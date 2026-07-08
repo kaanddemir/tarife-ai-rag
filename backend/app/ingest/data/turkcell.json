@@ -1,0 +1,749 @@
+{
+  "operator": "turkcell",
+  "line_type": "prepaid",
+  "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+  "scraped_at": "2026-07-08",
+  "package_count": 22,
+  "packages": [
+    {
+      "operator": "turkcell",
+      "name": "Fırsat 1200 Dakika",
+      "line_type": "prepaid",
+      "package_group": "standard",
+      "price_try": 350.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 0.25,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 0.25,
+      "voice_minutes": 1200,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir. Paket 4 hafta geçerlidir. Kullanılmayan haklar sonraki döneme devretmez. Haklar yurt içinde geçerlidir; dakika ve internet üçüncü kişilere transfer edilemez. Paket süresi veya haklar bittiğinde, ek paket yoksa kullanım müşterinin tarifesi ya da ilgili aşım tarifesi üzerinden ücretlendirilir.",
+      "campaign": null,
+      "faq": [
+        {
+          "q": "Paket kimler için geçerli?",
+          "a": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir."
+        },
+        {
+          "q": "Paket otomatik yenilenir mi?",
+          "a": "Hayır, paket otomatik yenilenmez."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/firsat-1200-dakika",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "Fırsat 1 GB",
+      "line_type": "prepaid",
+      "package_group": "standard",
+      "price_try": 450.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 1,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 1,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir. Paket 4 hafta geçerlidir. Kullanılmayan haklar sonraki döneme devretmez. Haklar yurt içinde geçerlidir; dakika ve internet üçüncü kişilere transfer edilemez. Paket süresi veya haklar bittiğinde, ek paket yoksa kullanım müşterinin tarifesi ya da ilgili aşım tarifesi üzerinden ücretlendirilir.",
+      "campaign": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP uygulamalarında geçerli 5'er GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Paket kimler için geçerli?",
+          "a": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir."
+        },
+        {
+          "q": "Ek faydalar neler?",
+          "a": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP'te geçerli 5'er GB internet dahildir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/firsat-1-gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "Fırsat 2 GB",
+      "line_type": "prepaid",
+      "package_group": "standard",
+      "price_try": 500.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 2,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 2,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir. Paket 4 hafta geçerlidir. Kullanılmayan haklar sonraki döneme devretmez. Haklar yurt içinde geçerlidir; dakika ve internet üçüncü kişilere transfer edilemez. Paket süresi veya haklar bittiğinde, ek paket yoksa kullanım müşterinin tarifesi ya da ilgili aşım tarifesi üzerinden ücretlendirilir.",
+      "campaign": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP uygulamalarında geçerli 5'er GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Paket kimler için geçerli?",
+          "a": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir."
+        },
+        {
+          "q": "Ek faydalar neler?",
+          "a": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP'te geçerli 5'er GB internet dahildir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/firsat-2-gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "Fırsat 5 GB",
+      "line_type": "prepaid",
+      "package_group": "standard",
+      "price_try": 600.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 5,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 5,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir. Paket 4 hafta geçerlidir. Kullanılmayan haklar sonraki döneme devretmez. Haklar yurt içinde geçerlidir; dakika ve internet üçüncü kişilere transfer edilemez. Paket süresi veya haklar bittiğinde, ek paket yoksa kullanım müşterinin tarifesi ya da ilgili aşım tarifesi üzerinden ücretlendirilir.",
+      "campaign": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP uygulamalarında geçerli 5'er GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Paket kimler için geçerli?",
+          "a": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir."
+        },
+        {
+          "q": "Ek faydalar neler?",
+          "a": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP'te geçerli 5'er GB internet dahildir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/firsat-5-gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "Fırsat 10 GB",
+      "line_type": "prepaid",
+      "package_group": "standard",
+      "price_try": 700.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 10,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 10,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir. Paket 4 hafta geçerlidir. Kullanılmayan haklar sonraki döneme devretmez. Haklar yurt içinde geçerlidir; dakika ve internet üçüncü kişilere transfer edilemez. Paket süresi veya haklar bittiğinde, ek paket yoksa kullanım müşterinin tarifesi ya da ilgili aşım tarifesi üzerinden ücretlendirilir.",
+      "campaign": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP uygulamalarında geçerli 5'er GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Paket kimler için geçerli?",
+          "a": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir."
+        },
+        {
+          "q": "Ek faydalar neler?",
+          "a": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP'te geçerli 5'er GB internet dahildir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/firsat-10-gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "Fırsat 15 GB",
+      "line_type": "prepaid",
+      "package_group": "standard",
+      "price_try": 800.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 15,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 15,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir. Paket 4 hafta geçerlidir. Kullanılmayan haklar sonraki döneme devretmez. Haklar yurt içinde geçerlidir; dakika ve internet üçüncü kişilere transfer edilemez. Paket süresi veya haklar bittiğinde, ek paket yoksa kullanım müşterinin tarifesi ya da ilgili aşım tarifesi üzerinden ücretlendirilir.",
+      "campaign": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP uygulamalarında geçerli 5'er GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Paket kimler için geçerli?",
+          "a": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir."
+        },
+        {
+          "q": "Ek faydalar neler?",
+          "a": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP'te geçerli 5'er GB internet dahildir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/firsat-15-gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "Fırsat 20 GB",
+      "line_type": "prepaid",
+      "package_group": "standard",
+      "price_try": 900.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 20,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 20,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir. Paket 4 hafta geçerlidir. Kullanılmayan haklar sonraki döneme devretmez. Haklar yurt içinde geçerlidir; dakika ve internet üçüncü kişilere transfer edilemez. Paket süresi veya haklar bittiğinde, ek paket yoksa kullanım müşterinin tarifesi ya da ilgili aşım tarifesi üzerinden ücretlendirilir.",
+      "campaign": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP uygulamalarında geçerli 5'er GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Paket kimler için geçerli?",
+          "a": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir."
+        },
+        {
+          "q": "Ek faydalar neler?",
+          "a": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP'te geçerli 5'er GB internet dahildir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/firsat-20-gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "Fırsat 25 GB",
+      "line_type": "prepaid",
+      "package_group": "standard",
+      "price_try": 1000.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 25,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 25,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir. Paket 4 hafta geçerlidir. Kullanılmayan haklar sonraki döneme devretmez. Haklar yurt içinde geçerlidir; dakika ve internet üçüncü kişilere transfer edilemez. Paket süresi veya haklar bittiğinde, ek paket yoksa kullanım müşterinin tarifesi ya da ilgili aşım tarifesi üzerinden ücretlendirilir.",
+      "campaign": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP uygulamalarında geçerli 5'er GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Paket kimler için geçerli?",
+          "a": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir."
+        },
+        {
+          "q": "Ek faydalar neler?",
+          "a": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP'te geçerli 5'er GB internet dahildir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/firsat-25-gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "Fırsat 30 GB",
+      "line_type": "prepaid",
+      "package_group": "standard",
+      "price_try": 1100.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 30,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 30,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir. Paket 4 hafta geçerlidir. Kullanılmayan haklar sonraki döneme devretmez. Haklar yurt içinde geçerlidir; dakika ve internet üçüncü kişilere transfer edilemez. Paket süresi veya haklar bittiğinde, ek paket yoksa kullanım müşterinin tarifesi ya da ilgili aşım tarifesi üzerinden ücretlendirilir.",
+      "campaign": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP uygulamalarında geçerli 5'er GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Paket kimler için geçerli?",
+          "a": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir."
+        },
+        {
+          "q": "Ek faydalar neler?",
+          "a": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP'te geçerli 5'er GB internet dahildir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/firsat-30-gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "Fırsat 40 GB",
+      "line_type": "prepaid",
+      "package_group": "standard",
+      "price_try": 1300.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 40,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 40,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir. Paket 4 hafta geçerlidir. Kullanılmayan haklar sonraki döneme devretmez. Haklar yurt içinde geçerlidir; dakika ve internet üçüncü kişilere transfer edilemez. Paket süresi veya haklar bittiğinde, ek paket yoksa kullanım müşterinin tarifesi ya da ilgili aşım tarifesi üzerinden ücretlendirilir.",
+      "campaign": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP uygulamalarında geçerli 5'er GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Paket kimler için geçerli?",
+          "a": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir."
+        },
+        {
+          "q": "Ek faydalar neler?",
+          "a": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP'te geçerli 5'er GB internet dahildir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/firsat-40-gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "Fırsat 50 GB",
+      "line_type": "prepaid",
+      "package_group": "standard",
+      "price_try": 1500.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 50,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 50,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir. Paket 4 hafta geçerlidir. Kullanılmayan haklar sonraki döneme devretmez. Haklar yurt içinde geçerlidir; dakika ve internet üçüncü kişilere transfer edilemez. Paket süresi veya haklar bittiğinde, ek paket yoksa kullanım müşterinin tarifesi ya da ilgili aşım tarifesi üzerinden ücretlendirilir.",
+      "campaign": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP uygulamalarında geçerli 5'er GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Paket kimler için geçerli?",
+          "a": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir."
+        },
+        {
+          "q": "Ek faydalar neler?",
+          "a": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP'te geçerli 5'er GB internet dahildir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/firsat-50-gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "Fırsat 80 GB",
+      "line_type": "prepaid",
+      "package_group": "standard",
+      "price_try": 1800.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 80,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 80,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir. Paket 4 hafta geçerlidir. Kullanılmayan haklar sonraki döneme devretmez. Haklar yurt içinde geçerlidir; dakika ve internet üçüncü kişilere transfer edilemez. Paket süresi veya haklar bittiğinde, ek paket yoksa kullanım müşterinin tarifesi ya da ilgili aşım tarifesi üzerinden ücretlendirilir.",
+      "campaign": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP uygulamalarında geçerli 5'er GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Paket kimler için geçerli?",
+          "a": "Tüm bireysel faturasız ses Turkcell müşterileri yararlanabilir."
+        },
+        {
+          "q": "Ek faydalar neler?",
+          "a": "Lifebox ve TV+ abonelikleri ile Lifebox, TV+ ve BiP'te geçerli 5'er GB internet dahildir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/firsat-80-gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "GNÇ Fırsat 10 GB",
+      "line_type": "prepaid",
+      "package_group": "gnc",
+      "price_try": 550.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 5,
+      "social_media_gb": 5,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 10,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "7 yaş ve üzeri, 25 yaş ve altındaki bireysel faturasız ses Turkcell müşterileri yararlanabilir. Bir TCKN üzerinden en fazla bir faturasız hat GNÇ paketinden faydalanabilir. Paket 4 hafta geçerlidir. Sosyal medya kotası yalnızca paket sayfasında belirtilen uygulamalarda geçerlidir; uygulama içindeki harici yönlendirmeler, reklamlar, canlı yayınlar ile bazı sesli/görüntülü görüşme kullanımları sosyal medya kotasına dahil olmayabilir. Kullanılmayan haklar devretmez.",
+      "campaign": "TikTok, Instagram, YouTube, Facebook, X ve Snapchat'te geçerli 5 GB sosyal medya interneti; Mini TV+ ve Lifebox Standart+ abonelikleri ile Lifebox, TV+ ve BiP uygulamalarında geçerli 5'er GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Kimler yararlanabilir?",
+          "a": "7 yaş ve üzeri, 25 yaş ve altındaki bireysel faturasız ses Turkcell müşterileri."
+        },
+        {
+          "q": "Sosyal medya interneti nerede geçerli?",
+          "a": "TikTok, Instagram, YouTube, Facebook, X ve Snapchat uygulamalarında geçerlidir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/gnc-firsat-10-gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "GNÇ Fırsat 20 GB",
+      "line_type": "prepaid",
+      "package_group": "gnc",
+      "price_try": 700.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 10,
+      "social_media_gb": 10,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 20,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "7 yaş ve üzeri, 25 yaş ve altındaki bireysel faturasız ses Turkcell müşterileri yararlanabilir. Bir TCKN üzerinden en fazla bir faturasız hat GNÇ paketinden faydalanabilir. Paket 4 hafta geçerlidir. Sosyal medya kotası yalnızca paket sayfasında belirtilen uygulamalarda geçerlidir; uygulama içindeki harici yönlendirmeler, reklamlar, canlı yayınlar ile bazı sesli/görüntülü görüşme kullanımları sosyal medya kotasına dahil olmayabilir. Kullanılmayan haklar devretmez.",
+      "campaign": "TikTok, Instagram, YouTube, Facebook, X ve Snapchat'te geçerli 10 GB sosyal medya interneti; Mini TV+ ve Lifebox Standart+ abonelikleri ile Lifebox, TV+ ve BiP uygulamalarında geçerli 5'er GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Kimler yararlanabilir?",
+          "a": "7 yaş ve üzeri, 25 yaş ve altındaki bireysel faturasız ses Turkcell müşterileri."
+        },
+        {
+          "q": "Sosyal medya interneti nerede geçerli?",
+          "a": "TikTok, Instagram, YouTube, Facebook, X ve Snapchat uygulamalarında geçerlidir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/gnc-firsat-20-gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "GNÇ Hepsi 24 GB Paketi",
+      "line_type": "prepaid",
+      "package_group": "gnc",
+      "price_try": 720.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 14,
+      "social_media_gb": 10,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 24,
+      "voice_minutes": 1200,
+      "sms_count": 750,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "7 yaş ve üzeri, 25 yaş ve altındaki bireysel faturasız ses Turkcell müşterileri yararlanabilir. Bir TCKN üzerinden en fazla bir faturasız hat GNÇ paketinden faydalanabilir. Paket 4 hafta geçerlidir. Sosyal medya kotası yalnızca paket sayfasında belirtilen uygulamalarda geçerlidir; uygulama içindeki harici yönlendirmeler, reklamlar, canlı yayınlar ile bazı sesli/görüntülü görüşme kullanımları sosyal medya kotasına dahil olmayabilir. Kullanılmayan haklar devretmez.",
+      "campaign": "Facebook ve X uygulamalarında geçerli 10 GB sosyal medya interneti ile BiP uygulamasında geçerli 5 GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Kimler yararlanabilir?",
+          "a": "7 yaş ve üzeri, 25 yaş ve altındaki bireysel faturasız ses Turkcell müşterileri."
+        },
+        {
+          "q": "Sosyal medya interneti nerede geçerli?",
+          "a": "Facebook ve X uygulamalarında geçerlidir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/gnc-hepsi-24-gb-paketi",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "GNÇ Fırsat 30 GB",
+      "line_type": "prepaid",
+      "package_group": "gnc",
+      "price_try": 800.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 15,
+      "social_media_gb": 15,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 30,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "7 yaş ve üzeri, 25 yaş ve altındaki bireysel faturasız ses Turkcell müşterileri yararlanabilir. Bir TCKN üzerinden en fazla bir faturasız hat GNÇ paketinden faydalanabilir. Paket 4 hafta geçerlidir. Sosyal medya kotası yalnızca paket sayfasında belirtilen uygulamalarda geçerlidir; uygulama içindeki harici yönlendirmeler, reklamlar, canlı yayınlar ile bazı sesli/görüntülü görüşme kullanımları sosyal medya kotasına dahil olmayabilir. Kullanılmayan haklar devretmez.",
+      "campaign": "TikTok, Instagram, YouTube, Facebook, X ve Snapchat'te geçerli 15 GB sosyal medya interneti; Mini TV+ ve Lifebox Standart+ abonelikleri ile Lifebox, TV+ ve BiP uygulamalarında geçerli 5'er GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Kimler yararlanabilir?",
+          "a": "7 yaş ve üzeri, 25 yaş ve altındaki bireysel faturasız ses Turkcell müşterileri."
+        },
+        {
+          "q": "Sosyal medya interneti nerede geçerli?",
+          "a": "TikTok, Instagram, YouTube, Facebook, X ve Snapchat uygulamalarında geçerlidir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/gnc-firsat-30-gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "GNÇ Fırsat 40 GB",
+      "line_type": "prepaid",
+      "package_group": "gnc",
+      "price_try": 900.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 20,
+      "social_media_gb": 20,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 40,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "7 yaş ve üzeri, 25 yaş ve altındaki bireysel faturasız ses Turkcell müşterileri yararlanabilir. Bir TCKN üzerinden en fazla bir faturasız hat GNÇ paketinden faydalanabilir. Paket 4 hafta geçerlidir. Sosyal medya kotası yalnızca paket sayfasında belirtilen uygulamalarda geçerlidir; uygulama içindeki harici yönlendirmeler, reklamlar, canlı yayınlar ile bazı sesli/görüntülü görüşme kullanımları sosyal medya kotasına dahil olmayabilir. Kullanılmayan haklar devretmez.",
+      "campaign": "TikTok, Instagram, YouTube, Facebook, X ve Snapchat'te geçerli 20 GB sosyal medya interneti; Mini TV+ ve Lifebox Standart+ abonelikleri ile Lifebox, TV+ ve BiP uygulamalarında geçerli 5'er GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Kimler yararlanabilir?",
+          "a": "7 yaş ve üzeri, 25 yaş ve altındaki bireysel faturasız ses Turkcell müşterileri."
+        },
+        {
+          "q": "Sosyal medya interneti nerede geçerli?",
+          "a": "TikTok, Instagram, YouTube, Facebook, X ve Snapchat uygulamalarında geçerlidir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/gnc-firsat-40-gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "GNÇ Fırsat 50 GB",
+      "line_type": "prepaid",
+      "package_group": "gnc",
+      "price_try": 1000.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 25,
+      "social_media_gb": 25,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 50,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 4,
+      "validity_unit": "week",
+      "validity_days": 28,
+      "conditions": "7 yaş ve üzeri, 25 yaş ve altındaki bireysel faturasız ses Turkcell müşterileri yararlanabilir. Bir TCKN üzerinden en fazla bir faturasız hat GNÇ paketinden faydalanabilir. Paket 4 hafta geçerlidir. Sosyal medya kotası yalnızca paket sayfasında belirtilen uygulamalarda geçerlidir; uygulama içindeki harici yönlendirmeler, reklamlar, canlı yayınlar ile bazı sesli/görüntülü görüşme kullanımları sosyal medya kotasına dahil olmayabilir. Kullanılmayan haklar devretmez.",
+      "campaign": "TikTok, Instagram, YouTube, Facebook, X ve Snapchat'te geçerli 25 GB sosyal medya interneti; Mini TV+ ve Lifebox Standart+ abonelikleri ile Lifebox, TV+ ve BiP uygulamalarında geçerli 5'er GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Kimler yararlanabilir?",
+          "a": "7 yaş ve üzeri, 25 yaş ve altındaki bireysel faturasız ses Turkcell müşterileri."
+        },
+        {
+          "q": "Sosyal medya interneti nerede geçerli?",
+          "a": "TikTok, Instagram, YouTube, Facebook, X ve Snapchat uygulamalarında geçerlidir."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/gnc-firsat-50-gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "Uzun Süreli Mega Fırsat 30 GB",
+      "line_type": "prepaid",
+      "package_group": "long_term",
+      "price_try": 1700.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 30,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 30,
+      "voice_minutes": 5000,
+      "sms_count": 2500,
+      "validity_value": 3,
+      "validity_unit": "month",
+      "validity_days": 90,
+      "conditions": "Tüm bireysel faturasız Turkcell ses müşterileri yararlanabilir. Kullanım hakları paket süresi boyunca yurt içinde geçerlidir. Kullanılmayan haklar sonraki döneme devretmez ve üçüncü kişilere transfer edilemez.",
+      "campaign": "Lifebox, TV+ ve fizy abonelikleri ile Lifebox, TV+, fizy ve BiP uygulamalarında geçerli 30'ar GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Paket ne kadar geçerli?",
+          "a": "3 ay boyunca geçerlidir."
+        },
+        {
+          "q": "Kimler yararlanabilir?",
+          "a": "Tüm bireysel faturasız Turkcell ses müşterileri."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/mega-firsat-30gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "Uzun Süreli Mega Fırsat 60 GB",
+      "line_type": "prepaid",
+      "package_group": "long_term",
+      "price_try": 3400.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 60,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 60,
+      "voice_minutes": 10000,
+      "sms_count": 5000,
+      "validity_value": 6,
+      "validity_unit": "month",
+      "validity_days": 180,
+      "conditions": "Tüm bireysel faturasız Turkcell ses müşterileri yararlanabilir. Kullanım hakları paket süresi boyunca yurt içinde geçerlidir. Kullanılmayan haklar sonraki döneme devretmez ve üçüncü kişilere transfer edilemez.",
+      "campaign": "Lifebox, TV+ ve fizy abonelikleri ile Lifebox, TV+, fizy ve BiP uygulamalarında geçerli 60'ar GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Paket ne kadar geçerli?",
+          "a": "6 ay boyunca geçerlidir."
+        },
+        {
+          "q": "Kimler yararlanabilir?",
+          "a": "Tüm bireysel faturasız Turkcell ses müşterileri."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/mega-firsat-60gb",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "61Cell Avantaj",
+      "line_type": "prepaid",
+      "package_group": "61cell",
+      "price_try": 150.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 2,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 2,
+      "voice_minutes": 600,
+      "sms_count": 300,
+      "validity_value": 1,
+      "validity_unit": "month",
+      "validity_days": 30,
+      "conditions": "Yalnızca 561 ile başlayan 61CELL Turkcell hatlarının sahibi veya kullanıcısı olan ses hattı müşterileri yararlanabilir. Paket 1 ay geçerlidir.",
+      "campaign": "BiP kullanımlarında geçerli aylık 1 GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Kimler yararlanabilir?",
+          "a": "Yalnızca 561 ile başlayan 61CELL Turkcell hatlarının sahibi veya kullanıcıları."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/61cell-avantaj",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    },
+    {
+      "operator": "turkcell",
+      "name": "61Cell Plus",
+      "line_type": "prepaid",
+      "package_group": "61cell",
+      "price_try": 200.0,
+      "price_period": null,
+      "price_note": null,
+      "internet_gb": 4,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "total_internet_gb": 4,
+      "voice_minutes": 1000,
+      "sms_count": 500,
+      "validity_value": 1,
+      "validity_unit": "month",
+      "validity_days": 30,
+      "conditions": "Yalnızca 561 ile başlayan 61CELL Turkcell hatlarının sahibi veya kullanıcısı olan ses hattı müşterileri yararlanabilir. Paket 1 ay geçerlidir.",
+      "campaign": "BiP kullanımlarında geçerli aylık 1 GB internet pakete dahildir.",
+      "faq": [
+        {
+          "q": "Kimler yararlanabilir?",
+          "a": "Yalnızca 561 ile başlayan 61CELL Turkcell hatlarının sahibi veya kullanıcıları."
+        }
+      ],
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler/61cell-plus",
+      "listing_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/ana-paketler?paymentType=hazir-kart",
+      "scraped_at": "2026-07-08",
+      "is_scraped": true
+    }
+  ]
+}
