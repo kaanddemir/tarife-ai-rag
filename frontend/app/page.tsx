@@ -10,16 +10,27 @@ import {
   saveActiveId,
   loadGuestUsed,
   saveGuestUsed,
+  loadDailyUsed,
+  saveDailyUsed,
   newConversation,
   titleFrom,
 } from "@/lib/storage";
 import { useAuth } from "@/lib/auth";
-import type { OperatorKey } from "@/components/OperatorPicker";
+import type { LineTypeKey, OperatorKey } from "@/components/OperatorPicker";
+
+// retrieve.py bu kelimeleri arar; "faturasiz" once kontrol edilir cunku "fatura" icerir.
+const LINE_TYPE_PREFIX: Record<Exclude<LineTypeKey, "all">, string> = {
+  postpaid: "faturalı",
+  prepaid: "faturasız",
+};
 import Sidebar from "@/components/Sidebar";
 import ChatArea from "@/components/ChatArea";
 import LoginModal from "@/components/LoginModal";
 
 const GUEST_LIMIT = 5;
+// Server-side daily quota for signed-in users (backend config.daily_message_limit).
+// Shown in the sidebar as an allowance; kept here alongside GUEST_LIMIT.
+const DAILY_LIMIT = 20;
 
 export default function Home() {
   const { isSignedIn, email, getAccessToken, signOut } = useAuth();
@@ -29,12 +40,13 @@ export default function Home() {
   const [navOpen, setNavOpen] = useState(false);
   const [hydrated, setHydrated] = useState(false);
   const [guestUsed, setGuestUsed] = useState(0);
+  const [dailyUsed, setDailyUsed] = useState(0);
   const [loginOpen, setLoginOpen] = useState(false);
   const [loginReason, setLoginReason] = useState<string | undefined>();
 
-  // Load from localStorage on mount.
   useEffect(() => {
     setGuestUsed(loadGuestUsed());
+    setDailyUsed(loadDailyUsed());
     const convs = loadConversations();
     if (convs.length) {
       setConversations(convs);
@@ -114,7 +126,11 @@ export default function Home() {
     setLoginOpen(true);
   }
 
-  async function handleSend(question: string, operator: OperatorKey) {
+  async function handleSend(
+    question: string,
+    operator: OperatorKey,
+    lineType: LineTypeKey,
+  ) {
     if (!activeId) return;
 
     // Pre-empt the guest cap for snappy UX; the backend still enforces the real limit.
@@ -135,9 +151,13 @@ export default function Home() {
     }));
     setLoading(true);
 
-    // Scope to an operator by prepending its name — backend retrieve() detects it.
-    const scoped =
-      operator === "all" ? question : `${OPERATOR_LABELS[operator]} ${question}`;
+    // Scope by prepending the operator name and line type — backend retrieve()
+    // detects both and turns them into hard filters.
+    const scope = [
+      operator === "all" ? null : OPERATOR_LABELS[operator],
+      lineType === "all" ? null : LINE_TYPE_PREFIX[lineType],
+    ].filter(Boolean);
+    const scoped = scope.length ? `${scope.join(" ")} ${question}` : question;
 
     try {
       const token = await getAccessToken();
@@ -149,7 +169,13 @@ export default function Home() {
         packages: r.packages,
       };
       updateActive((c) => ({ ...c, messages: [...c.messages, assistant] }));
-      if (!isSignedIn) {
+      if (isSignedIn) {
+        setDailyUsed((n) => {
+          const next = n + 1;
+          saveDailyUsed(next);
+          return next;
+        });
+      } else {
         setGuestUsed((n) => {
           const next = n + 1;
           saveGuestUsed(next);
@@ -159,6 +185,9 @@ export default function Home() {
     } catch (e) {
       if (e instanceof QuotaError) {
         if (e.reason === "daily_limit") {
+          // Server says the day's quota is spent — reflect 0 remaining in the meter.
+          setDailyUsed(DAILY_LIMIT);
+          saveDailyUsed(DAILY_LIMIT);
           const assistant: Message = {
             role: "assistant",
             content:
@@ -179,11 +208,13 @@ export default function Home() {
           );
         }
       } else {
-        const assistant: Message = {
-          role: "assistant",
-          content: `Yanıt alınamadı: ${(e as Error).message}. (Backend çalışıyor mu ve PROVIDER_API_KEY ayarlı mı?)`,
-          error: true,
-        };
+        // TypeError ("Failed to fetch") = couldn't reach the server; otherwise a
+        // server-side error. Keep the message user-friendly — no technical internals.
+        const content =
+          e instanceof TypeError
+            ? "Sunucuya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dener misin?"
+            : "Şu an yanıt veremedim. Lütfen birazdan tekrar dene.";
+        const assistant: Message = { role: "assistant", content, error: true };
         updateActive((c) => ({ ...c, messages: [...c.messages, assistant] }));
       }
     } finally {
@@ -211,7 +242,9 @@ export default function Home() {
         email={email}
         guestUsed={guestUsed}
         guestLimit={GUEST_LIMIT}
-        onLogin={() => openLogin("Giriş yaparak günlük 20 mesaj hakkı kazan.")}
+        dailyUsed={dailyUsed}
+        dailyLimit={DAILY_LIMIT}
+        onLogin={() => openLogin(`Giriş yaparak günlük ${DAILY_LIMIT} mesaj hakkı kazan.`)}
         onLogout={handleLogout}
       />
       <ChatArea

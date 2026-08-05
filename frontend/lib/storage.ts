@@ -3,6 +3,13 @@ import type { Conversation } from "./types";
 const CONV_KEY = "tarifeai:conversations";
 const ACTIVE_KEY = "tarifeai:activeId";
 const GUEST_USED_KEY = "tarifeai:guestUsed";
+const DAILY_USED_KEY = "tarifeai:dailyUsed";
+
+/** Local calendar day, used to auto-reset the signed-in daily counter. */
+function todayKey(): string {
+  const d = new Date();
+  return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+}
 
 function uid(): string {
   return `c_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
@@ -44,6 +51,31 @@ export function loadGuestUsed(): number {
 export function saveGuestUsed(n: number): void {
   if (typeof window === "undefined") return;
   window.localStorage.setItem(GUEST_USED_KEY, String(n));
+}
+
+/**
+ * Display-only signed-in daily counter; resets when the calendar day changes.
+ * Approximate (per-device, local midnight); the backend is the real authority.
+ */
+export function loadDailyUsed(): number {
+  if (typeof window === "undefined") return 0;
+  try {
+    const raw = window.localStorage.getItem(DAILY_USED_KEY);
+    if (!raw) return 0;
+    const { date, count } = JSON.parse(raw) as { date: string; count: number };
+    if (date !== todayKey()) return 0;
+    return Number.isFinite(count) && count > 0 ? count : 0;
+  } catch {
+    return 0;
+  }
+}
+
+export function saveDailyUsed(n: number): void {
+  if (typeof window === "undefined") return;
+  window.localStorage.setItem(
+    DAILY_USED_KEY,
+    JSON.stringify({ date: todayKey(), count: n })
+  );
 }
 
 export function newConversation(): Conversation {

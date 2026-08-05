@@ -1,27 +1,63 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import type { Conversation } from "@/lib/types";
 import MessageBubble from "./MessageBubble";
-import OperatorPicker, { OperatorKey } from "./OperatorPicker";
+import LoadingSkeleton from "./LoadingSkeleton";
+import OperatorPicker, { LineTypeKey, OperatorKey } from "./OperatorPicker";
 
-const SAMPLES = [
-  "20 GB paketleri karşılaştır",
-  "En uygun fiyatlı paketi bul",
-  "Operatörleri karşılaştır",
-  "En çok dakika veren paket",
+// Starter questions shown in the empty state. Each maps to a real retrieval intent
+// (internet / budget / youth group / number-transfer campaigns) so the first answer
+// lands on actual data. Icon is inline SVG (stroke style, matches the send button).
+const SAMPLES: { q: string; icon: ReactNode }[] = [
+  {
+    q: "En çok internet veren paket hangisi?",
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 20h.01M7 20v-4M12 20v-9M17 20V6" />
+      </svg>
+    ),
+  },
+  {
+    q: "150 TL altı en uygun paketler",
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 7h15a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h12" />
+        <path d="M16 12.5h4v3h-4a1.5 1.5 0 0 1 0-3z" />
+      </svg>
+    ),
+  },
+  {
+    q: "Gençlere özel avantajlı paketler",
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 4 2 9l10 5 10-5-10-5z" />
+        <path d="M6 11v4c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-4" />
+      </svg>
+    ),
+  },
+  {
+    q: "Numara taşıyana özel kampanyalar",
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 4v13M7 4 3 8M7 4l4 4" />
+        <path d="M17 20V7M17 20l4-4M17 20l-4-4" />
+      </svg>
+    ),
+  },
 ];
 
 interface Props {
   conversation: Conversation | null;
   loading: boolean;
-  onSend: (question: string, operator: OperatorKey) => void;
+  onSend: (question: string, operator: OperatorKey, lineType: LineTypeKey) => void;
   onToggleNav: () => void;
 }
 
 export default function ChatArea({ conversation, loading, onSend, onToggleNav }: Props) {
   const [text, setText] = useState("");
   const [operator, setOperator] = useState<OperatorKey>("all");
+  const [lineType, setLineType] = useState<LineTypeKey>("all");
   const endRef = useRef<HTMLDivElement>(null);
   const taRef = useRef<HTMLTextAreaElement>(null);
 
@@ -35,7 +71,7 @@ export default function ChatArea({ conversation, loading, onSend, onToggleNav }:
   function submit(value?: string) {
     const q = (value ?? text).trim();
     if (!q || loading) return;
-    onSend(q, operator);
+    onSend(q, operator, lineType);
     setText("");
     if (taRef.current) taRef.current.style.height = "auto";
   }
@@ -57,10 +93,17 @@ export default function ChatArea({ conversation, loading, onSend, onToggleNav }:
         <div className="messages-inner">
           {isEmpty ? (
             <div className="empty">
-              <h1>
-                <span className="a">Tarife</span>
-                <span className="b">AI</span>'ya hoş geldiniz
-              </h1>
+              <div className="welcome-card">
+                <h1>
+                  <span className="a">Tarife</span>
+                  <span className="b">AI</span>'ya hoş geldiniz
+                </h1>
+                <p className="welcome-sub">
+                  Turkcell, Vodafone ve Türk Telekom&apos;un faturalı ve faturasız
+                  paketlerini yapay zeka ile karşılaştır, sana en uygun olanı
+                  saniyeler içinde bul.
+                </p>
+              </div>
               <div className="how-it-works">
                 <span className="title">Nasıl Çalışır?</span>
                 <ol>
@@ -84,26 +127,21 @@ export default function ChatArea({ conversation, loading, onSend, onToggleNav }:
                   </li>
                 </ol>
               </div>
+              <div className="samples-grid">
+                {SAMPLES.map((s) => (
+                  <button key={s.q} className="sample-card" onClick={() => submit(s.q)}>
+                    <span className="sample-icon">{s.icon}</span>
+                    <span>{s.q}</span>
+                  </button>
+                ))}
+              </div>
             </div>
           ) : (
             <>
               {messages.map((m, i) => (
                 <MessageBubble key={i} message={m} />
               ))}
-              {loading && (
-                <div className="row assistant">
-                  <div className="bubble assistant">
-                    <div className="thinking">
-                      <span className="thinking-label">TarifeAI düşünüyor</span>
-                      <span className="typing">
-                        <span />
-                        <span />
-                        <span />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              )}
+              {loading && <LoadingSkeleton />}
             </>
           )}
           <div ref={endRef} />
@@ -112,17 +150,13 @@ export default function ChatArea({ conversation, loading, onSend, onToggleNav }:
 
       <div className="composer">
         <div className="composer-inner">
-          {isEmpty && (
-            <div className="samples">
-              {SAMPLES.map((s) => (
-                <button key={s} className="chip" onClick={() => submit(s)}>
-                  {s}
-                </button>
-              ))}
-            </div>
-          )}
           <div className="input-bar">
-            <OperatorPicker value={operator} onChange={setOperator} />
+            <OperatorPicker
+              value={operator}
+              onChange={setOperator}
+              lineType={lineType}
+              onLineTypeChange={setLineType}
+            />
             <textarea
               ref={taRef}
               rows={1}

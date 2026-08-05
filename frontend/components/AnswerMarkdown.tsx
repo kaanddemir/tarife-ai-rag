@@ -26,12 +26,33 @@ function buildRefMap(citations: Citation[]): RefMap {
   return map;
 }
 
+// Expand a marker token into individual source ids, tolerating range notation the
+// model sometimes emits ("[S1-S6]" -> S1..S6) so a raw range never leaks as text.
+function idsFromMarker(token: string): string[] {
+  const ids: string[] = [];
+  const re = /S(\d+)(?:\s*[–-]\s*S(\d+))?/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(token)) !== null) {
+    const start = parseInt(m[1], 10);
+    const end = m[2] ? parseInt(m[2], 10) : start;
+    for (let n = start; n <= end && n - start < 20; n += 1) {
+      if (!ids.includes(`S${n}`)) ids.push(`S${n}`);
+    }
+  }
+  return ids;
+}
+
 function inlineNodes(text: string, keyPrefix: string, refs: RefMap): ReactNode[] {
   const nodes: ReactNode[] = [];
   // A run of one or more source markers separated only by commas/spaces is
   // captured as a single token so it renders as one tidy superscript group
-  // (e.g. "¹,²,³") instead of leaving baseline commas between them.
-  const pattern = /(\*\*[^*]+?\*\*|\*[^*\n]+?\*|\[S\d+\](?:\s*,?\s*\[S\d+\])*)/g;
+  // (e.g. "¹,²,³") instead of leaving baseline commas between them. A marker may
+  // also be a range like "[S1-S6]", expanded by idsFromMarker.
+  const marker = String.raw`\[S\d+(?:\s*[–-]\s*S\d+)?\]`;
+  const pattern = new RegExp(
+    `(\\*\\*[^*]+?\\*\\*|\\*[^*\\n]+?\\*|${marker}(?:\\s*,?\\s*${marker})*)`,
+    "g"
+  );
   let lastIndex = 0;
   let match: RegExpExecArray | null;
   let index = 0;
@@ -47,7 +68,7 @@ function inlineNodes(text: string, keyPrefix: string, refs: RefMap): ReactNode[]
     if (token.startsWith("[S")) {
       // Render the marker run as one superscript group, commas kept superscript
       // and tight. Unknown/hallucinated ids (not in refs) are dropped silently.
-      const found = (token.match(/S\d+/g) ?? [])
+      const found = idsFromMarker(token)
         .map((id) => refs.get(id))
         .filter((r): r is { num: number; url: string } => Boolean(r));
       if (found.length > 0) {

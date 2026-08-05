@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   ),
   title: "TarifeAI",
   description:
-    "Turkcell, Vodafone ve Türk Telekom faturasız paketlerini yapay zeka ile karşılaştırın.",
+    "Turkcell, Vodafone ve Türk Telekom'un faturalı ve faturasız paketlerini yapay zeka ile karşılaştırın.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

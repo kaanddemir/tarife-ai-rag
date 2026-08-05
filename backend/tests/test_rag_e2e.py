@@ -19,6 +19,10 @@ def _pkg(operator, name, price, gb):
         operator=operator,
         name=name,
         line_type="prepaid",
+        customer_type="any",
+        product_scope="mobile_voice",
+        commitment_status="no_commitment",
+        data_quality_status="complete",
         price_try=price,
         internet_gb=gb,
         voice_minutes=1000,
@@ -61,12 +65,11 @@ def test_generate_grounds_and_filters_citations(monkeypatch):
     # Sources were embedded in the user prompt.
     user_msg = _FakeCompletions.last_kwargs["messages"][-1]["content"]
     assert "Hazir Kart 20 GB" in user_msg and "Kolay Paket 20 GB" in user_msg
+    # Source lines must carry the package's bucket (line type + who it's open to).
+    assert "(faturasiz, yeni veya mevcut musteri)" in user_msg
     system_msg = _FakeCompletions.last_kwargs["messages"][0]["content"]
     assert "**Öneri:**" in system_msg
-    assert "**Diğer alternatifler:**" in system_msg
-    assert "nedeni:" in system_msg
-    assert "- **Fiyat:**" in system_msg
-    assert "- **Kıyas:**" in system_msg
+    assert "**Kime hangisi uygun:**" in system_msg
     assert "orta detayli Markdown" in system_msg
     assert "**Sonraki adım:**" in system_msg
     assert "takip sorusu" in system_msg
@@ -89,6 +92,18 @@ def test_generate_orders_table_by_answer_citation_order(monkeypatch):
         "Faturasiz Genc 14 GB",
         "Hazir Kart 20 GB",
     ]
+
+
+def test_generate_caps_recommendations_even_if_model_cites_more(monkeypatch):
+    packages = [_pkg("turkcell", f"Paket {i}", 100 + i, 20) for i in range(1, 6)]
+    fake = _FakeClient("Hepsi iyi [S1] [S2] [S3] [S4] [S5].")
+    monkeypatch.setattr(generate_mod, "_client", lambda: fake)
+
+    resp = generate_mod.generate_answer("hepsini karsilastir", packages)
+
+    # A non-compliant model cited 5, but the table/citations stay capped at 3.
+    assert len(resp.packages) == generate_mod.MAX_RECOMMENDATIONS
+    assert [c.id for c in resp.citations] == ["S1", "S2", "S3"]
 
 
 def test_chat_request_accepts_optional_history():

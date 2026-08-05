@@ -6,6 +6,7 @@ signs these tokens asymmetrically (ES256/RS256) by default; we verify the signat
 against the project's public JWKS (cached) and trust the `sub` (user id) and
 `is_anonymous` claims. Legacy projects on the shared HS256 secret are also supported.
 """
+import logging
 import ssl
 import uuid
 from dataclasses import dataclass
@@ -16,6 +17,8 @@ import jwt
 from fastapi import HTTPException, Request
 
 from app.config import settings
+
+logger = logging.getLogger(__name__)
 
 # Tolerance for clock skew between this server and Supabase when checking iat/nbf/exp.
 # Without it, a token minted a moment ago can look "not yet valid" and 401 a real user.
@@ -51,7 +54,7 @@ def warm_jwks() -> None:
     try:
         _jwk_client().get_jwk_set()
     except Exception as exc:  # noqa: BLE001 — best-effort warmup, never fatal
-        print(f"[auth] JWKS warmup failed (will retry on first request): {exc}")
+        logger.warning("JWKS warmup failed (will retry on first request): %s", exc)
 
 
 def _verify(token: str) -> dict:
@@ -59,6 +62,11 @@ def _verify(token: str) -> dict:
     current default via JWKS) and legacy symmetric (HS256, shared secret) signing."""
     alg = jwt.get_unverified_header(token).get("alg", "")
     if alg == "HS256":
+        # The algorithm is the caller's claim, so an unconfigured secret must not
+        # fall through to a default: that would let anyone holding this repository
+        # mint a valid token. No secret configured means no HS256 project.
+        if not settings.supabase_jwt_secret:
+            raise jwt.InvalidAlgorithmError("HS256 tokens are not accepted")
         return jwt.decode(
             token,
             settings.supabase_jwt_secret,
@@ -98,7 +106,9 @@ def get_current_user(request: Request) -> AuthUser:
     try:
         claims = _verify(token)
     except (jwt.PyJWTError, jwt.exceptions.PyJWKClientError) as exc:
-        print(f"[auth] token rejected: {type(exc).__name__}: {exc}")
+        # Debug level: the reason describes a caller-supplied token, so it belongs
+        # in a deliberate debugging session rather than in the default log.
+        logger.debug("token rejected: %s: %s", type(exc).__name__, exc)
         raise HTTPException(status_code=401, detail="Invalid token") from exc
 
     sub = claims.get("sub")

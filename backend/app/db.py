@@ -8,7 +8,12 @@ SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False, futu
 
 
 def init_db() -> None:
-    """Ensure the pgvector extension and tables exist."""
+    """Ensure the pgvector extension and tables exist.
+
+    This small catalog is loaded via full refresh, so there is no separate migration
+    service; on a schema change the database is rebuilt from scratch (see
+    reset_packages_table, called by the ingest).
+    """
     from app.models import Base
 
     with engine.begin() as conn:
@@ -16,8 +21,24 @@ def init_db() -> None:
     Base.metadata.create_all(engine)
 
 
+def reset_packages_table() -> None:
+    """Drop and recreate the packages table so a schema change fully propagates.
+
+    create_all only creates missing tables -- it never adds or drops columns on an
+    existing one -- so after a model change the live table would keep stale columns
+    and lack new ones. The catalog is a full refresh from JSON, so dropping it loses
+    nothing; message_usage (quota data) is left untouched.
+    """
+    from app.models import Base, Package
+
+    with engine.begin() as conn:
+        conn.execute(text("CREATE EXTENSION IF NOT EXISTS vector"))
+    Package.__table__.drop(engine, checkfirst=True)
+    Base.metadata.create_all(engine)
+
+
 def get_session():
-    """FastAPI dependency yielding a scoped DB session."""
+    """FastAPI dependency yielding a scoped database session."""
     session = SessionLocal()
     try:
         yield session

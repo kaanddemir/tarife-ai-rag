@@ -30,7 +30,6 @@ export default function LoginModal({ open, onClose, reason }: Props) {
       setSent(true);
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);
-      console.error("[login] magic link failed:", err);
       setError(
         /rate limit/i.test(msg)
           ? "Çok fazla deneme yapıldı. Birkaç dakika sonra tekrar dene."

@@ -14,6 +14,8 @@ interface Props {
   email: string | null;
   guestUsed: number;
   guestLimit: number;
+  dailyUsed: number;
+  dailyLimit: number;
   onLogin: () => void;
   onLogout: () => void;
 }
@@ -29,6 +31,8 @@ export default function Sidebar({
   email,
   guestUsed,
   guestLimit,
+  dailyUsed,
+  dailyLimit,
   onLogin,
   onLogout,
 }: Props) {
@@ -138,14 +142,19 @@ export default function Sidebar({
       </div>
 
       <div className="sidebar-foot">
-        <div className="avatar">{isSignedIn && email ? email[0].toUpperCase() : "U"}</div>
+        {/* Signed-in: the name before "@". Guest: "K" (from "Kullanıcı"). */}
+        <div className="avatar">
+          {isSignedIn && email ? email[0].toUpperCase() : "K"}
+        </div>
         <div className="foot-main">
           {isSignedIn ? (
             <>
               <div className="foot-name truncate" title={email ?? undefined}>
-                {email ?? "Hesabım"}
+                {email ? email.split("@")[0] : "Hesabım"}
               </div>
-              <div className="foot-sub">Giriş yapıldı</div>
+              <div className="guest-meter">
+                <b>{Math.max(0, dailyLimit - dailyUsed)}</b> / {dailyLimit} Mesaj hakkı
+              </div>
             </>
           ) : (
             <>
@@ -157,12 +166,20 @@ export default function Sidebar({
           )}
         </div>
         {isSignedIn ? (
-          <button className="foot-action" onClick={onLogout}>
-            Çıkış
+          <button className="foot-action" onClick={onLogout} title="Çıkış" aria-label="Çıkış">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <path d="M16 17l5-5-5-5" />
+              <path d="M21 12H9" />
+            </svg>
           </button>
         ) : (
-          <button className="foot-action" onClick={onLogin}>
-            Giriş yap
+          <button className="foot-action" onClick={onLogin} title="Giriş yap" aria-label="Giriş yap">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+              <path d="M10 17l5-5-5-5" />
+              <path d="M15 12H3" />
+            </svg>
           </button>
         )}
       </div>

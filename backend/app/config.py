@@ -22,7 +22,9 @@ class Settings(BaseSettings):
     supabase_url: str = ""
     # Legacy shared JWT secret (Settings → API → JWT Secret). Only used for older
     # projects that still sign tokens with HS256; asymmetric projects use the JWKS above.
-    supabase_jwt_secret: str = "CHANGE_ME_SUPABASE_JWT_SECRET"
+    # Empty by default on purpose: a default committed here would be a secret anyone
+    # could sign a token with, so HS256 verification stays off until one is configured.
+    supabase_jwt_secret: str = ""
 
     @property
     def supabase_jwks_url(self) -> str:
@@ -48,8 +50,8 @@ class Settings(BaseSettings):
 
     # Hosted open-model API (OpenAI-compatible): Groq / Together / OpenRouter / etc.
     provider_base_url: str = "https://api.groq.com/openai/v1"
-    provider_api_key: str = "changeme"
-    model: str = "qwen/qwen3.6-27b"
+    provider_api_key: str = ""
+    model: str = "qwen/qwen3-32b"
 
     # Retrieval
     embed_model: str = "BAAI/bge-m3"

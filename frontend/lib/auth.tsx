@@ -68,8 +68,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const value = useMemo<AuthState>(() => {
+    // Magic-link must return to the app's own base path. On a project-page deploy the
+    // app lives under /TarifeAI, so origin alone (no path) would land on the wrong URL.
+    const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
     const redirectTo =
-      typeof window !== "undefined" ? window.location.origin : undefined;
+      typeof window !== "undefined" ? `${window.location.origin}${base}/` : undefined;
     return {
       session,
       ready,

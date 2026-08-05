@@ -209,7 +209,7 @@ body {
 }
 .messages-inner {
   width: 100%;
-  max-width: 760px;
+  max-width: 900px;
   margin: 0 auto;
   flex: 1;
   display: flex;
@@ -218,9 +218,24 @@ body {
 
 /* Empty state */
 .empty { max-width: 600px; margin: auto; text-align: center; }
-.empty h1 { font-size: 28px; margin: 0 0 10px; font-weight: 700; letter-spacing: -0.5px; }
+.empty h1 { font-size: 26px; margin: 0; font-weight: 700; letter-spacing: -0.5px; }
 .empty h1 .a { color: var(--text); }
 .empty h1 .b { color: var(--teal); }
+.welcome-card {
+  max-width: 520px;
+  margin: 0 auto 16px;
+  background: var(--panel);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 22px 22px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+.welcome-sub {
+  margin: 10px 0 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+}
 .how-it-works {
   max-width: 520px;
   margin: 0 auto 28px;
@@ -285,28 +300,57 @@ body {
   color: var(--text);
   font-weight: 600;
 }
-.samples {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 12px;
+/* Starter-question cards (empty state, 2×2 under "Nasıl Çalışır?"). */
+.samples-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  max-width: 520px;
+  margin: 0 auto;
 }
-.chip {
+.sample-card {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-align: left;
   background: var(--panel);
   border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 13.5px;
+  font-weight: 500;
   color: var(--text);
-  border-radius: 10px;
-  padding: 6px 12px;
-  font-size: 13px;
   cursor: pointer;
-  transition: background 0.12s, border-color 0.12s, color 0.12s;
+  transition: background 0.12s, border-color 0.12s, transform 0.12s, box-shadow 0.12s;
 }
-.chip:hover {
-  background: var(--teal-tint);
+.sample-card:hover {
   border-color: var(--teal);
-  color: var(--teal-600);
+  background: var(--teal-tint);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
+.sample-icon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: var(--teal-tint);
+  color: var(--teal);
+  transition: background 0.12s, color 0.12s;
+}
+.sample-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.sample-card:hover .sample-icon { background: var(--teal); color: #fff; }
 
 /* Bubbles */
 .row { display: flex; margin-bottom: 20px; }
@@ -324,7 +368,7 @@ body {
   border-radius: 16px;
   border-bottom-right-radius: 5px;
 }
-.bubble.assistant { color: var(--text); }
+.bubble.assistant { color: var(--text); max-width: 100%; width: 100%; }
 .bubble.full { max-width: 100%; width: 100%; }
 
 .answer-markdown { white-space: normal; }
@@ -462,6 +506,28 @@ body {
 .typing span:nth-child(3) { animation-delay: 0.4s; }
 @keyframes blink { 0%, 80%, 100% { opacity: 0.25; } 40% { opacity: 1; } }
 
+/* ---- Loading skeleton (placeholder while an answer generates) ---- */
+.sk {
+  display: block;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--text) 7%, transparent) 25%,
+    color-mix(in srgb, var(--text) 14%, transparent) 50%,
+    color-mix(in srgb, var(--text) 7%, transparent) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+.skeleton-answer { display: flex; flex-direction: column; gap: 9px; margin-top: 12px; }
+.sk-line { height: 12px; }
+.sk-hero { height: 32px; border-radius: 8px; }
+.sk-title { height: 10px; width: 90px; margin-bottom: 12px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .sk, .thinking-label, .typing span { animation: none; }
+}
+
 /* Comparison table */
 .table-card {
   margin-top: 14px;
@@ -471,36 +537,127 @@ body {
   padding: 14px;
 }
 .table-card h3 { margin: 0 0 10px; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; }
-.table-wrap { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }
-th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; }
-tbody tr:last-child td { border-bottom: none; }
-tbody tr:hover { background: var(--panel-2); }
-.op-badge { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; vertical-align: middle; }
-.recommended { background: var(--teal-tint); }
 .tag-recommended {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  margin-left: 8px;
-  vertical-align: middle;
+  gap: 4px;
+  padding: 3px 9px 3px 6px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--teal);
+  color: #fff;
 }
-.tag-recommended { background: var(--teal); color: #fff; }
 .tag-recommended svg {
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   fill: currentColor;
 }
-.muted { color: var(--muted); }
-td a.muted:hover { color: var(--teal-600); }
+
+/* ---- Comparison cards (operator-style tariff cards) ---- */
+.cmp-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+.cmp-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px;
+  background: var(--panel);
+  border: 2.5px solid var(--border);
+  border-radius: 12px;
+}
+/* Recommended is signalled by the "Önerilen" badge only — no extra stroke. */
+.cmp-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 24px;
+}
+.cmp-op {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+.cmp-name {
+  /* Reserve two lines so the internet figures align across cards. */
+  min-height: 2.6em;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  line-height: 1.3;
+}
+.cmp-name:hover { color: var(--teal-600); text-decoration: underline; }
+/* Blended-in audience hint (not a pill). Always reserves its line for alignment. */
+.cmp-group {
+  min-height: 1.1em;
+  font-size: 12px;
+  color: var(--muted);
+}
+.cmp-hero {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 2px;
+}
+.cmp-hero strong { font-size: 26px; font-weight: 700; color: var(--text); }
+.cmp-hero span { font-size: 12px; color: var(--muted); }
+/* Reserve one chip-row of height even when a card has no add-on quota, so the
+   spec row (dk / SMS / gün) sits at the same height across all cards. */
+.cmp-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  min-height: 22px;
+}
+.cmp-chip {
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  color: var(--muted);
+  background: color-mix(in srgb, var(--text) 6%, transparent);
+}
+.cmp-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 12px;
+  font-size: 13px;
+  color: var(--text);
+}
+.cmp-specs span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.cmp-specs svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--muted);
+  flex-shrink: 0;
+}
+.cmp-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+}
+.cmp-price { font-size: 18px; font-weight: 700; color: var(--text); }
+.cmp-price em { font-size: 12px; font-weight: 500; font-style: normal; color: var(--muted); margin-left: 3px; }
+.cmp-detail { font-size: 12px; font-weight: 600; color: var(--teal-600); text-decoration: none; white-space: nowrap; }
+.cmp-detail:hover { text-decoration: underline; }
 
 /* Input bar */
 .composer { padding: 8px 24px 12px; }
-.composer-inner { max-width: 760px; margin: 0 auto; }
+.composer-inner { max-width: 900px; margin: 0 auto; }
 .input-bar {
   display: flex; align-items: flex-end; gap: 10px;
   background: var(--panel);
@@ -572,6 +729,11 @@ td a.muted:hover { color: var(--teal-600); }
 }
 .popover button:hover { background: var(--panel-2); }
 .popover button.active { color: var(--teal-600); font-weight: 600; }
+.popover-label {
+  padding: 6px 12px 4px; font-size: 11px; font-weight: 600;
+  letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted);
+}
+.popover-sep { height: 1px; margin: 6px 8px; background: var(--border); }
 
 .disclaimer { text-align: center; color: var(--muted); font-size: 11.5px; margin-top: 10px; }
 .error { color: #ef4444; }
@@ -598,15 +760,32 @@ td a.muted:hover { color: var(--teal-600); }
   .bubble { max-width: 92%; }
 }
 
+/* Phones: tighten spacing and keep the composer usable on narrow screens. */
+@media (max-width: 480px) {
+  .messages { padding: 60px 14px 20px; }
+  .composer { padding: 8px 14px 12px; }
+  /* Full-width tariff cards instead of a half-empty grid track. */
+  .cmp-grid { grid-template-columns: 1fr; }
+  /* Cap the operator label so the text input keeps room to breathe. */
+  .op-toggle.set { max-width: 120px; }
+  .empty h1 { font-size: 24px; }
+  .how-it-works { padding: 16px; }
+  .samples-grid { grid-template-columns: 1fr; }
+}
+
 /* ---------- Account (sidebar footer) ---------- */
 .foot-main { display: flex; flex-direction: column; min-width: 0; flex: 1; }
-.foot-sub { font-size: 11px; color: var(--muted); }
 .foot-name.truncate {
   max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 .foot-action {
-  margin-left: auto; background: none; border: none; cursor: pointer;
-  color: var(--teal); font-size: 12px; font-weight: 600; padding: 4px 6px; border-radius: 6px;
+  margin-left: auto; display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; background: none; border: none; cursor: pointer;
+  color: var(--teal); border-radius: 8px;
+}
+.foot-action svg {
+  width: 18px; height: 18px; fill: none; stroke: currentColor;
+  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
 }
 .foot-action:hover { background: var(--teal-tint); }
 .guest-meter { font-size: 11px; color: var(--muted); }
