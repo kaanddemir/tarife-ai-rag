@@ -4,26 +4,50 @@
   "customer_type": "new",
   "source_url": "https://www.vodafone.com.tr/tarifeler/faturasiz-kolay-paketler",
   "scraped_at": "2026-07-10",
-  "package_count": 8,
+  "package_count": 7,
   "packages": [
     {
       "name": "Memlekete Hoş Geldin 40GB Paketi",
       "package_group": "welcome",
       "price_try": 300.0,
-      "price_period": "month",
+      "price_period": "90_day",
       "price_lock_months": null,
       "internet_gb": 40,
       "social_media_gb": null,
       "bonus_internet_gb": 20,
-      "total_internet_gb": 60,
       "voice_minutes": 1000,
       "sms_count": 1000,
-      "validity_value": 28,
+      "validity_value": 90,
       "validity_unit": "day",
-      "validity_days": 28,
-      "conditions": "1 Haziran 2026 tarihinden itibaren yeni hat alımlarında geçerlidir. Paketten hat aktivasyonu takip eden ilk 60 gün içerisinde bir kez faydalanabilir. Paket ücretine Telsiz Kullanım Ücreti dahil değildir. Paket içeriği 28 gün boyunca geçerlidir ve otomatik olarak yenilenemez.",
+      "validity_days": 90,
+      "conditions": "1 Haziran 2026 tarihinden itibaren TC ya da yabancı kimlik numarası ile faturasıza gelen yeni hat alan müşteriler yararlanabilir. Paketten Vodafone'a geliş tarihinden itibaren ilk 60 gün içinde bir kez faydalanılabilir. Paket ücretine Telsiz Kullanım Ücreti dahil değildir. Paket içeriği 90 gün geçerlidir; kullanılmayan haklar 90 günün sonunda silinir ve paket tekrar etmez. Son 90 gün içinde Vodafone'dan numarasını taşıyıp geri dönen aboneler yararlanamaz.",
       "campaign": "Paket 40 GB, internet paylaşımında kullanılabilen ek 20 GB, 1000 dakika ve 1000 SMS içerir.",
-      "source_url": "https://www.vodafone.com.tr/tarifeler/faturasiz-kolay-paketler"
+      "source_url": "https://www.vodafone.com.tr/turkiye-sim-kart",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "validity_value": 28,
+            "validity_days": 28,
+            "source_url": "https://www.vodafone.com.tr/tarifeler/faturasiz-kolay-paketler"
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "conditions": "1 Haziran 2026 tarihinden itibaren yeni hat alımlarında geçerlidir. Paketten hat aktivasyonu takip eden ilk 60 gün içerisinde bir kez faydalanabilir. Paket ücretine Telsiz Kullanım Ücreti dahil değildir. Paket içeriği 28 gün boyunca geçerlidir ve otomatik olarak yenilenemez."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"Paket kapsamında yüklenen içeriğin geçerlilik süresi 90 gün\" (record said 28) and \"300TL 40GB ... 20 GB yurtiçi internet paylaşım hakkı\"; new lines only, once in the first 60 days. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=one_time -- record/official: \"paket tekrar etmez\"; \"bir kez faydalanılabilir\".",
+      "activation_channels": [
+        "new_line"
+      ],
+      "benefits": [],
+      "benefits_status": "verified_none",
+      "bonus_internet_scope": "tethering_only",
+      "renewal_type": "one_time"
     },
     {
       "name": "5G Fırsat 25 GB Paketi",
@@ -34,7 +58,6 @@
       "internet_gb": 25,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 25,
       "voice_minutes": 750,
       "sms_count": 750,
       "validity_value": 28,
@@ -42,56 +65,123 @@
       "validity_days": 28,
       "conditions": "Müşteriler aktivasyonlarini takip eden 90 gun boyunca ayda en fazla 1 kez olmak uzere toplamda 3 kere tekliften yararlanabilir. 27 TL'lik telsiz ücreti dahil değildir. Numara taşıma ve yeni hat alımı için geçerlidir. Paket içeriği 28 gün boyunca geçerlidir. Tekrar etmez. Yeni hat alımlarında aktivasyon anında bir defaya mahsus olmak üzere paket ücretine ek olarak sim kart ücreti mağazalarımızdan tahsis edilecektir. 27 TL telsiz kullanım ücreti dahil değildir.",
       "campaign": null,
-      "source_url": "https://www.vodafone.com.tr/tarifeler/faturasiz-kolay-paketler"
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler/NEW/prepaid/ALL",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "source_url": "https://www.vodafone.com.tr/tarifeler/faturasiz-kolay-paketler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official prepaid listing data: candidateType NEW+MNP, 300₺, 25 GB, 750 DK, 750 SMS, \"28 gün ... Tekrar etmez\". Unchanged except the source URL. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=one_time -- record/official: \"Tekrar etmez\".",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [],
+      "benefits_status": "verified_none",
+      "renewal_type": "one_time"
     },
     {
       "name": "Memlekete Hoş Geldin 100GB Paketi",
       "package_group": "welcome",
       "price_try": 250.0,
-      "price_period": "month",
+      "price_period": "90_day",
       "price_lock_months": null,
       "internet_gb": 100,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 100,
       "voice_minutes": 1000,
       "sms_count": 1000,
       "validity_value": 90,
       "validity_unit": "day",
       "validity_days": 90,
-      "conditions": "Bu paketler sadece Adana, Adıyaman, Amasya, Antalya, Ardahan, Aydın Batman, Çorum, Denizli, Diyarbakır, Edirne, Elazığ, Gaziantep, İzmir, Kayseri, Konya, Kırşehir, Manisa, Muğla, Nevşehir, Ordu, Uşak, Yozgat'ta yapılan yeni hat aktivasyonlarında geçerlidir. 29 Haziran 2026 tarihinden itibaren yeni hat alımlarında geçerlidir. Paket içeriği 90 gün boyunca geçerlidir ve otomatik olarak yenilenmez. Yeni hat alımlarında, aktivasyon sırasında bir defaya mahsus olmak üzere paket ücretine ek olarak SIM kart ücreti tahsil edilir. Güncel SIM kart ücreti hakkında mağazalarımızdan bilgi alabilirsiniz. Paketten hat aktivasyonunu takip eden ilk 90 gün içerisinde bir kez faydalanabilir. Paket ücretine Telsiz Kullanım Ücreti dahil değildir.",
+      "conditions": "29 Haziran 2026 itibarıyla faturasıza gelen yeni hat alan müşteriler yararlanabilir. Paket yalnızca Antalya, Aydın, Edirne, İzmir, Kayseri, Konya, Muğla, Nevşehir illerine özel satışa açıktır ve sadece bayi kanalı üzerinden gerçekleşen satışlara açıktır. Paketten Vodafone'a geliş tarihinden itibaren ilk 90 gün içinde bir kez faydalanılabilir. Paket içeriği 90 gün geçerlidir. Yeni hat alımlarında SIM kart ücreti bir defaya mahsus ayrıca tahsil edilir. Paket ücretine Telsiz Kullanım Ücreti dahil değildir.",
       "campaign": null,
-      "source_url": "https://www.vodafone.com.tr/tarifeler/faturasiz-kolay-paketler"
+      "source_url": "https://www.vodafone.com.tr/turkiye-sim-kart",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "source_url": "https://www.vodafone.com.tr/tarifeler/faturasiz-kolay-paketler"
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "conditions": "Bu paketler sadece Adana, Adıyaman, Amasya, Antalya, Ardahan, Aydın Batman, Çorum, Denizli, Diyarbakır, Edirne, Elazığ, Gaziantep, İzmir, Kayseri, Konya, Kırşehir, Manisa, Muğla, Nevşehir, Ordu, Uşak, Yozgat'ta yapılan yeni hat aktivasyonlarında geçerlidir. 29 Haziran 2026 tarihinden itibaren yeni hat alımlarında geçerlidir. Paket içeriği 90 gün boyunca geçerlidir ve otomatik olarak yenilenmez. Yeni hat alımlarında, aktivasyon sırasında bir defaya mahsus olmak üzere paket ücretine ek olarak SIM kart ücreti tahsil edilir. Güncel SIM kart ücreti hakkında mağazalarımızdan bilgi alabilirsiniz. Paketten hat aktivasyonunu takip eden ilk 90 gün içerisinde bir kez faydalanabilir. Paket ücretine Telsiz Kullanım Ücreti dahil değildir."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: 250 TL, 90 days, 1000 DK + 1000 SMS, new lines only, dealer channel in 8 provinces; unchanged except the source URL (now the plan's own page). Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=one_time -- record/official: \"bir kez faydalanılabilir\" (once per line, within the first 90 days).",
+      "activation_channels": [
+        "new_line"
+      ],
+      "eligibility_tags": [
+        "dealer_only",
+        "province_restricted"
+      ],
+      "benefits": [],
+      "benefits_status": "verified_none",
+      "renewal_type": "one_time"
     },
     {
       "name": "Memlekete Hoş Geldin 80GB Paketi",
       "package_group": "welcome",
       "price_try": 250.0,
-      "price_period": "month",
+      "price_period": "90_day",
       "price_lock_months": null,
       "internet_gb": 80,
       "social_media_gb": null,
       "bonus_internet_gb": 40,
-      "total_internet_gb": 120,
       "voice_minutes": 1000,
       "sms_count": 1000,
       "validity_value": 90,
       "validity_unit": "day",
       "validity_days": 90,
-      "conditions": "Paketten hat aktivasyonunu takip eden ilk 90 gün içerisinde bir kez faydalanabilir. 29 Haziran 2026 tarihinden itibaren yeni hat alımlarında geçerlidir. Yeni hat alımlarında, aktivasyon sırasında bir defaya mahsus olmak üzere paket ücretine ek olarak SIM kart ücreti tahsil edilir. Güncel SIM kart ücreti hakkında mağazalarımızdan bilgi alabilirsiniz. Paket içeriği 90 gün boyunca geçerlidir ve otomatik olarak yenilenmez. Paket ücretine Telsiz Kullanım Ücreti dahil değildir. Bu paketler sadece Adana, Adıyaman, Amasya, Antalya, Ardahan, Aydın Batman, Çorum, Denizli, Diyarbakır, Edirne, Elazığ, Gaziantep, İzmir, Kayseri, Konya, Kırşehir, Manisa, Muğla, Nevşehir, Ordu, Uşak, Yozgat'ta yapılan yeni hat aktivasyonlarında geçerlidir.",
+      "conditions": "29 Haziran 2026 itibarıyla faturasıza gelen yeni hat alan müşteriler yararlanabilir. Paket yalnızca Antalya, Aydın, Edirne, İzmir, Kayseri, Konya, Muğla, Nevşehir illerine özel satışa açıktır ve sadece bayi kanalı üzerinden gerçekleşen satışlara açıktır. Paketten Vodafone'a geliş tarihinden itibaren ilk 90 gün içinde bir kez faydalanılabilir. Paket içeriği 90 gün geçerlidir. Yeni hat alımlarında SIM kart ücreti bir defaya mahsus ayrıca tahsil edilir. Paket ücretine Telsiz Kullanım Ücreti dahil değildir.",
       "campaign": "Paket 80 GB, internet paylaşımında kullanılabilen ek 40 GB, 1000 dakika ve 1000 SMS içerir.",
-      "source_url": "https://www.vodafone.com.tr/tarifeler/faturasiz-kolay-paketler"
+      "source_url": "https://www.vodafone.com.tr/turkiye-sim-kart",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "source_url": "https://www.vodafone.com.tr/tarifeler/faturasiz-kolay-paketler"
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "conditions": "Paketten hat aktivasyonunu takip eden ilk 90 gün içerisinde bir kez faydalanabilir. 29 Haziran 2026 tarihinden itibaren yeni hat alımlarında geçerlidir. Yeni hat alımlarında, aktivasyon sırasında bir defaya mahsus olmak üzere paket ücretine ek olarak SIM kart ücreti tahsil edilir. Güncel SIM kart ücreti hakkında mağazalarımızdan bilgi alabilirsiniz. Paket içeriği 90 gün boyunca geçerlidir ve otomatik olarak yenilenmez. Paket ücretine Telsiz Kullanım Ücreti dahil değildir. Bu paketler sadece Adana, Adıyaman, Amasya, Antalya, Ardahan, Aydın Batman, Çorum, Denizli, Diyarbakır, Edirne, Elazığ, Gaziantep, İzmir, Kayseri, Konya, Kırşehir, Manisa, Muğla, Nevşehir, Ordu, Uşak, Yozgat'ta yapılan yeni hat aktivasyonlarında geçerlidir."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: 250 TL, 90 days, 1000 DK + 1000 SMS, new lines only, dealer channel in 8 provinces; unchanged except the source URL (now the plan's own page). Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=one_time -- record/official: \"bir kez faydalanılabilir\" (once per line, within the first 90 days).",
+      "activation_channels": [
+        "new_line"
+      ],
+      "eligibility_tags": [
+        "dealer_only",
+        "province_restricted"
+      ],
+      "benefits": [],
+      "benefits_status": "verified_none",
+      "bonus_internet_scope": "tethering_only",
+      "renewal_type": "one_time"
     },
     {
       "name": "5G Fırsat 3 Ay 100 GB Paketi",
       "package_group": "freezone",
       "price_try": 300.0,
-      "price_period": "3_month",
+      "price_period": "90_day",
       "price_lock_months": null,
       "internet_gb": 100,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 100,
       "voice_minutes": 1000,
       "sms_count": 1000,
       "validity_value": 3,
@@ -99,37 +189,33 @@
       "validity_days": 90,
       "conditions": "5G Fırsat 3 Ay 100 GB Paketi kapsamında 100GB, yurt içi her yöne 1000 dakika, yurt içi her yöne 1000 SMS kullanım hakkı sahibi olurlar. Müşteri bu paketi Vodafone'a geliş tarihinden itibaren ilk 60 günde alabilir. Üzerinde 5G Fırsat 3 Ay 100 GB Paketi olan aboneler 5G Fırsat 3 Ay 50 GB Paketi'nden yararlanamazlar. 27 TL'lik telsiz kullanım ücreti dahil değildir. Bu paketten sadece TC ya da Yabancı kimlik numarası ile faturasıza gelen yeni hat alan 7-26 yaş arasındaki tüm müşteriler yararlanabileceklerdir. Paket içeriği 90 gün boyunca geçerlidir. Tekrar etmez. Yeni hat alımlarında aktivasyon anında bir defaya mahsus olmak üzere paket ücretine ek olarak sim kart ücreti mağazalarımızdan tahsis edilecektir. Kolay Paketler bakiyeye TL yüklemeden, direkt olarak nakit veya banka/kredi kartıyla alınan paketlerdir. Yeni hat alımı için geçerlidir. Yanımda uygulaması ve bayide fiyatlar satın alma tarihine göre farklılık gösterebilir.",
       "campaign": "26 yaş altı gençlere özel faturasız tarifendeki internet keyfini İKİYE KATLAYAN hediye GB, otobüs biletleri ve daha birçok markada indirim!",
-      "source_url": "https://www.vodafone.com.tr/tarifeler/faturasiz-kolay-paketler"
-    },
-    {
-      "name": "5G Fırsat 3 Ay 50 GB Paketi",
-      "package_group": "long_term",
-      "price_try": 300.0,
-      "price_period": "3_month",
-      "price_lock_months": null,
-      "internet_gb": 50,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 50,
-      "voice_minutes": 1000,
-      "sms_count": 1000,
-      "validity_value": 3,
-      "validity_unit": "month",
-      "validity_days": 90,
-      "conditions": "Müşteri bu paketi Vodafone'a geliş tarihinden itibaren ilk 60 günde alabilir. Bu paketten TC ya da Yabancı kimlik numarası ile faturasıza gelen yeni hat alan tüm müşteriler yararlanabileceklerdir. 5G Fırsat 3 Ay 50 GB Paketi kapsamında 50GB, yurt içi her yöne 1000 dakika, yurt içi her yöne 1000 SMS kullanım hakkı sahibi olurlar. Üzerinde 5G Fırsat 3 Ay 50 GB Paketi olan aboneler 5G Fırsat 3 Ay 100 GB Paketi'nden yararlanamazlar. 27 TL'lik telsiz kullanım ücreti dahil değildir. Paket içeriği 90 gün boyunca geçerlidir. Tekrar etmez. Yeni hat alımlarında aktivasyon anında bir defaya mahsus olmak üzere paket ücretine ek olarak sim kart ücreti mağazalarımızdan tahsis edilecektir. Kolay Paketler bakiyeye TL yüklemeden, direkt olarak nakit veya banka/kredi kartıyla alınan paketlerdir. Yeni hat alımı için geçerlidir. Yanımda uygulaması ve bayide fiyatlar satın alma tarihine göre farklılık gösterebilir.",
-      "campaign": "Mevsimlik tekliflerimizi kaçırma!",
-      "source_url": "https://www.vodafone.com.tr/tarifeler/faturasiz-kolay-paketler"
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler/NEW/prepaid/ALL",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "source_url": "https://www.vodafone.com.tr/tarifeler/faturasiz-kolay-paketler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official prepaid listing data: candidateType NEW only, 300₺ / 3 ay, 100 GB, 1000 DK, 1000 SMS, first 60 days only. Unchanged except the source URL. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=one_time -- record/official: \"Tekrar etmez\".",
+      "activation_channels": [
+        "new_line"
+      ],
+      "benefits": [],
+      "benefits_status": "unverified",
+      "renewal_type": "one_time"
     },
     {
       "name": "5G 3 Ay 50GB Paketi",
       "package_group": "long_term",
       "price_try": 875.0,
-      "price_period": "3_month",
+      "price_period": "90_day",
       "price_lock_months": null,
       "internet_gb": 50,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 50,
       "voice_minutes": 5000,
       "sms_count": 1000,
       "validity_value": 3,
@@ -137,18 +223,34 @@
       "validity_days": 90,
       "conditions": "27 TL'lik telsiz kullanım ücreti dahil değildir. Paket içeriği 90 gün boyunca geçerlidir. Tekrar etmez. Yeni hat alımlarında aktivasyon anında bir defaya mahsus olmak üzere paket ücretine ek olarak sim kart ücreti mağazalarımızdan tahsis edilecektir. Kolay Paketler bakiyeye TL yüklemeden, direkt olarak nakit veya banka/kredi kartıyla alınan paketlerdir. Numara taşıma ve yeni hat alımı için geçerlidir. Yanımda uygulaması ve bayide fiyatlar satın alma tarihine göre farklılık gösterebilir.",
       "campaign": "Mevsimlik tekliflerimizi kaçırma!",
-      "source_url": "https://www.vodafone.com.tr/tarifeler/faturasiz-kolay-paketler"
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler/NEW/prepaid/ALL",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "source_url": "https://www.vodafone.com.tr/tarifeler/faturasiz-kolay-paketler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official prepaid listing data: NEW and MNP variants, 875₺ / 3 ay, 50 GB, 5000 DK, 1000 SMS, 90 days. Unchanged except the source URL. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=one_time -- record/official: \"Tekrar etmez\".",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [],
+      "benefits_status": "verified_none",
+      "renewal_type": "one_time"
     },
     {
       "name": "5G 6 Ay 60GB Paketi",
       "package_group": "long_term",
       "price_try": 1400.0,
-      "price_period": "6_month",
+      "price_period": "180_day",
       "price_lock_months": null,
       "internet_gb": 60,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 60,
       "voice_minutes": 10000,
       "sms_count": 2000,
       "validity_value": 6,
@@ -156,7 +258,26 @@
       "validity_days": 180,
       "conditions": "27 TL'lik telsiz kullanım ücreti dahil değildir. Paket içeriği 180 gün boyunca geçerlidir. Tekrar etmez. Yeni hat alımlarında aktivasyon anında bir defaya mahsus olmak üzere paket ücretine ek olarak sim kart ücreti mağazalarımızdan tahsis edilecektir. Numara taşıma ve yeni hat alımı için geçerlidir. Kolay Paketler bakiyeye TL yüklemeden, direkt olarak nakit veya banka/kredi kartıyla alınan paketlerdir. Yanımda uygulaması ve bayide fiyatlar satın alma tarihine göre farklılık gösterebilir.",
       "campaign": "Mevsimlik tekliflerimizi kaçırma!",
-      "source_url": "https://www.vodafone.com.tr/tarifeler/faturasiz-kolay-paketler"
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler/NEW/prepaid/ALL",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "source_url": "https://www.vodafone.com.tr/tarifeler/faturasiz-kolay-paketler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official prepaid listing data: NEW and MNP variants, 1400₺ / 6 ay, 60 GB, 10000 DK, 2000 SMS, 180 days. Unchanged except the source URL. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=one_time -- record/official: \"Tekrar etmez\".",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [],
+      "benefits_status": "verified_none",
+      "renewal_type": "one_time"
     }
-  ]
+  ],
+  "verified_at": "2026-10-12",
+  "schema_version": 2
 }

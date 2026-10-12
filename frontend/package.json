@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/api.test.mjs tests/tariff.test.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.110.1",

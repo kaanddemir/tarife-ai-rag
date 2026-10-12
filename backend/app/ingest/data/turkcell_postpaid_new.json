@@ -4,12 +4,12 @@
   "customer_type": "new",
   "source_url": "https://www.turkcell.com.tr/turkcellli-olmak/paket-secimi?paymentType=faturali-hat",
   "scraped_at": "2026-07-10",
-  "package_count": 23,
+  "package_count": 24,
   "packages": [
     {
       "name": "5G Ultra Dijital 5 GB",
       "package_group": "digital",
-      "price_try": 350.0,
+      "price_try": 400.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -17,20 +17,94 @@
       "internet_gb": 5,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 5,
       "voice_minutes": 1000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen uygun bireysel ses hattı müşterilerine sunulur. Taahhütlü aylık fiyat sabit fiyat dönemi boyunca geçerlidir.",
-      "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-dijital-5-gb"
+      "campaign": "BiP'e özel ek 1 GB; TV+, Lifebox ve fizy'de geçerli 5'er GB internet (servisler ayrıca satın alınmalı). dergilik'te geçerli 1 GB internet.",
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-dijital-5-gb",
+      "no_commitment_price_try": 710.0,
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 350.0,
+            "no_commitment_price_try": null
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"TAAHHÜTLÜ ABONELİK 400 TL\", \"TAAHHÜTSÜZ ABONELİK 710 TL\"; allowances match. Eligibility: new line or number porting via the web channel (also prepaid-to-postpaid for 5 GB). Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "BiP'e özel ek 1 GB",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": 1
+        },
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "dergilik'te geçerli 1 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "dergilik"
+          ],
+          "amount_gb": 1,
+          "note": "Servis ücreti dahil değil."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "5G Ultra Dijital 15 GB",
       "package_group": "digital",
-      "price_try": 450.0,
+      "price_try": 500.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -38,20 +112,94 @@
       "internet_gb": 15,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 15,
       "voice_minutes": 1000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen uygun bireysel ses hattı müşterilerine sunulur. Taahhütlü aylık fiyat sabit fiyat dönemi boyunca geçerlidir.",
-      "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-dijital-15-gb"
+      "campaign": "BiP'e özel ek 1 GB; TV+, Lifebox ve fizy'de geçerli 5'er GB internet (servisler ayrıca satın alınmalı). dergilik'te geçerli 1 GB internet.",
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-dijital-15-gb",
+      "no_commitment_price_try": 930.0,
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 450.0,
+            "no_commitment_price_try": null
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"TAAHHÜTLÜ ABONELİK 500 TL\", \"TAAHHÜTSÜZ ABONELİK 930 TL\"; allowances match. Eligibility: new line or number porting via the web channel (also prepaid-to-postpaid for 5 GB). Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "BiP'e özel ek 1 GB",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": 1
+        },
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "dergilik'te geçerli 1 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "dergilik"
+          ],
+          "amount_gb": 1,
+          "note": "Servis ücreti dahil değil."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "5G Ultra Dijital 25 GB",
       "package_group": "digital",
-      "price_try": 550.0,
+      "price_try": 600.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -59,209 +207,296 @@
       "internet_gb": 25,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 25,
       "voice_minutes": 1000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen uygun bireysel ses hattı müşterilerine sunulur. Taahhütlü aylık fiyat sabit fiyat dönemi boyunca geçerlidir.",
-      "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-dijital-25-gb"
+      "campaign": "BiP'e özel ek 1 GB; TV+, Lifebox ve fizy'de geçerli 5'er GB internet (servisler ayrıca satın alınmalı). dergilik'te geçerli 1 GB internet.",
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-dijital-25-gb",
+      "no_commitment_price_try": 1100.0,
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 550.0,
+            "no_commitment_price_try": null
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"TAAHHÜTLÜ ABONELİK 600 TL\", \"TAAHHÜTSÜZ ABONELİK 1100 TL\"; allowances match. Eligibility: new line or number porting via the web channel (also prepaid-to-postpaid for 5 GB). Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "BiP'e özel ek 1 GB",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": 1
+        },
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "dergilik'te geçerli 1 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "dergilik"
+          ],
+          "amount_gb": 1,
+          "note": "Servis ücreti dahil değil."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "5G Ultra Dijital 40 GB",
       "package_group": "digital",
-      "price_try": 700.0,
+      "price_try": 720.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
       "price_lock_months": 12,
       "internet_gb": 20,
       "social_media_gb": 20,
+      "social_media_apps": [
+        "Instagram",
+        "YouTube",
+        "TikTok",
+        "Facebook",
+        "X"
+      ],
       "bonus_internet_gb": null,
-      "total_internet_gb": 40,
       "voice_minutes": 2000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen uygun bireysel ses hattı müşterilerine sunulur. Taahhütlü aylık fiyat sabit fiyat dönemi boyunca geçerlidir.",
-      "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-dijital-40-gb"
+      "campaign": "BiP'e özel ek 1 GB; TV+, Lifebox ve fizy'de geçerli 5'er GB internet (servisler ayrıca satın alınmalı).",
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-dijital-40-gb",
+      "no_commitment_price_try": 1400.0,
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 700.0,
+            "no_commitment_price_try": null
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"TAAHHÜTLÜ ABONELİK 720 TL\", \"TAAHHÜTSÜZ ABONELİK 1400 TL\"; allowances match. Eligibility: new line or number porting via the web channel (also prepaid-to-postpaid for 5 GB). Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "BiP'e özel ek 1 GB",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": 1
+        },
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
-      "name": "5G Ultra GNÇ 5 GB",
-      "package_group": "gnc",
-      "price_try": 350.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
-      "internet_gb": 5,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 5,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen, hat sahibi 26 yaşından küçük veya hat kullanıcısı 7-25 yaş arasında olan uygun müşterilere sunulur.",
-      "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-gnc-5-gb"
-    },
-    {
-      "name": "5G Ultra GNÇ 10 GB",
-      "package_group": "gnc",
-      "price_try": 400.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
-      "internet_gb": 5,
-      "social_media_gb": 5,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 10,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen, hat sahibi 26 yaşından küçük veya hat kullanıcısı 7-25 yaş arasında olan uygun müşterilere sunulur.",
-      "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-gnc-10-gb"
-    },
-    {
-      "name": "5G Ultra GNÇ 20 GB",
-      "package_group": "gnc",
-      "price_try": 500.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
-      "internet_gb": 10,
-      "social_media_gb": 10,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 20,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen, hat sahibi 26 yaşından küçük veya hat kullanıcısı 7-25 yaş arasında olan uygun müşterilere sunulur.",
-      "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-gnc-20-gb"
-    },
-    {
-      "name": "5G Ultra GNÇ 40 GB",
-      "package_group": "gnc",
-      "price_try": 700.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
-      "internet_gb": 20,
-      "social_media_gb": 20,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 40,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen, hat sahibi 26 yaşından küçük veya hat kullanıcısı 7-25 yaş arasında olan uygun müşterilere sunulur.",
-      "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-gnc-40-gb"
-    },
-    {
-      "name": "5G Ultra GNÇ 60 GB",
-      "package_group": "gnc",
-      "price_try": 800.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
-      "internet_gb": 30,
-      "social_media_gb": 30,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 60,
-      "voice_minutes": 2000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen, hat sahibi 26 yaşından küçük veya hat kullanıcısı 7-25 yaş arasında olan uygun müşterilere sunulur.",
-      "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-gnc-60-gb"
-    },
-    {
-      "name": "5G Ultra GNÇ 90 GB",
-      "package_group": "gnc",
+      "name": "5G Ultra Dijital Platinum 60 GB",
+      "package_group": "platinum",
       "price_try": 900.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
       "price_lock_months": 12,
-      "internet_gb": 45,
-      "social_media_gb": 45,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 90,
-      "voice_minutes": 2000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen, hat sahibi 26 yaşından küçük veya hat kullanıcısı 7-25 yaş arasında olan uygun müşterilere sunulur.",
-      "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-gnc-90-gb"
-    },
-    {
-      "name": "5G Ultra GNÇ 120GB",
-      "package_group": "gnc",
-      "price_try": 1000.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
-      "internet_gb": 60,
-      "social_media_gb": 60,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 120,
-      "voice_minutes": 2000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen, hat sahibi 26 yaşından küçük veya hat kullanıcısı 7-25 yaş arasında olan uygun müşterilere sunulur.",
-      "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-gnc-120gb"
-    },
-    {
-      "name": "5G Ultra Dijital Platinum 60 GB",
-      "package_group": "platinum",
-      "price_try": 850.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
       "internet_gb": 30,
       "social_media_gb": 30,
       "bonus_internet_gb": null,
-      "total_internet_gb": 60,
       "voice_minutes": 5000,
       "sms_count": 500,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen uygun bireysel müşterilere sunulan Platinum özel tarifedir.",
-      "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-dijital-platinum-60-gb"
+      "campaign": "Platinum ayrıcalıkları, her fatura döneminde 5 gün ücretsiz Tarifen Yurt Dışında Geçerli, BiP ve WhatsApp'ta sınırsız mesajlaşma, Salla Kazan haftalık GB hakkı.",
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-dijital-platinum-60-gb",
+      "no_commitment_price_try": 1630.0,
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 850.0,
+            "no_commitment_price_try": null
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"TAAHHÜTLÜ ABONELİK 900 TL\", \"TAAHHÜTSÜZ ABONELİK 1630 TL\"; GB / social GB / 5000 DK match. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "social_media_apps": [
+        "Instagram",
+        "YouTube",
+        "TikTok",
+        "Facebook",
+        "X"
+      ],
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP ve WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "BiP",
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Sesli/görüntülü görüşme dahil değil."
+        },
+        {
+          "category": "roaming",
+          "service": "Tarifen Yurt Dışında Geçerli: her fatura döneminde 5 gün ücretsiz",
+          "offer": "included"
+        },
+        {
+          "category": "service",
+          "service": "Platinum ayrıcalıkları (Platinum Müşteri Hizmetleri, Platinum uygulaması)",
+          "offer": "included"
+        },
+        {
+          "category": "bonus_data",
+          "service": "Salla Kazan haftalık GB sallama hakkı",
+          "offer": "included",
+          "note": "Her hafta GB garantili sallama hakkı; miktar sayfada sabit değil."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "5G Ultra Dijital Platinum 100GB",
       "package_group": "platinum",
-      "price_try": 1000.0,
+      "price_try": 1100.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -269,20 +504,109 @@
       "internet_gb": 50,
       "social_media_gb": 50,
       "bonus_internet_gb": null,
-      "total_internet_gb": 100,
       "voice_minutes": 5000,
       "sms_count": 500,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen uygun bireysel müşterilere sunulan Platinum özel tarifedir.",
-      "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-dijital-platinum-100gb"
+      "campaign": "Platinum ayrıcalıkları, her fatura döneminde 5 gün ücretsiz Tarifen Yurt Dışında Geçerli, BiP ve WhatsApp'ta sınırsız mesajlaşma, Salla Kazan haftalık GB hakkı.",
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-dijital-platinum-100gb",
+      "no_commitment_price_try": 2800.0,
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 1000.0,
+            "no_commitment_price_try": null
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"TAAHHÜTLÜ ABONELİK 1100 TL\", \"TAAHHÜTSÜZ ABONELİK 2800 TL\"; GB / social GB / 5000 DK match. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "social_media_apps": [
+        "Instagram",
+        "YouTube",
+        "TikTok",
+        "Facebook",
+        "X"
+      ],
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP ve WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "BiP",
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Sesli/görüntülü görüşme dahil değil."
+        },
+        {
+          "category": "roaming",
+          "service": "Tarifen Yurt Dışında Geçerli: her fatura döneminde 5 gün ücretsiz",
+          "offer": "included"
+        },
+        {
+          "category": "service",
+          "service": "Platinum ayrıcalıkları (Platinum Müşteri Hizmetleri, Platinum uygulaması)",
+          "offer": "included"
+        },
+        {
+          "category": "bonus_data",
+          "service": "Salla Kazan haftalık GB sallama hakkı",
+          "offer": "included",
+          "note": "Her hafta GB garantili sallama hakkı; miktar sayfada sabit değil."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "5G Ultra Platinum Black 120 GB",
       "package_group": "platinum_black",
-      "price_try": 1250.0,
+      "price_try": 1450.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -290,104 +614,109 @@
       "internet_gb": 60,
       "social_media_gb": 60,
       "bonus_internet_gb": null,
-      "total_internet_gb": 120,
       "voice_minutes": 5000,
       "sms_count": 500,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen uygun bireysel müşterilere sunulan Platinum özel tarifedir.",
-      "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-platinum-black-120-gb"
-    },
-    {
-      "name": "Turkcell Yapboz Small",
-      "package_group": "customizable",
-      "price_try": 300.0,
-      "price_period": "month",
-      "commitment_months": null,
-      "commitment_status": "no_commitment",
-      "price_lock_months": 6,
-      "internet_gb": 8,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 8,
-      "voice_minutes": 500,
-      "sms_count": null,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni Turkcell müşterilerine sunulan, paket içeriğinin sonradan değiştirilebildiği faturalı Yapboz teklifidir.",
-      "campaign": "6 fatura dönemi sabit fiyat garantisi.",
-      "source_url": "https://www.turkcell.com.tr/kampanyalar/mobil-hat-data-hatti-kampanyalari/yeni-turkcell-musterisi/yap-boz-small"
-    },
-    {
-      "name": "Turkcell Yapboz Medium",
-      "package_group": "customizable",
-      "price_try": 390.0,
-      "price_period": "month",
-      "commitment_months": null,
-      "commitment_status": "no_commitment",
-      "price_lock_months": 6,
-      "internet_gb": 12,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 12,
-      "voice_minutes": 500,
-      "sms_count": null,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni Turkcell müşterilerine sunulan, paket içeriğinin sonradan değiştirilebildiği faturalı Yapboz teklifidir.",
-      "campaign": "6 fatura dönemi sabit fiyat garantisi.",
-      "source_url": "https://www.turkcell.com.tr/kampanyalar/mobil-hat-data-hatti-kampanyalari/yeni-turkcell-musterisi/yap-boz-medium"
-    },
-    {
-      "name": "Turkcell Yapboz Large",
-      "package_group": "customizable",
-      "price_try": 510.0,
-      "price_period": "month",
-      "commitment_months": null,
-      "commitment_status": "no_commitment",
-      "price_lock_months": 6,
-      "internet_gb": 20,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 20,
-      "voice_minutes": 500,
-      "sms_count": null,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni Turkcell müşterilerine sunulan, paket içeriğinin sonradan değiştirilebildiği faturalı Yapboz teklifidir.",
-      "campaign": "6 fatura dönemi sabit fiyat garantisi.",
-      "source_url": "https://www.turkcell.com.tr/kampanyalar/mobil-hat-data-hatti-kampanyalari/yeni-turkcell-musterisi/yap-boz-large"
-    },
-    {
-      "name": "5G İlk Turkcellim 1 GB",
-      "package_group": "first_turkcell",
-      "price_try": 240.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
-      "internet_gb": 1,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 1,
-      "voice_minutes": 500,
-      "sms_count": 500,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen, hat kullanıcısı 7-15 yaş arasında olan uygun müşterilere sunulur. Hat sahibi ile kullanıcının ebeveynlik koşulları geçerlidir.",
-      "campaign": "300 TL Biletinial hediye çeki; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ilk-turkcellim-1-gb"
+      "campaign": "Platinum ayrıcalıkları, her fatura döneminde 5 gün ücretsiz Tarifen Yurt Dışında Geçerli, BiP ve WhatsApp'ta sınırsız mesajlaşma, Salla Kazan haftalık GB hakkı.",
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-platinum-black-120-gb",
+      "no_commitment_price_try": 2150.0,
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 1250.0,
+            "no_commitment_price_try": null
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "12 ay boyunca her ay sosyal medyada geçerli 5 GB hediye internet."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"TAAHHÜTLÜ ABONELİK 1450 TL\", \"TAAHHÜTSÜZ ABONELİK 2150 TL\"; GB / social GB / 5000 DK match. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "social_media_apps": [
+        "Instagram",
+        "YouTube",
+        "TikTok",
+        "Facebook",
+        "X"
+      ],
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP ve WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "BiP",
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Sesli/görüntülü görüşme dahil değil."
+        },
+        {
+          "category": "roaming",
+          "service": "Tarifen Yurt Dışında Geçerli: her fatura döneminde 5 gün ücretsiz",
+          "offer": "included"
+        },
+        {
+          "category": "service",
+          "service": "Platinum ayrıcalıkları (Platinum Müşteri Hizmetleri, Platinum uygulaması)",
+          "offer": "included"
+        },
+        {
+          "category": "bonus_data",
+          "service": "Salla Kazan haftalık GB sallama hakkı",
+          "offer": "included",
+          "note": "Her hafta GB garantili sallama hakkı; miktar sayfada sabit değil."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "5G İlk Turkcellim 6 GB",
       "package_group": "first_turkcell",
-      "price_try": 300.0,
+      "price_try": 350.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -395,20 +724,86 @@
       "internet_gb": 6,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 6,
       "voice_minutes": 500,
       "sms_count": 500,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen, hat kullanıcısı 7-15 yaş arasında olan uygun müşterilere sunulur. Hat sahibi ile kullanıcının ebeveynlik koşulları geçerlidir.",
-      "campaign": "300 TL Biletinial hediye çeki; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ilk-turkcellim-6-gb"
+      "campaign": "BiP ve WhatsApp'ta sınırsız mesajlaşma; TV+, Lifebox ve fizy'de geçerli 5'er GB internet (servisler ayrıca satın alınmalı).",
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ilk-turkcellim-6-gb",
+      "no_commitment_price_try": 650.0,
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 300.0,
+            "no_commitment_price_try": null
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "300 TL Biletinial hediye çeki; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"TAAHHÜTLÜ ABONELİK 350 TL\", \"TAAHHÜTSÜZ ABONELİK 650 TL\"; allowances and 7-15 age rule match (new line or number porting). Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP ve WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "BiP",
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Sesli/görüntülü görüşme dahil değil."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "5G İlk Turkcellim 12 GB",
       "package_group": "first_turkcell",
-      "price_try": 360.0,
+      "price_try": 400.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -416,20 +811,86 @@
       "internet_gb": 12,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 12,
       "voice_minutes": 500,
       "sms_count": 500,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen, hat kullanıcısı 7-15 yaş arasında olan uygun müşterilere sunulur. Hat sahibi ile kullanıcının ebeveynlik koşulları geçerlidir.",
-      "campaign": "300 TL Biletinial hediye çeki; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ilk-turkcellim-12-gb"
+      "campaign": "BiP ve WhatsApp'ta sınırsız mesajlaşma; TV+, Lifebox ve fizy'de geçerli 5'er GB internet (servisler ayrıca satın alınmalı).",
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ilk-turkcellim-12-gb",
+      "no_commitment_price_try": 760.0,
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 360.0,
+            "no_commitment_price_try": null
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "300 TL Biletinial hediye çeki; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"TAAHHÜTLÜ ABONELİK 400 TL\", \"TAAHHÜTSÜZ ABONELİK 760 TL\"; allowances and 7-15 age rule match (new line or number porting). Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP ve WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "BiP",
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Sesli/görüntülü görüşme dahil değil."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "5G İlk Turkcellim 18 GB",
       "package_group": "first_turkcell",
-      "price_try": 420.0,
+      "price_try": 475.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -437,20 +898,86 @@
       "internet_gb": 18,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 18,
       "voice_minutes": 1000,
       "sms_count": 1000,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen, hat kullanıcısı 7-15 yaş arasında olan uygun müşterilere sunulur. Hat sahibi ile kullanıcının ebeveynlik koşulları geçerlidir.",
-      "campaign": "300 TL Biletinial hediye çeki; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ilk-turkcellim-18-gb"
+      "campaign": "BiP ve WhatsApp'ta sınırsız mesajlaşma; TV+, Lifebox ve fizy'de geçerli 5'er GB internet (servisler ayrıca satın alınmalı).",
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ilk-turkcellim-18-gb",
+      "no_commitment_price_try": 850.0,
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 420.0,
+            "no_commitment_price_try": null
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "300 TL Biletinial hediye çeki; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"TAAHHÜTLÜ ABONELİK 475 TL\", \"TAAHHÜTSÜZ ABONELİK 850 TL\"; allowances and 7-15 age rule match (new line or number porting). Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP ve WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "BiP",
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Sesli/görüntülü görüşme dahil değil."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "5G İlk Turkcellim 24 GB",
       "package_group": "first_turkcell",
-      "price_try": 500.0,
+      "price_try": 550.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -458,20 +985,86 @@
       "internet_gb": 24,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 24,
       "voice_minutes": 1000,
       "sms_count": 1000,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen, hat kullanıcısı 7-15 yaş arasında olan uygun müşterilere sunulur. Hat sahibi ile kullanıcının ebeveynlik koşulları geçerlidir.",
-      "campaign": "300 TL Biletinial hediye çeki; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ilk-turkcellim-24-gb"
+      "campaign": "BiP ve WhatsApp'ta sınırsız mesajlaşma; TV+, Lifebox ve fizy'de geçerli 5'er GB internet (servisler ayrıca satın alınmalı).",
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ilk-turkcellim-24-gb",
+      "no_commitment_price_try": 1000.0,
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 500.0,
+            "no_commitment_price_try": null
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "300 TL Biletinial hediye çeki; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"TAAHHÜTLÜ ABONELİK 550 TL\", \"TAAHHÜTSÜZ ABONELİK 1000 TL\"; allowances and 7-15 age rule match (new line or number porting). Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP ve WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "BiP",
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Sesli/görüntülü görüşme dahil değil."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "5G İlk Turkcellim 48 GB",
       "package_group": "first_turkcell",
-      "price_try": 600.0,
+      "price_try": 700.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -479,15 +1072,1104 @@
       "internet_gb": 48,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 48,
       "voice_minutes": 1000,
       "sms_count": 1000,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Yeni hat veya numara taşıma ile Turkcell Faturalı'ya gelen, hat kullanıcısı 7-15 yaş arasında olan uygun müşterilere sunulur. Hat sahibi ile kullanıcının ebeveynlik koşulları geçerlidir.",
-      "campaign": "300 TL Biletinial hediye çeki; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları.",
-      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ilk-turkcellim-48-gb"
+      "campaign": "BiP ve WhatsApp'ta sınırsız mesajlaşma; TV+, Lifebox ve fizy'de geçerli 5'er GB internet (servisler ayrıca satın alınmalı).",
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ilk-turkcellim-48-gb",
+      "no_commitment_price_try": 1200.0,
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 600.0,
+            "no_commitment_price_try": null
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "300 TL Biletinial hediye çeki; BiP ve WhatsApp'ta sınırsız mesajlaşma ile seçili Turkcell uygulamalarına özel internet faydaları."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"TAAHHÜTLÜ ABONELİK 700 TL\", \"TAAHHÜTSÜZ ABONELİK 1200 TL\"; allowances and 7-15 age rule match (new line or number porting). Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP ve WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "BiP",
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Sesli/görüntülü görüşme dahil değil."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G Ultra 5 GB",
+      "package_group": "standard",
+      "price_try": 450.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 820.0,
+      "internet_gb": 5,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 3000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Son 90 gün içinde yeni hat alımı, numara taşıma veya Turkcell Faturasız'dan ödeme tipi değişikliği yaparak Turkcell Faturalı'ya gelen bireysel ses hattı abonelerine sunulur. 12 fatura dönemi taahhütlüdür.",
+      "campaign": null,
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-5-gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing. Page: 5 GB, 3.000 DK, 250 SMS; \"TAAHHÜTLÜ ABONELİK 450 TL\", \"TAAHHÜTSÜZ ABONELİK 820 TL\"; eligibility: new line, number porting or prepaid-to-postpaid switch. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "BiP'e özel ek 1 GB",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": 1
+        },
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "price_lock_months": null
+          }
+        }
+      ],
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G Ultra 10 GB",
+      "package_group": "standard",
+      "price_try": 550.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 980.0,
+      "internet_gb": 10,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 3000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Son 90 gün içinde yeni hat alımı, numara taşıma veya Turkcell Faturasız'dan ödeme tipi değişikliği yaparak Turkcell Faturalı'ya gelen bireysel ses hattı abonelerine sunulur. 12 fatura dönemi taahhütlüdür.",
+      "campaign": null,
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-10-gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing. Page: 10 GB, 3.000 DK, 250 SMS; \"TAAHHÜTLÜ ABONELİK 550 TL\", \"TAAHHÜTSÜZ ABONELİK 980 TL\"; eligibility: new line, number porting or prepaid-to-postpaid switch. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "BiP'e özel ek 1 GB",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": 1
+        },
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "price_lock_months": null
+          }
+        }
+      ],
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G Ultra 20 GB",
+      "package_group": "standard",
+      "price_try": 700.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 1200.0,
+      "internet_gb": 20,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 3000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Son 90 gün içinde yeni hat alımı, numara taşıma veya Turkcell Faturasız'dan ödeme tipi değişikliği yaparak Turkcell Faturalı'ya gelen bireysel ses hattı abonelerine sunulur. 12 fatura dönemi taahhütlüdür.",
+      "campaign": null,
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-20-gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing. Page: 20 GB, 3.000 DK, 250 SMS; \"TAAHHÜTLÜ ABONELİK 700 TL\", \"TAAHHÜTSÜZ ABONELİK 1200 TL\"; eligibility: new line, number porting or prepaid-to-postpaid switch. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "BiP'e özel ek 1 GB",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": 1
+        },
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "price_lock_months": null
+          }
+        }
+      ],
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G Ultra 30 GB",
+      "package_group": "standard",
+      "price_try": 800.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 1400.0,
+      "internet_gb": 30,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 3000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Son 90 gün içinde yeni hat alımı, numara taşıma veya Turkcell Faturasız'dan ödeme tipi değişikliği yaparak Turkcell Faturalı'ya gelen bireysel ses hattı abonelerine sunulur. 12 fatura dönemi taahhütlüdür.",
+      "campaign": null,
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-30-gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing. Page: 30 GB, 3.000 DK, 250 SMS; \"TAAHHÜTLÜ ABONELİK 800 TL\", \"TAAHHÜTSÜZ ABONELİK 1400 TL\"; eligibility: new line, number porting or prepaid-to-postpaid switch. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "BiP'e özel ek 1 GB",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": 1
+        },
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "price_lock_months": null
+          }
+        }
+      ],
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G Ultra Platinum 50 GB",
+      "package_group": "platinum",
+      "price_try": 950.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 1650.0,
+      "internet_gb": 50,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 5000,
+      "sms_count": 500,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Son 90 gün içinde yeni hat alımı, numara taşıma veya Turkcell Faturasız'dan ödeme tipi değişikliği yaparak Turkcell Faturalı'ya gelen bireysel ses hattı abonelerine sunulur. 12 fatura dönemi taahhütlüdür. Platinum özel tarifedir.",
+      "campaign": null,
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-ultra-platinum-50-gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing (Platinum). Page: 50 GB, 5.000 DK, 500 SMS; \"TAAHHÜTLÜ ABONELİK 950 TL\", \"TAAHHÜTSÜZ ABONELİK 1.650 TL\"; new line, number porting or prepaid-to-postpaid switch. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "bonus_data",
+          "service": "Yeni tesise aylık hediye 10 GB",
+          "offer": "included",
+          "amount_gb": 10,
+          "duration_months": 12,
+          "eligibility": "new_line_only"
+        },
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "roaming",
+          "service": "Tarifen Yurt Dışında Geçerli: her fatura döneminde 5 gün ücretsiz",
+          "offer": "included"
+        },
+        {
+          "category": "service",
+          "service": "Platinum ayrıcalıkları (Platinum Müşteri Hizmetleri, Platinum uygulaması)",
+          "offer": "included"
+        },
+        {
+          "category": "bonus_data",
+          "service": "Salla Kazan haftalık GB sallama hakkı",
+          "offer": "included",
+          "note": "Her hafta GB garantili sallama hakkı; miktar sayfada sabit değil."
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "price_lock_months": null
+          }
+        }
+      ],
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G GNÇ Avantaj 5 GB",
+      "package_group": "gnc",
+      "price_try": 400.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 710.0,
+      "internet_gb": 5,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "age_min": 7,
+      "age_max": 28,
+      "conditions": "Yeni hat alımı veya numara taşıma ile Turkcell Faturalı'ya gelen, hat sahibi 29 yaşından küçük veya hat kullanıcısı 7-29 yaş (7 dahil) arasında olan bireysel faturalı ses hattı müşterilerine sunulur. 12 fatura dönemi taahhütlüdür.",
+      "campaign": null,
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-gnc-avantaj-5-gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing (GNÇ, \"7-28 Yaş\"). Page: 5 GB, 1000 DK, 250 SMS; \"TAAHHÜTLÜ ABONELİK 400 TL\", \"TAAHHÜTSÜZ ABONELİK 710 TL\"; eligibility from 6.10.2026: line owner under 29 or line user aged 7-29, new line or number porting. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP ve WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "BiP",
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Sesli/görüntülü görüşme dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "1 sinema bileti alana 1 sinema bileti hediye",
+          "offer": "included",
+          "note": "Ayrı kampanya koşulları geçerli."
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "price_lock_months": null
+          }
+        }
+      ],
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G GNÇ Avantaj 10 GB",
+      "package_group": "gnc",
+      "price_try": 450.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 820.0,
+      "internet_gb": 10,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "age_min": 7,
+      "age_max": 28,
+      "conditions": "Yeni hat alımı veya numara taşıma ile Turkcell Faturalı'ya gelen, hat sahibi 29 yaşından küçük veya hat kullanıcısı 7-29 yaş (7 dahil) arasında olan bireysel faturalı ses hattı müşterilerine sunulur. 12 fatura dönemi taahhütlüdür.",
+      "campaign": null,
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-gnc-avantaj-10-gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing (GNÇ, \"7-28 Yaş\"). Page: 10 GB, 1000 DK, 250 SMS; \"TAAHHÜTLÜ ABONELİK 450 TL\", \"TAAHHÜTSÜZ ABONELİK 820 TL\"; eligibility from 6.10.2026: line owner under 29 or line user aged 7-29, new line or number porting. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP ve WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "BiP",
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Sesli/görüntülü görüşme dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "1 sinema bileti alana 1 sinema bileti hediye",
+          "offer": "included",
+          "note": "Ayrı kampanya koşulları geçerli."
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "price_lock_months": null
+          }
+        }
+      ],
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G GNÇ Avantaj 20 GB",
+      "package_group": "gnc",
+      "price_try": 550.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 1000.0,
+      "internet_gb": 20,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "age_min": 7,
+      "age_max": 28,
+      "conditions": "Yeni hat alımı veya numara taşıma ile Turkcell Faturalı'ya gelen, hat sahibi 29 yaşından küçük veya hat kullanıcısı 7-29 yaş (7 dahil) arasında olan bireysel faturalı ses hattı müşterilerine sunulur. 12 fatura dönemi taahhütlüdür.",
+      "campaign": null,
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-gnc-avantaj-20-gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing (GNÇ, \"7-28 Yaş\"). Page: 20 GB, 1000 DK, 250 SMS; \"TAAHHÜTLÜ ABONELİK 550 TL\", \"TAAHHÜTSÜZ ABONELİK 1000 TL\"; eligibility from 6.10.2026: line owner under 29 or line user aged 7-29, new line or number porting. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP ve WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "BiP",
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Sesli/görüntülü görüşme dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "1 sinema bileti alana 1 sinema bileti hediye",
+          "offer": "included",
+          "note": "Ayrı kampanya koşulları geçerli."
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "price_lock_months": null
+          }
+        }
+      ],
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G GNÇ Avantaj 40 GB",
+      "package_group": "gnc",
+      "price_try": 800.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 1400.0,
+      "internet_gb": 40,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "age_min": 7,
+      "age_max": 28,
+      "conditions": "Yeni hat alımı veya numara taşıma ile Turkcell Faturalı'ya gelen, hat sahibi 29 yaşından küçük veya hat kullanıcısı 7-29 yaş (7 dahil) arasında olan bireysel faturalı ses hattı müşterilerine sunulur. 12 fatura dönemi taahhütlüdür.",
+      "campaign": null,
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-gnc-avantaj-40-gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing (GNÇ, \"7-28 Yaş\"). Page: 40 GB, 1000 DK, 250 SMS; \"TAAHHÜTLÜ ABONELİK 800 TL\", \"TAAHHÜTSÜZ ABONELİK 1400 TL\"; eligibility from 6.10.2026: line owner under 29 or line user aged 7-29, new line or number porting. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP ve WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "BiP",
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Sesli/görüntülü görüşme dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "1 sinema bileti alana 1 sinema bileti hediye",
+          "offer": "included",
+          "note": "Ayrı kampanya koşulları geçerli."
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "price_lock_months": null
+          }
+        }
+      ],
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G GNÇ Avantaj 60 GB",
+      "package_group": "gnc",
+      "price_try": 950.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 1550.0,
+      "internet_gb": 60,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 2000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "age_min": 7,
+      "age_max": 28,
+      "conditions": "Yeni hat alımı veya numara taşıma ile Turkcell Faturalı'ya gelen, hat sahibi 29 yaşından küçük veya hat kullanıcısı 7-29 yaş (7 dahil) arasında olan bireysel faturalı ses hattı müşterilerine sunulur. 12 fatura dönemi taahhütlüdür.",
+      "campaign": null,
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-gnc-avantaj-60-gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing (GNÇ, \"7-28 Yaş\"). Page: 60 GB, 2000 DK, 250 SMS; \"TAAHHÜTLÜ ABONELİK 950 TL\", \"TAAHHÜTSÜZ ABONELİK 1550 TL\"; eligibility from 6.10.2026: line owner under 29 or line user aged 7-29, new line or number porting. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP ve WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "BiP",
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Sesli/görüntülü görüşme dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "1 sinema bileti alana 1 sinema bileti hediye",
+          "offer": "included",
+          "note": "Ayrı kampanya koşulları geçerli."
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "price_lock_months": null
+          }
+        }
+      ],
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G GNÇ Avantaj 90 GB",
+      "package_group": "gnc",
+      "price_try": 1050.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 1700.0,
+      "internet_gb": 90,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 2000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "age_min": 7,
+      "age_max": 28,
+      "conditions": "Yeni hat alımı veya numara taşıma ile Turkcell Faturalı'ya gelen, hat sahibi 29 yaşından küçük veya hat kullanıcısı 7-29 yaş (7 dahil) arasında olan bireysel faturalı ses hattı müşterilerine sunulur. 12 fatura dönemi taahhütlüdür.",
+      "campaign": null,
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-gnc-avantaj-90-gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing (GNÇ, \"7-28 Yaş\"). Page: 90 GB, 2000 DK, 250 SMS; \"TAAHHÜTLÜ ABONELİK 1050 TL\", \"TAAHHÜTSÜZ ABONELİK 1700 TL\"; eligibility from 6.10.2026: line owner under 29 or line user aged 7-29, new line or number porting. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP ve WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "BiP",
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Sesli/görüntülü görüşme dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "1 sinema bileti alana 1 sinema bileti hediye",
+          "offer": "included",
+          "note": "Ayrı kampanya koşulları geçerli."
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "price_lock_months": null
+          }
+        }
+      ],
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G GNÇ Avantaj 120 GB",
+      "package_group": "gnc",
+      "price_try": 1200.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 2800.0,
+      "internet_gb": 120,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 2000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "age_min": 7,
+      "age_max": 28,
+      "conditions": "Yeni hat alımı veya numara taşıma ile Turkcell Faturalı'ya gelen, hat sahibi 29 yaşından küçük veya hat kullanıcısı 7-29 yaş (7 dahil) arasında olan bireysel faturalı ses hattı müşterilerine sunulur. 12 fatura dönemi taahhütlüdür.",
+      "campaign": null,
+      "source_url": "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri-paketleri/5g-gnc-avantaj-120-gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing (GNÇ, \"7-28 Yaş\"). Page: 120 GB, 2000 DK, 250 SMS; \"TAAHHÜTLÜ ABONELİK 1200 TL\", \"TAAHHÜTSÜZ ABONELİK 2800 TL\"; eligibility from 6.10.2026: line owner under 29 or line user aged 7-29, new line or number porting. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "fizy'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "fizy"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "TV+'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "TV+"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "Lifebox'e özel 5 GB",
+          "offer": "requires_purchase",
+          "apps": [
+            "Lifebox"
+          ],
+          "amount_gb": 5,
+          "note": "Servis ücreti dahil değil; internet hakkı servis satın alındıktan sonra kullanılabilir."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP ve WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "BiP",
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Sesli/görüntülü görüşme dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "1 sinema bileti alana 1 sinema bileti hediye",
+          "offer": "included",
+          "note": "Ayrı kampanya koşulları geçerli."
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "price_lock_months": null
+          }
+        }
+      ],
+      "renewal_type": "recurring"
     }
-  ]
+  ],
+  "verified_at": "2026-10-12",
+  "schema_version": 2
 }

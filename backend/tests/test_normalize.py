@@ -1,6 +1,7 @@
 import pytest
 
 from app.ingest.normalize import (
+    benefit_tags,
     build_doc_text,
     normalize_record,
     parse_amount,
@@ -66,7 +67,7 @@ def test_normalize_record_keeps_line_and_customer_type_from_input():
     assert out["line_type"] == "postpaid"
     assert out["customer_type"] == "new"
     assert "faturali paketi" in out["doc_text"]
-    assert "yeni musteri" in out["doc_text"]
+    assert "yeni gelen musterilere ozel" in out["doc_text"]
 
 
 @pytest.mark.parametrize(
@@ -110,16 +111,16 @@ def test_build_doc_text_labels_postpaid_and_omits_missing_validity():
 
 def test_build_doc_text_renders_unlimited_gb_not_minus_one():
     doc = build_doc_text(
-        _typed(line_type="postpaid", customer_type="new", internet_gb=-1, total_internet_gb=-1)
+        _typed(line_type="postpaid", customer_type="new", internet_gb=-1)
     )
-    assert "sinirsiz internet" in doc
+    assert "sinirsiz genel internet" in doc
     assert "-1" not in doc
 
 
 def test_build_doc_text_renders_unlimited_social_as_a_sentence():
     """Because social_media_gb=-1 is truthy, it used to write '-1 GB'i sosyal medya'."""
     doc = build_doc_text(_typed(line_type="postpaid", customer_type="new", social_media_gb=-1))
-    assert "Sosyal medya (TikTok, Instagram, YouTube vb.) kullanimi sinirsizdir." in doc
+    assert "Sosyal medya (TikTok, Instagram, YouTube vb.) kullanimi sinirsizdir; bu genel internet degildir." in doc
     assert "-1 GB" not in doc
 
 
@@ -166,12 +167,9 @@ def test_prepaid_eligibility_tags_are_derived_deterministically():
             )
         )
     )
-    assert out["eligibility_tags"] == [
-        "new_line",
-        "number_porting",
-        "online_only",
-        "province_restricted",
-    ]
+    # Channels go to activation_channels, never into eligibility_tags.
+    assert out["eligibility_tags"] == ["online_only", "province_restricted"]
+    assert out["activation_channels"] == ["new_line", "number_porting"]
 
 
 def test_prepaid_operational_eligibility_tags_are_derived_from_source_text():
@@ -184,13 +182,8 @@ def test_prepaid_operational_eligibility_tags_are_derived_from_source_text():
             )
         )
     )
-    assert out["eligibility_tags"] == [
-        "activation_window",
-        "age_restricted",
-        "identity_required",
-        "new_line",
-        "province_restricted",
-    ]
+    # Age lives in age_min/age_max and the channel in activation_channels.
+    assert out["eligibility_tags"] == ["activation_window", "identity_required", "province_restricted"]
 
 
 def test_prepaid_shared_benefits_are_derived_from_fields_and_campaign_text():
@@ -199,10 +192,9 @@ def test_prepaid_shared_benefits_are_derived_from_fields_and_campaign_text():
             validity_value=3,
             validity_unit="month",
             validity_days=90,
-            price_period="3_month",
+            price_period="90_day",
             price_lock_months=12,
             bonus_internet_gb=5,
-            total_internet_gb=25,
             campaign=(
                 "Sınırsız WhatsApp mesajlaşma, Türk Telekomlularla sınırsız konuşma, "
                 "BiP'te geçerli 1 GB, Bi' Dünya Fırsat, 24 saatte teslimat ve "
@@ -210,7 +202,7 @@ def test_prepaid_shared_benefits_are_derived_from_fields_and_campaign_text():
             ),
         )
     )
-    assert out["benefit_tags"] == [
+    assert benefit_tags(out) == [  # legacy record (no benefits_status): text rules
         "app_specific_data",
         "bonus_data",
         "data_sharing",
@@ -233,7 +225,6 @@ def test_postpaid_common_benefits_are_derived_from_quota_and_campaign():
             package_group="family_prime",
             commitment_months=12,
             internet_gb="sınırsız",
-            total_internet_gb="sınırsız",
             voice_minutes="sınırsız",
             sms_count="sınırsız",
             conditions="Tarife aşımsızdır.",
@@ -243,7 +234,7 @@ def test_postpaid_common_benefits_are_derived_from_quota_and_campaign():
             ),
         )
     )
-    assert out["benefit_tags"] == [
+    assert benefit_tags(out) == [
         "5g_ready",
         "bonus_data",
         "overage_protection",
@@ -267,10 +258,7 @@ def test_postpaid_taxonomy_and_parent_requirement_add_eligibility_tags():
             conditions="Hat sahibi ile kullanıcının ebeveynlik koşulları geçerlidir.",
         )
     )
-    assert out["eligibility_tags"] == [
-        "age_restricted",
-        "parental_relationship_required",
-    ]
+    assert out["eligibility_tags"] == ["parental_relationship_required"]
 
 
 def test_build_doc_text_includes_campaign():
@@ -332,7 +320,13 @@ def test_non_mobile_product_is_rejected_for_rag_catalog():
         )
 
 
-def test_canonical_id_is_stable_across_cosmetic_name_changes():
-    first = normalize_record(_rec(name="Eski Paket Adı", package_group="standard"))
-    renamed = normalize_record(_rec(name="Yeni Paket Adı", package_group="standard"))
-    assert first["canonical_id"] == renamed["canonical_id"]
+def test_id_survives_price_and_allowance_changes_and_canonical_id_is_gone():
+    """`id` (uuid5 of operator|line_type|name) is the only identity: a repricing or a GB
+    change keeps it. The old canonical_id fingerprint changed in exactly those cases."""
+    from app.ingest.load import package_id
+    before = normalize_record(_rec(name="Paket 20 GB", price_try=200.0))
+    after = normalize_record(_rec(name="Paket 20 GB", price_try=250.0, internet_gb=25))
+    assert "canonical_id" not in before and "canonical_id" not in after
+    key = lambda r: package_id(r["operator"], r["line_type"], r["name"])  # noqa: E731
+    assert key(before) == key(after)
+    assert "kanonik kimlik" not in before["doc_text"]

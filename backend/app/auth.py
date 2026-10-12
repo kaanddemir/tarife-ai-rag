@@ -8,6 +8,8 @@ against the project's public JWKS (cached) and trust the `sub` (user id) and
 """
 import logging
 import ssl
+import threading
+import time
 import uuid
 from dataclasses import dataclass
 from functools import lru_cache
@@ -23,6 +25,15 @@ logger = logging.getLogger(__name__)
 # Tolerance for clock skew between this server and Supabase when checking iat/nbf/exp.
 # Without it, a token minted a moment ago can look "not yet valid" and 401 a real user.
 _CLOCK_SKEW_LEEWAY = 30
+
+# Claims every accepted token must carry: a signed token without exp would never expire.
+_REQUIRED_CLAIMS = ["exp", "iat", "sub", "aud"]
+
+# An unknown `kid` makes us rebuild the JWKS client (key rotation). Without a floor
+# on that, any caller could force an outbound JWKS fetch per request with junk kids.
+_JWKS_REFRESH_MIN_INTERVAL = 60
+_jwks_refresh_lock = threading.Lock()
+_jwks_last_refresh = 0.0
 
 
 @dataclass(frozen=True)
@@ -45,6 +56,7 @@ def _jwk_client() -> "jwt.PyJWKClient":
         cache_keys=True,
         lifespan=600,
         ssl_context=ctx,
+        timeout=5,
     )
 
 
@@ -55,6 +67,16 @@ def warm_jwks() -> None:
         _jwk_client().get_jwk_set()
     except Exception as exc:  # noqa: BLE001 — best-effort warmup, never fatal
         logger.warning("JWKS warmup failed (will retry on first request): %s", exc)
+
+
+def _allow_jwks_refresh() -> bool:
+    global _jwks_last_refresh
+    with _jwks_refresh_lock:
+        now = time.monotonic()
+        if now - _jwks_last_refresh < _JWKS_REFRESH_MIN_INTERVAL:
+            return False
+        _jwks_last_refresh = now
+        return True
 
 
 def _verify(token: str) -> dict:
@@ -73,13 +95,17 @@ def _verify(token: str) -> dict:
             algorithms=["HS256"],
             audience="authenticated",
             leeway=_CLOCK_SKEW_LEEWAY,
+            options={"require": _REQUIRED_CLAIMS},
         )
 
     try:
         signing_key = _jwk_client().get_signing_key_from_jwt(token)
     except jwt.exceptions.PyJWKClientError:
         # Stale cache (e.g. key rotation) or a transient fetch error: rebuild the
-        # client once and retry before giving up, so key rotation doesn't 401 users.
+        # client and retry before giving up, so key rotation doesn't 401 users --
+        # at most once per interval, so junk kids can't trigger a fetch per request.
+        if not _allow_jwks_refresh():
+            raise
         _jwk_client.cache_clear()
         signing_key = _jwk_client().get_signing_key_from_jwt(token)
 
@@ -89,6 +115,7 @@ def _verify(token: str) -> dict:
         algorithms=["ES256", "RS256"],
         audience="authenticated",
         leeway=_CLOCK_SKEW_LEEWAY,
+        options={"require": _REQUIRED_CLAIMS},
     )
 
 

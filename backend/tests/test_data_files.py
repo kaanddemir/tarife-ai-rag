@@ -9,13 +9,14 @@ import json
 
 import pytest
 
-from app.ingest.load import DATA_DIR, load_records, merge_customer_types
+from app.ingest.load import DATA_DIR, build_catalog, load_records, merge_customer_types, package_id
 from app.ingest.normalize import UNLIMITED, normalize_record
 
 LINE_TYPES = {"prepaid", "postpaid"}
 CUSTOMER_TYPES = {"new", "existing", "any"}
 OPERATORS = {"turkcell", "vodafone", "turk_telekom"}
-PRICE_PERIODS = {"month", "one_time", "28_day", "3_month", "6_month", "12_month"}
+PRICE_PERIODS = {"month", "28_day", "60_day", "90_day", "180_day", "360_day"}
+RENEWAL_TYPES = {"recurring", "one_time", "unknown"}
 VALIDITY_UNITS = {"day", "week", "month"}
 
 # Every package object carries exactly these keys -- both missing and extra are errors.
@@ -29,7 +30,6 @@ PACKAGE_KEYS = {
     "internet_gb",
     "social_media_gb",
     "bonus_internet_gb",
-    "total_internet_gb",
     "voice_minutes",
     "sms_count",
     "validity_value",
@@ -38,13 +38,30 @@ PACKAGE_KEYS = {
     "conditions",
     "campaign",
     "source_url",
+    # Canonical parity fields: present on every record, with explicit unknowns
+    # (activation_channels null, benefits_status "unverified") instead of absent keys.
+    "activation_channels",
+    "benefits",
+    "benefits_status",
+    # Whether the plan charges again by itself (unknown = source silent).
+    "renewal_type",
 }
 
 POSTPAID_ONLY_KEYS = {"commitment_months", "commitment_status"}
 
 # price_try is the committed price (postpaid). A package may optionally also carry the
 # higher no-commitment price; when absent, the row simply has no such key.
-OPTIONAL_PRICE_KEYS = {"no_commitment_price_try"}
+OPTIONAL_PRICE_KEYS = {"no_commitment_price_try", "promo_months", "price_after_promo_try"}
+
+# Provenance (see app/ingest/validate.py): every record is a verified current offer
+# with its verification date and official-source evidence; `history` keeps values a
+# verified update replaced.
+LIFECYCLE_KEYS = {"verified_at", "evidence"}
+OPTIONAL_LIFECYCLE_KEYS = {"history"}
+# Per-record audience bounds (e.g. Turkcell GNÇ Avantaj 7-28), when the source states them.
+# Explicit restrictions the text rules cannot see (dealer_only, partner_channel_only, ...)
+# and the apps a social-media quota covers.
+OPTIONAL_AUDIENCE_KEYS = {"age_min", "age_max", "eligibility_tags", "social_media_apps", "bonus_internet_scope"}
 
 DATA_FILES = sorted(DATA_DIR.glob("*.json"))
 
@@ -79,9 +96,9 @@ def test_packages_carry_exactly_the_canonical_keys(path):
     """Schema contract: a missing field blows up at ingest, an extra field is silently
     dropped. We catch both here."""
     data = json.loads(path.read_text(encoding="utf-8"))
-    expected = PACKAGE_KEYS | (POSTPAID_ONLY_KEYS if data["line_type"] == "postpaid" else set())
+    expected = PACKAGE_KEYS | LIFECYCLE_KEYS | (POSTPAID_ONLY_KEYS if data["line_type"] == "postpaid" else set())
     for pkg in data["packages"]:
-        keys = pkg.keys() - OPTIONAL_PRICE_KEYS
+        keys = pkg.keys() - OPTIONAL_PRICE_KEYS - OPTIONAL_LIFECYCLE_KEYS - OPTIONAL_AUDIENCE_KEYS
         assert keys == expected, (
             f"{path.name} / {pkg.get('name')}: "
             f"missing {sorted(expected - keys)}, extra {sorted(keys - expected)}"
@@ -89,36 +106,17 @@ def test_packages_carry_exactly_the_canonical_keys(path):
 
 
 def _gb_fields(pkg) -> tuple:
-    return (
-        pkg.get("internet_gb"),
-        pkg.get("social_media_gb"),
-        pkg.get("bonus_internet_gb"),
-        pkg.get("total_internet_gb"),
-    )
+    return (pkg.get("internet_gb"), pkg.get("social_media_gb"), pkg.get("bonus_internet_gb"))
 
 
 @pytest.mark.parametrize("path", DATA_FILES, ids=lambda p: p.name)
-def test_total_internet_gb_is_the_sum_of_its_parts(path):
-    """In the source data the total for Turk Telekom Prime packages was off by one
-    (49 for a 50 GB package). Unlimited (-1) components are a separate quota and don't
-    enter the sum."""
+def test_no_stored_internet_total(path):
+    """total_internet_gb summed general, social-only, hotspot-only and app-only data; it is
+    gone. General-use internet is derived (normalize.general_internet_gb)."""
     data = json.loads(path.read_text(encoding="utf-8"))
     for pkg in data["packages"]:
-        internet, social, bonus, total = _gb_fields(pkg)
-        if internet is None or total is None:
-            continue
-        if UNLIMITED in (internet, social, bonus):
-            assert total == UNLIMITED, (
-                f"{path.name} / {pkg['name']}: unlimited component requires "
-                f"total_internet_gb={UNLIMITED}, got {total}"
-            )
-            continue
-        if total == UNLIMITED:
-            continue
-        expected = internet + sum(v for v in (social, bonus) if v and v > 0)
-        assert total == pytest.approx(expected), (
-            f"{path.name} / {pkg['name']}: total_internet_gb={total}, expected {expected}"
-        )
+        assert "total_internet_gb" not in pkg, f"{path.name} / {pkg['name']}"
+        assert pkg["internet_gb"] is not None, f"{path.name} / {pkg['name']}"
 
 
 @pytest.mark.parametrize("path", DATA_FILES, ids=lambda p: p.name)
@@ -127,7 +125,7 @@ def test_gb_fields_are_unlimited_or_non_negative(path):
     data = json.loads(path.read_text(encoding="utf-8"))
     for pkg in data["packages"]:
         for name, value in zip(
-            ("internet_gb", "social_media_gb", "bonus_internet_gb", "total_internet_gb"),
+            ("internet_gb", "social_media_gb", "bonus_internet_gb"),
             _gb_fields(pkg),
         ):
             if value is None:
@@ -199,28 +197,24 @@ def test_real_data_has_no_cross_bucket_duplicates_left():
 
 def test_real_catalog_has_complete_standard_taxonomy_and_stable_ids():
     normalized = [normalize_record(r, require_mobile_voice=True) for r in merge_customer_types(load_records())]
-    canonical_ids = []
     for pkg in normalized:
         assert pkg["operator_family"] == pkg["package_group"]
         assert pkg["audience_segment"] in {"general", "youth", "child", "family", "public_special"}
         assert pkg["product_scope"] == "mobile_voice"
-        assert pkg["canonical_id"]
-        canonical_ids.append(pkg["canonical_id"])
-    assert len(canonical_ids) == len(set(canonical_ids))
+        assert "canonical_id" not in pkg  # `id` is the only identity
+    ids = [package_id(p["operator"], p["line_type"], p["name"]) for p in normalized]
+    assert len(ids) == len(set(ids))
 
 
 def test_real_catalog_has_no_review_required_records():
     """A `review_required` package takes a +0.08 distance penalty in retrieval and
     enters the prompt as "Veri kalitesi: review_required". There must not be a single one in the catalog."""
-    flagged = [
-        (pkg["operator"], pkg["name"], pkg["missing_fields"])
-        for pkg in (
-            normalize_record(record, require_mobile_voice=True)
-            for record in merge_customer_types(load_records())
-        )
-        if pkg["data_quality_status"] != "complete"
-    ]
-    assert not flagged, flagged
+    # data_quality_status / missing_fields are obsolete: the loader refuses an
+    # incomplete record outright, so every loaded record is complete by construction.
+    records, report = build_catalog()
+    assert len(records) == 105 and not report.errors
+    for pkg in records:
+        assert "data_quality_status" not in pkg and "missing_fields" not in pkg
 
 
 def test_device_only_packages_are_not_in_active_catalog():
@@ -234,14 +228,6 @@ def test_contentless_base_tariffs_are_not_in_active_catalog():
     assert "Yeni İçişleri Baz Tarifesi" not in names
 
 
-def test_faq_only_facts_survived_in_conditions():
-    """`faq` alani kaldirilirken baska hicbir alanda gecmeyen 7 cumle `conditions`'a
-    tasindi; doc_text ve prompt bu metni okuyor."""
-    by_name = {record["name"]: record for record in load_records()}
-    assert "devretmez" in by_name["Transfer 1 GB Paketi"]["conditions"]
-    assert "SMS kanalından" in by_name["Transfer 30 GB Paketi"]["conditions"]
-
-
 def test_prepaid_catalog_is_acquisition_only_and_fixed_content():
     prepaid_paths = [path for path in DATA_FILES if "_prepaid_" in path.stem]
     assert prepaid_paths
@@ -253,8 +239,10 @@ def test_prepaid_catalog_is_acquisition_only_and_fixed_content():
             assert pkg["price_period"] in PRICE_PERIODS, f"{path.name} / {pkg['name']}"
             assert pkg["validity_unit"] in VALIDITY_UNITS, f"{path.name} / {pkg['name']}"
             assert pkg["validity_days"] > 0, f"{path.name} / {pkg['name']}"
+            # One prepaid price pays for one package of validity_days.
+            assert pkg["price_period"] == f"{pkg['validity_days']}_day", f"{path.name} / {pkg['name']}"
+            assert pkg["renewal_type"] in RENEWAL_TYPES, f"{path.name} / {pkg['name']}"
             assert pkg["internet_gb"] is not None, f"{path.name} / {pkg['name']}"
-            assert pkg["total_internet_gb"] is not None, f"{path.name} / {pkg['name']}"
 
 
 def test_prepaid_catalog_contains_expected_acquisition_products_and_taxonomy():
@@ -266,14 +254,16 @@ def test_prepaid_catalog_contains_expected_acquisition_products_and_taxonomy():
             if record["line_type"] == "prepaid"
         )
     }
-    assert "Hoş Geldin 25 GB Paketi" not in prepaid
+    # Removed in July without a recorded reason; re-added because the official
+    # page shows it live on 2026-10-12 (300 TL / 28 days, new line or number porting).
+    assert prepaid["Hoş Geldin 25 GB Paketi"]["price_try"] == 300
     assert "Yeni Nesil Dijital Paket" not in prepaid
 
     assert prepaid["5G Cepte Fırsat 20"]["price_lock_months"] == 3
-    assert "number_porting" in prepaid["5G Cepte Fırsat 20"]["eligibility_tags"]
-    assert prepaid["Transfer 10 GB Paketi"]["price_lock_months"] == 12
-    assert "number_porting" in prepaid["Transfer 10 GB Paketi"]["eligibility_tags"]
-    assert "new_line" in prepaid["Memlekete Hoş Geldin 40GB Paketi"]["eligibility_tags"]
+    assert prepaid["5G Cepte Fırsat 20"]["activation_channels"] == ["number_porting"]
+    # Transfer (closed 10.09.2026) was removed; Hoş Geldin 10 GB is the current porting offer.
+    assert {"new_line", "number_porting"} <= set(prepaid["Hoş Geldin 10 GB Paketi"]["activation_channels"])
+    assert prepaid["Memlekete Hoş Geldin 40GB Paketi"]["activation_channels"] == ["new_line"]
     assert "5G Cepte Fırsat 100 GB" not in prepaid
     assert prepaid["5G Fırsat 3 Ay 100 GB Paketi"]["audience_segment"] == "youth"
     assert prepaid["5G Fırsat 3 Ay 100 GB Paketi"]["age_max"] == 25

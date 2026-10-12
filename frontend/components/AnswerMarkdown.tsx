@@ -71,7 +71,11 @@ function inlineNodes(text: string, keyPrefix: string, refs: RefMap): ReactNode[]
       const found = idsFromMarker(token)
         .map((id) => refs.get(id))
         .filter((r): r is { num: number; url: string } => Boolean(r));
-      if (found.length > 0) {
+      if (found.length === 0) {
+        // Dropped marker: also drop the space before it, so "cevap [S9]." reads "cevap."
+        const prev = nodes[nodes.length - 1];
+        if (typeof prev === "string") nodes[nodes.length - 1] = prev.replace(/\s+$/, "");
+      } else {
         nodes.push(
           <sup key={key} className="cite-ref">
             {found.map((ref, i) => (

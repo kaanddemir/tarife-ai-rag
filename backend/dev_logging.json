@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "disable_existing_loggers": false,
+  "filters": {
+    "access_line": {"()": "app.dev_logging.AccessLine"},
+    "milestones": {"()": "app.dev_logging.Milestones"}
+  },
+  "formatters": {
+    "app": {"()": "app.dev_logging.DevFormatter", "format": "  %(asctime)s %(levelname)-7s %(name)s: %(message)s", "datefmt": "%H:%M:%S"},
+    "access": {"format": "  %(asctime)s %(message)s", "datefmt": "%H:%M:%S"}
+  },
+  "handlers": {
+    "app": {"class": "logging.StreamHandler", "formatter": "app", "filters": ["milestones"], "stream": "ext://sys.stderr"},
+    "access": {"class": "logging.StreamHandler", "formatter": "access", "filters": ["access_line"], "stream": "ext://sys.stdout"}
+  },
+  "root": {"level": "WARNING", "handlers": ["app"]},
+  "loggers": {
+    "app": {"level": "INFO"},
+    "uvicorn": {"level": "WARNING", "handlers": ["app"], "propagate": false},
+    "uvicorn.access": {"level": "INFO", "handlers": ["access"], "propagate": false}
+  }
+}

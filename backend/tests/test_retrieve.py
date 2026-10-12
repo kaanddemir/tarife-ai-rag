@@ -1,4 +1,7 @@
+import pytest
+
 from app.rag.retrieve import (
+    detect_activation_channel,
     detect_age,
     detect_audience_segment,
     detect_customer_type,
@@ -27,7 +30,8 @@ def test_detect_max_price():
     # fiyat filtresi kuruyordu.
     assert detect_max_price("20 GB paket lazım") is None
     assert detect_max_price("bana faturalı hat lazım") is None
-    assert detect_max_price("en az 100 TL") == 100.0  # gercek 'az' sinyali korunur
+    # "en az" is a MINIMUM; it used to be read as a ceiling (see detect_price_bounds).
+    assert detect_max_price("en az 100 TL") is None
     # Regression: don't treat the GB amount as a price; the real price can come after GB.
     assert detect_max_price("20 GB'a kadar paketler") is None
     assert detect_max_price("20 GB altında 150 TL paket") == 150.0
@@ -43,7 +47,9 @@ def test_gb_band_keeps_unlimited_packages():
     sql = str(gb_band_filter(20.0).compile(compile_kwargs={"literal_binds": True}))
     assert "packages.internet_gb = -1" in sql
     assert " OR " in sql
-    assert "packages.internet_gb >= 15.0" in sql and "packages.internet_gb <= 25.0" in sql
+    assert ">= 15.0" in sql and "<= 25.0" in sql
+    # Measured on general-use internet: a general-scope bonus counts, restricted ones do not.
+    assert "packages.bonus_internet_scope = 'general'" in sql
 
 
 def test_detect_line_type():
@@ -105,3 +111,8 @@ def test_existing_customer_filter_does_not_admit_new_only_rows():
     assert "packages.line_type = 'prepaid'" in sql
     assert "packages.customer_type IN ('existing', 'any')" in sql
     assert "'new'" not in sql
+
+
+@pytest.mark.parametrize("q", ["numaramı taşıyacağım faturasız paket", "numaramı taşırsam ne olur", "numaramızı taşıyoruz"])
+def test_porting_detected_in_any_inflection(q):
+    assert detect_activation_channel(q) == "number_porting"

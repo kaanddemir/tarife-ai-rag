@@ -1,7 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { chat, OPERATOR_LABELS, QuotaError, type ChatTurn } from "@/lib/api";
+import { useEffect, useRef, useState } from "react";
+import {
+  AuthError,
+  chat,
+  OPERATOR_LABELS,
+  QuotaError,
+  RequestTimeoutError,
+  ServerError,
+  type ChatTurn,
+} from "@/lib/api";
 import type { Conversation, Message } from "@/lib/types";
 import {
   loadConversations,
@@ -43,6 +51,9 @@ export default function Home() {
   const [dailyUsed, setDailyUsed] = useState(0);
   const [loginOpen, setLoginOpen] = useState(false);
   const [loginReason, setLoginReason] = useState<string | undefined>();
+  // Synchronous in-flight guard: `loading` state updates too late to stop a fast
+  // double submit (Enter + click) from sending the same question twice.
+  const sendingRef = useRef(false);
 
   useEffect(() => {
     setGuestUsed(loadGuestUsed());
@@ -70,6 +81,14 @@ export default function Home() {
 
   const active = conversations.find((c) => c.id === activeId) ?? null;
 
+  // Escape closes the mobile conversation drawer.
+  useEffect(() => {
+    if (!navOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setNavOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [navOpen]);
+
   function handleNew() {
     if (active && active.messages.length === 0) {
       setNavOpen(false);
@@ -95,18 +114,19 @@ export default function Home() {
   }
 
   function handleDelete(id: string) {
-    setConversations((prev) => {
-      const next = prev.filter((c) => c.id !== id);
-      if (id === activeId) {
-        if (next.length) setActiveId(next[0].id);
-        else {
-          const c = newConversation();
-          setActiveId(c.id);
-          return [c];
-        }
-      }
-      return next;
-    });
+    // Computed outside the state updater: updaters must stay pure (React may run
+    // them twice), and a repeated click for an already-removed id is a no-op.
+    if (!conversations.some((c) => c.id === id)) return;
+    const next = conversations.filter((c) => c.id !== id);
+    if (id !== activeId) {
+      setConversations(next);
+      return;
+    }
+    // Deleting the open conversation lands on a clean new chat.
+    const empty = next.find((c) => c.messages.length === 0);
+    const fresh = empty ?? newConversation();
+    setConversations(empty ? next : [fresh, ...next]);
+    setActiveId(fresh.id);
   }
 
   function handleRename(id: string, title: string) {
@@ -126,12 +146,17 @@ export default function Home() {
     setLoginOpen(true);
   }
 
+  /**
+   * Send a question. `replaceFrom` is the index of a failed attempt (its question
+   * and error bubble) to replace, so "Tekrar dene" does not duplicate the question.
+   */
   async function handleSend(
     question: string,
     operator: OperatorKey,
     lineType: LineTypeKey,
+    replaceFrom?: number,
   ) {
-    if (!activeId) return;
+    if (!activeId || sendingRef.current) return;
 
     // Pre-empt the guest cap for snappy UX; the backend still enforces the real limit.
     if (!isSignedIn && guestUsed >= GUEST_LIMIT) {
@@ -139,16 +164,21 @@ export default function Home() {
       return;
     }
 
-    const userMsg: Message = { role: "user", content: question };
-    const history: ChatTurn[] = (active?.messages ?? [])
+    const userMsg: Message = { role: "user", content: question, at: Date.now() };
+    const base = (active?.messages ?? []).slice(0, replaceFrom);
+    // Local error bubbles are not conversation; sending them back would skew the
+    // backend's clarification state and waste history slots.
+    const history: ChatTurn[] = base
+      .filter((m) => !m.error)
       .slice(-5)
       .map((m) => ({ role: m.role, content: m.content }));
 
     updateActive((c) => ({
       ...c,
       title: c.messages.length === 0 ? titleFrom(question) : c.title,
-      messages: [...c.messages, userMsg],
+      messages: [...c.messages.slice(0, replaceFrom), userMsg],
     }));
+    sendingRef.current = true;
     setLoading(true);
 
     // Scope by prepending the operator name and line type — backend retrieve()
@@ -160,13 +190,13 @@ export default function Home() {
     const scoped = scope.length ? `${scope.join(" ")} ${question}` : question;
 
     try {
-      const token = await getAccessToken();
-      const r = await chat(scoped, history, token);
+      const r = await chat(scoped, history, getAccessToken);
       const assistant: Message = {
         role: "assistant",
         content: r.answer,
         citations: r.citations,
         packages: r.packages,
+        at: Date.now(),
       };
       updateActive((c) => ({ ...c, messages: [...c.messages, assistant] }));
       if (isSignedIn) {
@@ -193,6 +223,8 @@ export default function Home() {
             content:
               "Günlük mesaj limitine ulaştın. Yarın tekrar deneyebilirsin.",
             error: true,
+            errorKind: "quota",
+            at: Date.now(),
           };
           updateActive((c) => ({ ...c, messages: [...c.messages, assistant] }));
         } else {
@@ -208,16 +240,26 @@ export default function Home() {
           );
         }
       } else {
-        // TypeError ("Failed to fetch") = couldn't reach the server; otherwise a
-        // server-side error. Keep the message user-friendly — no technical internals.
-        const content =
-          e instanceof TypeError
-            ? "Sunucuya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dener misin?"
-            : "Şu an yanıt veremedim. Lütfen birazdan tekrar dene.";
-        const assistant: Message = { role: "assistant", content, error: true };
+        // Every failure is an error bubble, never part of the conversation, and says
+        // what went wrong without technical internals. A provider outage must not
+        // read as "no tariff found".
+        const [errorKind, content]: [Message["errorKind"], string] =
+          e instanceof AuthError
+            ? ["auth", "Oturumun doğrulanamadı. Sayfayı yenileyip tekrar giriş yapman gerekebilir."]
+            : e instanceof RequestTimeoutError
+              ? ["timeout", "Yanıt çok uzun sürdü ve beklemeyi bıraktım. Sorunu tekrar gönderebilirsin."]
+              : e instanceof TypeError
+                ? ["network", "Sunucuya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dene."]
+                : e instanceof ServerError && e.reason === "provider_unavailable"
+                  ? ["server", "Yapay zeka servisi şu an yanıt vermiyor. Bu mesaj hakkından düşülmedi; birazdan tekrar dene."]
+                  : e instanceof ServerError && e.status === 429
+                    ? ["server", "Çok hızlı mesaj gönderildi. Birkaç saniye bekleyip tekrar dene."]
+                    : ["server", "Şu an yanıt veremedim. Lütfen birazdan tekrar dene."];
+        const assistant: Message = { role: "assistant", content, error: true, errorKind, at: Date.now() };
         updateActive((c) => ({ ...c, messages: [...c.messages, assistant] }));
       }
     } finally {
+      sendingRef.current = false;
       setLoading(false);
     }
   }
@@ -230,7 +272,7 @@ export default function Home() {
 
   return (
     <div className={`app${navOpen ? " nav-open" : ""}`}>
-      <div className="backdrop" onClick={() => setNavOpen(false)} />
+      <div className="backdrop" aria-hidden="true" onClick={() => setNavOpen(false)} />
       <Sidebar
         conversations={conversations}
         activeId={activeId}
@@ -251,7 +293,13 @@ export default function Home() {
         conversation={active}
         loading={loading}
         onSend={handleSend}
+        onRetry={(errorIndex, operator, lineType) => {
+          // The failed question is the user turn right before its error bubble.
+          const question = active?.messages[errorIndex - 1];
+          if (question?.role === "user") handleSend(question.content, operator, lineType, errorIndex - 1);
+        }}
         onToggleNav={() => setNavOpen((v) => !v)}
+        onNew={handleNew}
       />
       <LoginModal
         open={loginOpen}

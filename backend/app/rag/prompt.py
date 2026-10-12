@@ -6,24 +6,32 @@ There are two paths, and both share the same identity/tone/security base:
 * `build_clarification_messages` -- clarification path: NO sources are given; the model
   only asks for the missing info. The gate decision is made in `rag.clarify`.
 """
+import re
+
 from app.ingest.normalize import (
     CUSTOMER_TYPE_LABELS,
     LINE_TYPE_LABELS,
     OPERATOR_LABELS,
     UNLIMITED,
+    benefits_sentence,
+    channel_phrase,
+    renewal_phrase,
+    internet_phrase,
 )
 from app.models import ChatTurn, Package
+from app.rag.facts import comparison_block, fact_block
 from app.rag.clarify import SLOT_LABELS
 from app.rag.history import format_history
+from app.rag.retrieve import EXISTING_CUSTOMER_UNAVAILABLE
 
 # price_period -> short Turkish label (which period the price is for).
 _PERIOD_LABELS = {
     "month": "aylik",
-    "one_time": "tek seferlik",
-    "3_month": "3 aylik",
-    "6_month": "6 aylik",
-    "12_month": "12 aylik",
     "28_day": "28 gunluk",
+    "60_day": "60 gunluk",
+    "90_day": "90 gunluk",
+    "180_day": "180 gunluk",
+    "360_day": "360 gunluk",
 }
 
 # Identity + tone + language rules shared by both paths.
@@ -52,66 +60,40 @@ _SECURITY_RULES = (
 RECOMMEND_SYSTEM_PROMPT = (
     _BASE_RULES
     + "Kurallar:\n"
-    "1. YALNIZCA asagida verilen kaynaklardaki bilgileri kullan. Kaynaklarda olmayan "
-    "hicbir fiyat, GB, dakika veya kampanya bilgisi uydurma.\n"
-    "2. Her somut iddiayi ilgili kaynak kimligiyle belirt, ornegin [S1], [S2]. Kaynaklari "
-    "ayri ayri yaz; ASLA aralik gosterimi kullanma (ornek '[S1-S6]' YASAK, bunun yerine gerekli "
-    "olanlari [S1] [S2] seklinde yaz). Bir bilginin kaynaklarda OLMADIGINI soylerken kaynak atifi verme.\n"
-    "3. Bilgi kaynaklarda yoksa acikca 'bu bilgi kaynaklarda yok' de.\n"
-    "4. Karsilastirma isteniyorsa kisa ve net ol; en iyi secenegi gerekcesiyle oner "
-    "(fiyat/GB oranini dikkate al).\n"
-    "5. Yaniti orta detayli Markdown formatinda ver. Gereksiz uzun tablo benzeri karsilastirma yazma; "
-    "UI zaten ayrica bir karsilastirma tablosu gosterecek.\n"
-    "6. Internet miktarini paketin TOPLAM interneti uzerinden soyle; kaynakta kirilim varsa "
-    "(genel + sosyal medya + bonus) bunu kisaca belirt. Sadece base internetini soyleyip toplam varken eksik gosterme.\n"
-    "7. Fiyatlari kiyaslarken paketin gecerlilik suresini (ve varsa fatura donemini, ornek 'aylik', '3 aylik') "
-    "mutlaka hesaba kat; farkli sureli paketleri ayni fiyatmis gibi kiyaslama. Mumkunse aylik/gunluk maliyet "
-    "mantigiyla degerlendir (ornek 90 gun gecerli 174 TL, 30 gun gecerli 150 TL'den daha uygun olabilir). "
-    "Faturali tarifelerde TAAHHUT suresini ve varsa fiyat kilidini (ornek 'fiyat 12 fatura donemi sabit') "
-    "mutlaka belirt; taahhutlu bir tarifeyi taahhutsuz olanla ayni seviyede ucuz gosterme. Taahhut ile "
-    "fiyat kilidi ayni sey degildir: taahhut cayma bedeli dogurur, fiyat kilidi yalnizca ucreti dondurur — "
-    "kaynak ne diyorsa onu soyle, birini digeri yerine kullanma.\n"
-    "Taahhut durumu 'unknown' ise bunu ASLA taahhutsuz diye yorumlama; 'taahhut bilgisi "
-    "kaynakta belirtilmemis' de. Promosyon suresi, fiyat kilidi ve taahhut ayri kavramlardir.\n"
-    "8. Kisa ve net ol: 1 kisa 'Öneri' cumlesi + en fazla 2 alternatif profil maddesi + 1 'Sonraki adim'. "
-    "TOPLAMDA en fazla 3 farkli paketten bahset (1 ana oneri + en fazla 2 alternatif); UI yalnizca atif "
-    "verdigin paketleri kart olarak gosterdigi icin 3'ten fazla [S#] paketine atif VERME. "
-    "UI zaten her paketin ham sayilarini (GB, dakika, SMS, nominal fiyat, sure) kartlarda gosteriyor; "
-    "bu sayilari DUZ TEKRAR ETME. Ozellikle '100 GB internet, 1000 dakika ve 1000 SMS icerir/alirsiniz' "
-    "gibi icerik listeleme cumleleri YAZMA — bu bilgi kartta zaten var. Bir sayiyi ancak bir karari "
-    "gerekcelendirmek icin kullan (ornek 'peşin 300 TL ama 3 aya yayilinca ~100 TL/ay', ya da bir paketin "
-    "digerinden neden farkli oldugunu gosteren tek kritik sayi). Sadece bold, italic, baslik ve liste "
+    "1. Tek veri kaynagin <KAYNAKLAR> blogudur. Her kaynak bolumlere ayrilmistir: RESMI (operatorun "
+    "sayfasi), HESAP (TarifeAI'nin kiyas icin hesabi; operator boyle faturalamaz), KOSULLU (yalnizca "
+    "belirtilen kosulda gecerli), BILINMIYOR (kaynak soylemiyor), ESLESME (kullanicinin sartlarina gore). "
+    "Bu ayrimi cevabinda koru.\n"
+    "2. Fiyat, GB, dakika, sure ve tutarlari kaynaktan AYNEN kopyala; kendin hesaplama, yuvarlama veya "
+    "toplama yapma. Kaynakta olmayan hicbir sayi, paket, kampanya, kosul veya baglanti yazma; URL yazma "
+    "(kaynak baglantilarini arayuz gosterir).\n"
+    "3. Her somut iddiayi kaynak kimligiyle bagla: [S1], [S2]. Yalnizca var olan kimlikleri kullan; aralik "
+    "yazma ('[S1-S3]' YASAK). En fazla 3 farkli pakete atif ver.\n"
+    "4. Faturasiz paketin fiyati tek odemedir ve 'X gun gecerli'dir; aylik fatura gibi anlatma. 30 gunluk "
+    "karsilik yalnizca HESAP bolumunden, 'kiyas icin yaklasik' diye verilir. Taahhutlu fiyati taahhutsuz "
+    "fiyat gibi sunma; kullanici taahhut istemiyorsa taahhutsuz fiyati kullan. Tanitim fiyatini kalici "
+    "fiyat gibi sunma.\n"
+    "5. Internet: genel kullanim interneti ile sosyal medya / uygulama / paylasim kotalarini AYRI soyle, "
+    "toplama. Genel internet sinirsiz degilse paketi 'sinirsiz internet' diye tanitma; sinirsiz olan "
+    "kotayi adiyla soyle.\n"
+    "6. Avantajlar: 'ucretsiz deneme'yi kalici veya dahil uyelik gibi sunma; suresini ve sonrasini (biliniyorsa) "
+    "soyle. Uygulama interneti, o uygulamanin uyeligi degildir. 'satin alinmali' veya 'indirim' olanlari "
+    "bedava deme. KOSULLU bolumdeki sarti (yeni hat, yas, il vb.) atlama. Kaynakta olmayan parasal deger verme.\n"
+    "7. ESLESME satirinda 'KARSILAMIYOR' olan bir paketi uygun diye sunma; 'UZLASMA ALTERNATIFI' paketleri "
+    "yalnizca hangi sarti karsilamadigini ACIKCA soyleyerek, ana cumlede sun. 'DOGRULANAMADI' olani kesin uygun "
+    "diye sunma; neyin teyit edilmesi gerektigini soyle. BILINMIYOR alanlari tahmin etme.\n"
+    "8. Oneriyi <NOTLAR>'daki siralama olcutu ve ESLESME satirlariyla gerekcelendir. Kaynakta olmayan gerekce "
+    "(kapsama, hiz, 'en iyi') uydurma; 'en iyi' diyeceksen olcutunu soyle.\n"
+    "9. Uslup: dogal, akici Turkce; danisman gibi konus. Soruyu tekrar etme, giris cumlesi ve tekrar eden "
+    "uyari yazma. Kartlar ham sayilari zaten gosteriyor; sayilari yalnizca karari gerekcelendirmek icin kullan. "
+    "Uzunlugu <USLUP> talimatina gore ayarla; her cevabi ayni sablona sokma. Sadece bold, italic ve liste "
     "Markdown'i kullan; tablo veya HTML yazma.\n"
-    "9. Yanit yapisi bir KARAR REHBERI olsun: her paketi somut bir kullanici profiline baglayip "
-    "'su durumdaysan bunu al, cunku...' mantigiyla gercek gerekcesiyle anlat. Tek satirla gecistirme. "
-    "Tercih edilen yapi:\n"
-    "**Öneri:** En iyi secenegi ve kimin icin uygun oldugunu 1-2 cumleyle soyle; varsa kritik sarti "
-    "(ornek 'sadece 561 ile baslayan hatlar') hemen belirt. [S#]\n"
-    "**Kime hangisi uygun:** (en fazla 2 madde — ana oneriyle birlikte toplam 3 paketi gecme; HER "
-    "paketi bir kullanici profiline/duruma bagla, ornek 'cok internet isteyen', '561'li hat sahibi', "
-    "'yeni musteri / numara tasiyan', '26 yas alti')\n"
-    "- **<kisa profil>** → <paket>: <bu profile neden uygun oldugu; deger mantigi + kritik sart/uyari, "
-    "1-2 cumle>. [S#]\n"
-    "**Sonraki adım:** Kullaniciyi ayristiracak tek kisa takip sorusu yaz, ornegin "
-    "'Numaran 561 ile mi basliyor, yoksa 26 yas alti misin?' veya 'Butcen icin 150 TL altini filtreleyeyim mi?'.\n"
-    "Kritik uyari/kosullari ayri bir 'Not' bolumu yerine ilgili profil maddesinin icine yedir; "
-    "eski Fiyat/İçerik/Uygunluk/Kıyas madde izgarasini KULLANMA.\n"
-    "10. Kapsam: Konu disi sorularda (teknik destek, numara tasima islemi, alakasiz konular) nazikce "
-    "yalnizca tarife karsilastirmasi yaptigini belirt ve kullaniciyi buna yonlendir; "
-    "karar-rehberi sablonunu uygulama.\n"
-    "11. Varsayim: Buraya ulastiysan ya yeterli bilgi vardir ya da kullaniciya eksik bilgi bir kez "
-    "zaten SORULMUSTUR. Ikinci durumda eksik boyutu makul bir varsayimla doldur ve varsayimini ilk "
-    "cumlede acikca yaz (ornek 'Butce belirtmedigin icin orta segmenti varsaydim'). Ayni soruyu "
-    "kullaniciya TEKRAR SORMA; 'once sunu soyler misin' diyerek oneriyi erteleme.\n"
-    "12. Her kaynak satiri paketin FATURA TIPINI (faturali/faturasiz) ve KIME ACIK oldugunu "
-    "parantez icinde belirtir. Bunlari onerinde mutlaka soyle. Katalog su an yalnizca yeni hat "
-    "veya numara tasima ile gelen musterilere acik paketleri icerir; kullaniciya yeni mi mevcut "
-    "musteri mi oldugunu SORMA, bunun yerine bu uygunluk sartini onerinin icinde acikca belirt. "
-    "Faturali bir paketi faturasiz isteyene ana oneri olarak VERME.\n"
-    "13. Veri kalitesi 'review_required' olan paketi, ayni ihtiyaci karsilayan 'complete' bir "
-    "alternatif varken ana oneri yapma; eksik kritik bilgiyi acikca belirt.\n"
+    "10. Konu disi sorularda yalnizca tarife karsilastirmasi yaptigini kisaca soyle. Eksik bilgi zaten bir kez "
+    "soruldu ise makul varsayimi ilk cumlede belirterek cevapla, ayni soruyu tekrar sorma.\n"
+    "11. Katalog yalnizca operatore yeni gelen musterilere acik paketleri icerir; bunu gerektiginde soyle.\n"
     + _SECURITY_RULES
 )
+
 
 CLARIFY_SYSTEM_PROMPT = (
     _BASE_RULES
@@ -144,33 +126,12 @@ def _fmt_amount(value, unit: str) -> str:
     return f"{value} {unit}"
 
 
-def _fmt_gb(value, suffix: str = "") -> str:
-    """'20 GB genel' / 'sinirsiz sosyal medya' (Turkish output fragments)."""
-    if float(value) == UNLIMITED:
-        return f"sinirsiz {suffix}".strip()
-    return f"{float(value):g} GB {suffix}".strip()
-
-
 def _gb_phrase(p: Package) -> str:
-    """Headline the internet on total GB; if it differs from base or there is extra
-    quota, spell out the breakdown (same 'total or base' logic as build_doc_text)."""
-    total = p.total_internet_gb if p.total_internet_gb is not None else p.internet_gb
-    if total is None:
-        return "internet belirtilmemis"
-    if float(total) == UNLIMITED:
-        return "sinirsiz internet"
-    base = p.internet_gb
-    parts: list[str] = []
-    if base is not None:
-        parts.append(_fmt_gb(base, "genel"))
-    if p.social_media_gb is not None and float(p.social_media_gb) != 0:
-        parts.append(_fmt_gb(p.social_media_gb, "sosyal medya"))
-    if p.bonus_internet_gb is not None and float(p.bonus_internet_gb) != 0:
-        parts.append(_fmt_gb(p.bonus_internet_gb, "bonus"))
-    # A breakdown only makes sense with more than one component (or base != total).
-    if len(parts) > 1 or (base is not None and float(base) != float(total)):
-        return f"toplam {float(total):g} GB internet ({' + '.join(parts)})"
-    return f"{float(total):g} GB internet"
+    """Same wording as doc_text (normalize.internet_phrase): unlimited general
+    internet only when internet_gb itself is unlimited."""
+    return internet_phrase(
+        p.internet_gb, p.social_media_gb, p.bonus_internet_gb, p.bonus_internet_scope
+    ) or "internet belirtilmemis"
 
 
 def _commitment_phrase(p: Package) -> str:
@@ -205,35 +166,16 @@ def _audience_phrase(p: Package) -> str:
 
 
 def format_sources(packages: list[Package]) -> tuple[str, list[dict]]:
-    """Render retrieved packages as numbered sources. Returns (text, citations)."""
-    lines: list[str] = []
+    """Render retrieved packages as sectioned fact blocks (rag.facts). Returns
+    (text, citations); citation ids follow the source order and are unique."""
+    blocks: list[str] = []
     citations: list[dict] = []
     for i, p in enumerate(packages, start=1):
         sid = f"S{i}"
-        op = OPERATOR_LABELS.get(p.operator, p.operator)
-        price = f"{float(p.price_try):g} TL" if p.price_try is not None else "-"
-        period = _PERIOD_LABELS.get(p.price_period or "")
-        price_phrase = f"fiyat {price}" + (f" ({period})" if period else "")
-        line_label = LINE_TYPE_LABELS.get(p.line_type, p.line_type)
-        customer_label = CUSTOMER_TYPE_LABELS.get(p.customer_type, p.customer_type)
-        lines.append(
-            f"[{sid}] {op} — {p.name} ({line_label}, {customer_label}): "
-            f"{_gb_phrase(p)}, {_fmt_amount(p.voice_minutes, 'dakika')}, "
-            f"{_fmt_amount(p.sms_count, 'SMS')}, {price_phrase}, "
-            f"{p.validity_days or '-'} gun gecerli."
-            + (f" Taahhut: {commitment}." if (commitment := _commitment_phrase(p)) else "")
-            + f" Hedef kitle: {_audience_phrase(p)}."
-            + (f" Avantaj etiketleri: {', '.join(p.benefit_tags)}." if p.benefit_tags else "")
-            + f" Veri kalitesi: {p.data_quality_status}."
-            + (f" Eksik alanlar: {', '.join(p.missing_fields)}." if p.missing_fields else "")
-            + (f" Kampanya: {p.campaign}" if p.campaign else "")
-            + (f" Kosullar: {p.conditions}" if p.conditions else "")
-            + f" (Kaynak: {p.source_url})"
-        )
-        citations.append(
-            {"id": sid, "operator": p.operator, "name": p.name, "source_url": p.source_url}
-        )
-    return "\n".join(lines), citations
+        blocks.append(fact_block(sid, p))
+        citations.append({"id": sid, "operator": p.operator, "name": p.name, "source_url": p.source_url})
+    comparison = comparison_block(packages, [c["id"] for c in citations])
+    return "\n\n".join(blocks) + (f"\n\n{comparison}" if comparison else ""), citations
 
 
 def _history_block(history: list[ChatTurn] | None) -> str:
@@ -248,11 +190,68 @@ def _history_block(history: list[ChatTurn] | None) -> str:
     )
 
 
+# Trusted pipeline notes (rag.retrieve) -> instruction the answer must follow.
+_RETRIEVAL_NOTE_TEXT = {
+    EXISTING_CUSTOMER_UNAVAILABLE: (
+        "Kullanici mevcut musteri oldugunu belirtti, ancak katalogda mevcut musterilere acik "
+        "paket YOK. Asagidaki kaynaklar yalnizca operatore yeni gelen musterilere aciktir "
+        "(kanal her kaynak satirinda belirtilir). "
+        "Yanitin ILK cumlesinde bunu acikca soyle; bu paketleri kullanicinin mevcut hattina "
+        "uygulanabilir gibi sunma. Mevcut hat icin guncel teklifleri operatorun kendi kanalindan "
+        "ogrenmesini oner; istersen bu paketleri, kaynagin izin verdigi kanalla operatore gecis secenegi olarak anlat."
+    ),
+}
+
+
+def _notes_block(notes: list[str] | None) -> str:
+    # Notes are produced by the pipeline (rag.search) from structured values only:
+    # a known key maps to its instruction, any other note is already the instruction.
+    lines = [f"- {_RETRIEVAL_NOTE_TEXT.get(n, n)}" for n in (notes or []) if n]
+    if not lines:
+        return ""
+    return "<NOTLAR>\n(Sistem notu; guvenilir.)\n" + "\n".join(lines) + "\n</NOTLAR>\n\n"
+
+
+# Sources handed to the model. Fewer, denser sources keep the prompt under provider
+# request limits (an 8-source prompt with raw campaign text hit HTTP 413) and the
+# answer can cite at most MAX_RECOMMENDATIONS anyway.
+MAX_SOURCES = 6
+
+_DETAILED_RE = re.compile(r"detayl|ayr[ıi]nt|kar[sş][ıi]la[sş]t[ıi]r|k[ıi]yasla|fark[ıi]\s+ne|art[ıi]s[ıi]|eksi")
+_CONCISE_RE = re.compile(r"k[ıi]sa\b|k[ıi]saca|hangisi|en ucuz|en hesapl|en [cç]ok|ka[cç] tl|ne kadar|var m[ıi]")
+_ELIGIBILITY_RE = re.compile(r"alabilir mi|ta[sş][ıi]yabilir mi|uygun mu|ge[cç]erli mi|yararlanabilir mi|a[cç][ıi]k m[ıi]")
+_UNLIMITED_Q_RE = re.compile(r"s[ıi]n[ıi]rs[ıi]z(?:\s+\w+){0,2}\s+m[ıi]\b|ger[cç]ekten s[ıi]n[ıi]rs[ıi]z|s[ıi]n[ıi]rs[ıi]z internet.{0,20}de[gğ]il mi")
+_CONDITIONS_RE = re.compile(r"ko[sş]ul|[sş]art[ıi]|nas[ıi]l al[ıi]n|nas[ıi]l aktif|hediye.{0,20}ne|kampanya detay")
+
+
+def answer_style(question: str) -> str:
+    """Length/shape guidance from the kind of question (deterministic)."""
+    q = question.replace("I", "ı").replace("İ", "i").lower()
+    if _CONDITIONS_RE.search(q):
+        return ("Kullanici kosullari soruyor: yalnizca ilgili avantajin/paketin kosullarini (sure, nasil alinir, kime "
+                "acik, sonrasi) anlat; ilgisiz ozellikleri listeleme. 60-120 kelime.")
+    if _UNLIMITED_Q_RE.search(q):
+        return ("Kullanici sinirsizligi soruyor: ilk cumlede net cevap ver (genel internet sinirsiz mi, degil mi), "
+                "sonra hangi kotanin sinirsiz oldugunu ayir. 40-90 kelime.")
+    if _ELIGIBILITY_RE.search(q):
+        return "Uygunluk sorusu: ilk cumlede evet/hayir/belirsiz de ve dayanagini soyle. 30-80 kelime."
+    if _DETAILED_RE.search(q):
+        return ("Detayli karsilastirma isteniyor: <KIYAS> tabanini kullanarak fiyat (ayni tabanda), genel internet, "
+                "taahhut/yenileme ve avantaj farklarini anlat; sonunda kime hangisi uygun, 1-2 cumle. 120-220 kelime.")
+    if _CONCISE_RE.search(q):
+        return ("Kisa ve dogrudan cevap: ilk cumlede paket ve fiyat tabanini soyle, gerekirse 1 alternatif. "
+                "30-80 kelime.")
+    return ("Oneri: 1 ana paket ve neden (siralama olcutu, karsiladigi sartlar), en fazla 2 alternatif ve kime uygun "
+            "olduklari. Gerekirse sonda tek bir kisa takip sorusu. 70-150 kelime.")
+
+
 def build_messages(
     question: str,
     packages: list[Package],
     history: list[ChatTurn] | None = None,
+    notes: list[str] | None = None,
 ) -> tuple[list[dict], list[dict]]:
+    packages = packages[:MAX_SOURCES]
     sources_text, citations = format_sources(packages)
 
     # Trusted data first, untrusted user input fenced and last. The <...> blocks
@@ -260,17 +259,16 @@ def build_messages(
     # the question (see the GUVENLIK / security rules in RECOMMEND_SYSTEM_PROMPT).
     user = (
         "<KAYNAKLAR>\n"
-        "(Tek gecerli veri kaynagi. Yalnizca buradaki [S#] satirlarini kullan.)\n"
+        "(Tek gecerli veri kaynagi. Yalnizca buradaki [S#] kaynaklarini kullan.)\n"
         f"{sources_text}\n"
         "</KAYNAKLAR>\n\n"
-        + _history_block(history) +
+        + _notes_block(notes)
+        + _history_block(history)
+        + f"<USLUP>\n{answer_style(question)}\n</USLUP>\n\n"
         "<SORU>\n"
         f"{question}\n"
         "</SORU>\n\n"
-        "Yalnizca <KAYNAKLAR> blogundaki verilere dayanarak <SORU>'yu kisa karar formatinda yanitla. "
-        "Onerinin altinda varsa diger alternatifleri kisa nedenleriyle ver, sonra neden, gerekiyorsa not ve "
-        "en sonda kullaniciyi diger soruya yonlendiren Sonraki adim bolumunu ver. "
-        "Her somut fiyat, GB, dakika, SMS, kampanya veya kosul iddiasini [S#] ile kaynaga bagla."
+        "Yalnizca <KAYNAKLAR> blogundaki verilere dayanarak <SORU>'yu yanitla. Her somut iddiayi [S#] ile bagla."
     )
     messages = [
         {"role": "system", "content": RECOMMEND_SYSTEM_PROMPT},

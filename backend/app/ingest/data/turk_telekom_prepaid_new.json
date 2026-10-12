@@ -4,37 +4,69 @@
   "customer_type": "new",
   "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler?pcat=Ana%20Paketler",
   "scraped_at": "2026-07-10",
-  "package_count": 18,
+  "package_count": 16,
   "packages": [
     {
       "name": "Hoş Geldin 50 GB Paketi",
       "package_group": "welcome",
-      "price_try": 174.0,
-      "price_period": "3_month",
+      "price_try": 300.0,
+      "price_period": "90_day",
       "price_lock_months": null,
       "internet_gb": 50,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 50,
       "voice_minutes": 1000,
       "sms_count": 1000,
       "validity_value": 90,
       "validity_unit": "day",
       "validity_days": 90,
-      "conditions": "Yeni hat veya numara taşıma ile Türk Telekom'a gelen uygun bireysel faturasız müşterilere yöneliktir. Paket 3 ay boyunca geçerlidir. Yeni hat tesisinde ÖİV ve telsiz ruhsatname ücreti ayrıca tahsil edilir; telsiz kullanım ücreti paket fiyatına dahil değildir.",
+      "conditions": "Sadece son 90 gün içerisinde yeni hat tesisi yoluyla Türk Telekom faturasıza gelen müşteriler paketten faydalanabilir; aktivasyondan itibaren 90 gün içinde pakete kayıt yapılabilir. Paket 90 gün geçerlidir. Yeni hat tesisinde ÖİV ve telsiz ruhsatname ücreti ayrıca tahsil edilir; telsiz kullanım ücreti paket fiyatına dahil değildir.",
       "campaign": "3 ay boyunca geçerli; sınırsız YaaY ve Bi' Dünya Fırsat avantajları dahildir.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/3-aylik-hos-geldin-50gb-paketi"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/3-aylik-hos-geldin-50gb-paketi",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 174.0,
+            "conditions": "Yeni hat veya numara taşıma ile Türk Telekom'a gelen uygun bireysel faturasız müşterilere yöneliktir. Paket 3 ay boyunca geçerlidir. Yeni hat tesisinde ÖİV ve telsiz ruhsatname ücreti ayrıca tahsil edilir; telsiz kullanım ücreti paket fiyatına dahil değildir."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"1 Eylül 2026 tarihi itibari ile pakete kayıt olan müşteriler için paket ücreti 300 TL'dir\" (was 174 TL) and \"Sadece son 90 gün içerisinde yeni hat tesisi yoluyla gelen müşteriler paketten faydalanabilecektir\" -- new line only; the record wrongly said new line or number porting. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=one_time -- official page: \"Paketimiz tek seferliktir\".",
+      "activation_channels": [
+        "new_line"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız (3 ay)",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1,
+          "duration_months": 3
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "one_time"
     },
     {
       "name": "Geniş 3 Ay 20 GB Paketi",
       "package_group": "wide",
       "price_try": 500.0,
-      "price_period": "3_month",
+      "price_period": "90_day",
       "price_lock_months": null,
       "internet_gb": 20,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 20,
       "voice_minutes": 3000,
       "sms_count": 250,
       "validity_value": 90,
@@ -42,18 +74,48 @@
       "validity_days": 90,
       "conditions": "Bireysel faturasız müşteriler için 90 gün geçerlidir. Kullanılmayan haklar süre sonunda silinir. Paket kapsamındaki haklar yurt içinde geçerlidir.",
       "campaign": "Sınırsız WhatsApp mesajlaşma, Türk Telekomlularla sınırsız konuşma, Bi' Dünya Fırsat ve ücretsiz dijital kurye hizmeti.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/genis-3-ay-20-gb-paketi"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/genis-3-ay-20-gb-paketi",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: price, validity, DK/SMS and GB match. Page states the package is also open to existing prepaid customers (\"yeni ve mevcut\"); see DATA_NOTES. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- official page: \"Paket, 90 gün sonunda iptal edilmezse, hatta yeterli bakiye olması halinde otomatik olarak yenilenecektir\".",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "Geniş 3 Ay 30 GB Paketi",
       "package_group": "wide",
       "price_try": 675.0,
-      "price_period": "3_month",
+      "price_period": "90_day",
       "price_lock_months": null,
       "internet_gb": 30,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 30,
       "voice_minutes": 5000,
       "sms_count": 5000,
       "validity_value": 90,
@@ -61,18 +123,48 @@
       "validity_days": 90,
       "conditions": "Bireysel faturasız müşteriler için 90 gün geçerlidir. Kullanılmayan haklar süre sonunda silinir. Paket kapsamındaki haklar yurt içinde geçerlidir.",
       "campaign": "Sınırsız WhatsApp mesajlaşma, Türk Telekomlularla sınırsız konuşma, Bi' Dünya Fırsat ve ücretsiz dijital kurye hizmeti.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/genis-3-ay-30-gb-paketi"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/genis-3-ay-30-gb-paketi",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: price, validity, DK/SMS and GB match. Page states the package is also open to existing prepaid customers (\"yeni ve mevcut\"); see DATA_NOTES. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- official page: \"Paket, 90 gün sonunda iptal edilmezse, hatta yeterli bakiye olması halinde otomatik olarak yenilenecektir\".",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "Geniş 3 Ay 50 GB Paketi",
       "package_group": "wide",
       "price_try": 875.0,
-      "price_period": "3_month",
+      "price_period": "90_day",
       "price_lock_months": null,
       "internet_gb": 50,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 50,
       "voice_minutes": 5000,
       "sms_count": 5000,
       "validity_value": 90,
@@ -80,18 +172,48 @@
       "validity_days": 90,
       "conditions": "Bireysel faturasız müşteriler için 90 gün geçerlidir. Kullanılmayan haklar süre sonunda silinir. Paket kapsamındaki haklar yurt içinde geçerlidir.",
       "campaign": "Sınırsız WhatsApp mesajlaşma, Türk Telekomlularla sınırsız konuşma, Bi' Dünya Fırsat ve ücretsiz dijital kurye hizmeti.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/genis-3-ay-50-gb-paketi"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/genis-3-ay-50-gb-paketi",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: price, validity, DK/SMS and GB match. Page states the package is also open to existing prepaid customers (\"yeni ve mevcut\"); see DATA_NOTES. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- official page: \"Paket, 90 gün sonunda iptal edilmezse, hatta yeterli bakiye olması halinde otomatik olarak yenilenecektir\".",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "Geniş 3 Ay 100 GB Paketi",
       "package_group": "wide",
       "price_try": 1250.0,
-      "price_period": "3_month",
+      "price_period": "90_day",
       "price_lock_months": null,
       "internet_gb": 100,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 100,
       "voice_minutes": 5000,
       "sms_count": 5000,
       "validity_value": 90,
@@ -99,18 +221,48 @@
       "validity_days": 90,
       "conditions": "Bireysel faturasız müşteriler için 90 gün geçerlidir. Kullanılmayan haklar süre sonunda silinir. Paket kapsamındaki haklar yurt içinde geçerlidir.",
       "campaign": "Sınırsız WhatsApp mesajlaşma, Türk Telekomlularla sınırsız konuşma, Bi' Dünya Fırsat ve ücretsiz dijital kurye hizmeti.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/genis-3-ay-100-gb-paketi"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/genis-3-ay-100-gb-paketi",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: price, validity, DK/SMS and GB match. Page states the package is also open to existing prepaid customers (\"yeni ve mevcut\"); see DATA_NOTES. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- official page: \"Paket, 90 gün sonunda iptal edilmezse, hatta yeterli bakiye olması halinde otomatik olarak yenilenecektir\".",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "Geniş 6 Ay 50 GB Paketi",
       "package_group": "wide",
       "price_try": 1150.0,
-      "price_period": "6_month",
+      "price_period": "180_day",
       "price_lock_months": null,
       "internet_gb": 50,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 50,
       "voice_minutes": 10000,
       "sms_count": 10000,
       "validity_value": 180,
@@ -118,18 +270,48 @@
       "validity_days": 180,
       "conditions": "Bireysel faturasız müşteriler için 180 gün geçerlidir. Kullanılmayan haklar süre sonunda silinir. Paket kapsamındaki haklar yurt içinde geçerlidir.",
       "campaign": "Sınırsız WhatsApp mesajlaşma, Türk Telekomlularla sınırsız konuşma, Bi' Dünya Fırsat ve ücretsiz dijital kurye hizmeti.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/genis-6-ay-50-gb-paketi"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/genis-6-ay-50-gb-paketi",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: price, validity, DK/SMS and GB match. Page states the package is also open to existing prepaid customers (\"yeni ve mevcut\"); see DATA_NOTES. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- official page: \"Paket, 180 gün sonunda iptal edilmezse, hatta yeterli bakiye olması halinde otomatik olarak yenilenecektir\".",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "Geniş 12 Ay 100 GB Paketi",
       "package_group": "wide",
-      "price_try": 3160.0,
-      "price_period": "12_month",
+      "price_try": 3300.0,
+      "price_period": "360_day",
       "price_lock_months": null,
       "internet_gb": 100,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 100,
       "voice_minutes": 20000,
       "sms_count": 20000,
       "validity_value": 360,
@@ -137,151 +319,53 @@
       "validity_days": 360,
       "conditions": "Bireysel faturasız müşteriler için 360 gün geçerlidir. Kullanılmayan haklar süre sonunda silinir. Paket kapsamındaki haklar yurt içinde geçerlidir.",
       "campaign": "Sınırsız WhatsApp mesajlaşma, Türk Telekomlularla sınırsız konuşma, Bi' Dünya Fırsat ve ücretsiz dijital kurye hizmeti.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/genis-12-ay-100-gb-paketi"
-    },
-    {
-      "name": "Transfer 1 GB Paketi",
-      "package_group": "transfer",
-      "price_try": 240.0,
-      "price_period": "28_day",
-      "price_lock_months": 12,
-      "internet_gb": 1,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 1,
-      "voice_minutes": 1500,
-      "sms_count": 100,
-      "validity_value": 28,
-      "validity_unit": "day",
-      "validity_days": 28,
-      "conditions": "Yalnızca son 90 gün içinde yeni hat açılışı veya numara taşıma ile Türk Telekom'a gelen uygun TCKN/YKN sahibi bireysel faturasız müşteriler yararlanabilir. Paket 28 gün geçerlidir ve iptal edilmezse yeterli bakiye bulunması halinde otomatik yenilenir. Haklar yalnızca yurt içinde geçerlidir; kullanılmayan faydalar süre sonunda silinir. Kullanılmayan haklar devretmez; 28 gün sonunda silinir.",
-      "campaign": "12 ay sabit fiyat garantisi, Bi' Dünya Fırsat, il ve ilçelere 24 saatte teslimat ve ücretsiz dijital kurye hizmeti.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/transfer-1-gb-paketi"
-    },
-    {
-      "name": "Transfer 5 GB Paketi",
-      "package_group": "transfer",
-      "price_try": 300.0,
-      "price_period": "28_day",
-      "price_lock_months": 12,
-      "internet_gb": 5,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 5,
-      "voice_minutes": 1000,
-      "sms_count": 100,
-      "validity_value": 28,
-      "validity_unit": "day",
-      "validity_days": 28,
-      "conditions": "Yalnızca son 90 gün içinde yeni hat açılışı veya numara taşıma ile Türk Telekom'a gelen uygun TCKN/YKN sahibi bireysel faturasız müşteriler yararlanabilir. Paket 28 gün geçerlidir ve iptal edilmezse yeterli bakiye bulunması halinde otomatik yenilenir. Haklar yalnızca yurt içinde geçerlidir; kullanılmayan faydalar süre sonunda silinir. Kullanılmayan haklar devretmez; 28 gün sonunda silinir.",
-      "campaign": "12 ay sabit fiyat garantisi, Bi' Dünya Fırsat, il ve ilçelere 24 saatte teslimat ve ücretsiz dijital kurye hizmeti.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/transfer-5-gb-paketi"
-    },
-    {
-      "name": "Transfer 10 GB Paketi",
-      "package_group": "transfer",
-      "price_try": 375.0,
-      "price_period": "28_day",
-      "price_lock_months": 12,
-      "internet_gb": 10,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 10,
-      "voice_minutes": 1000,
-      "sms_count": 100,
-      "validity_value": 28,
-      "validity_unit": "day",
-      "validity_days": 28,
-      "conditions": "Yalnızca son 90 gün içinde yeni hat açılışı veya numara taşıma ile Türk Telekom'a gelen uygun TCKN/YKN sahibi bireysel faturasız müşteriler yararlanabilir. Paket 28 gün geçerlidir ve iptal edilmezse yeterli bakiye bulunması halinde otomatik yenilenir. Haklar yalnızca yurt içinde geçerlidir; kullanılmayan faydalar süre sonunda silinir. Kullanılmayan haklar devretmez; 28 gün sonunda silinir.",
-      "campaign": "12 ay sabit fiyat garantisi, Bi' Dünya Fırsat, il ve ilçelere 24 saatte teslimat ve ücretsiz dijital kurye hizmeti.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/transfer-10-gb-paketi"
-    },
-    {
-      "name": "Transfer 15 GB Paketi",
-      "package_group": "transfer",
-      "price_try": 440.0,
-      "price_period": "28_day",
-      "price_lock_months": 12,
-      "internet_gb": 15,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 15,
-      "voice_minutes": 1000,
-      "sms_count": 100,
-      "validity_value": 28,
-      "validity_unit": "day",
-      "validity_days": 28,
-      "conditions": "Yalnızca son 90 gün içinde yeni hat açılışı veya numara taşıma ile Türk Telekom'a gelen uygun TCKN/YKN sahibi bireysel faturasız müşteriler yararlanabilir. Paket 28 gün geçerlidir ve iptal edilmezse yeterli bakiye bulunması halinde otomatik yenilenir. Haklar yalnızca yurt içinde geçerlidir; kullanılmayan faydalar süre sonunda silinir. Kullanılmayan haklar devretmez; 28 gün sonunda silinir.",
-      "campaign": "12 ay sabit fiyat garantisi, Bi' Dünya Fırsat, il ve ilçelere 24 saatte teslimat ve ücretsiz dijital kurye hizmeti.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/transfer-15-gb-paketi"
-    },
-    {
-      "name": "Transfer 20 GB Paketi",
-      "package_group": "transfer",
-      "price_try": 500.0,
-      "price_period": "28_day",
-      "price_lock_months": 12,
-      "internet_gb": 20,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 20,
-      "voice_minutes": 1000,
-      "sms_count": 100,
-      "validity_value": 28,
-      "validity_unit": "day",
-      "validity_days": 28,
-      "conditions": "Yalnızca son 90 gün içinde yeni hat açılışı veya numara taşıma ile Türk Telekom'a gelen uygun TCKN/YKN sahibi bireysel faturasız müşteriler yararlanabilir. Paket 28 gün geçerlidir ve iptal edilmezse yeterli bakiye bulunması halinde otomatik yenilenir. Haklar yalnızca yurt içinde geçerlidir; kullanılmayan faydalar süre sonunda silinir. Kullanılmayan haklar devretmez; 28 gün sonunda silinir.",
-      "campaign": "12 ay sabit fiyat garantisi, Bi' Dünya Fırsat, il ve ilçelere 24 saatte teslimat ve ücretsiz dijital kurye hizmeti.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/transfer-20-gb-paketi"
-    },
-    {
-      "name": "Transfer 30 GB Paketi",
-      "package_group": "transfer",
-      "price_try": 620.0,
-      "price_period": "28_day",
-      "price_lock_months": 12,
-      "internet_gb": 30,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 30,
-      "voice_minutes": 1000,
-      "sms_count": 100,
-      "validity_value": 28,
-      "validity_unit": "day",
-      "validity_days": 28,
-      "conditions": "Sadece son 90 gün içinde yeni hat açılışı veya numara taşıma ile Türk Telekom'a gelen uygun bireysel faturasız müşteriler yararlanabilir. Paket 28 gün geçerlidir. Aynı paket 28 gün içinde birden fazla kez alınabilir. İptal edilmezse ve hatta yeterli bakiye varsa 28 gün sonunda otomatik yenilenir. Kullanılmayan haklar süre sonunda silinir. Haklar yalnızca yurt içinde geçerlidir; üçüncü kişilere transfer edilemez. 12 Haziran 2026 itibarıyla paket yalnızca SMS kanalından yeniden satın alınabilir.",
-      "campaign": "12 ay sabit fiyat garantisi, il ve ilçelere 24 saatte teslimat, Bi' Dünya Fırsat, numara taşıma ve yeni hatla gelenlere özel avantajlar ve ücretsiz dijital kurye hizmeti.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/transfer-30-gb-paketi"
-    },
-    {
-      "name": "Transfer 40 GB Paketi",
-      "package_group": "transfer",
-      "price_try": 725.0,
-      "price_period": "28_day",
-      "price_lock_months": 12,
-      "internet_gb": 40,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 40,
-      "voice_minutes": 1000,
-      "sms_count": 100,
-      "validity_value": 28,
-      "validity_unit": "day",
-      "validity_days": 28,
-      "conditions": "Sadece son 90 gün içinde yeni hat açılışı veya numara taşıma ile Türk Telekom'a gelen uygun bireysel faturasız müşteriler yararlanabilir. Paket 28 gün geçerlidir. Aynı paket 28 gün içinde birden fazla kez alınabilir. İptal edilmezse ve hatta yeterli bakiye varsa 28 gün sonunda otomatik yenilenir. Kullanılmayan haklar süre sonunda silinir. Haklar yalnızca yurt içinde geçerlidir; üçüncü kişilere transfer edilemez.",
-      "campaign": "12 ay sabit fiyat garantisi, il ve ilçelere 24 saatte teslimat, Bi' Dünya Fırsat, numara taşıma ve yeni hatla gelenlere özel avantajlar ve ücretsiz dijital kurye hizmeti.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/transfer-40-gb-paketi"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/genis-12-ay-100-gb-paketi",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 3160.0
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"Geniş 12 Ay 100 GB Paketi 360 Gün 20000 DK + 20000 SMS + 100 GB 3.300 TL\" (was 3160). Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.1 (2026-10-12): official page: \"yeni ve mevcut tüm müşteriler yararlanabilecektir\" -> also open to existing customers (catalog stays new-customer only); channel still not stated. Phase 2D.2 (2026-10-12): renewal_type=unknown -- official page states no renewal rule (only cancellation by SMS and \"paketi yenilenmediyse\" overage wording).",
+      "activation_channels": null,
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "unknown"
     },
     {
       "name": "Dijital 4 GB",
       "package_group": "digital",
-      "price_try": 490.0,
+      "price_try": 540.0,
       "price_period": "28_day",
       "price_lock_months": null,
       "internet_gb": 4,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 4,
       "voice_minutes": 750,
       "sms_count": 250,
       "validity_value": 28,
@@ -289,18 +373,56 @@
       "validity_days": 28,
       "conditions": "Bireysel faturasız müşteriler için 28 gün geçerlidir. Paket online kanallara özeldir. Kullanılmayan haklar süre sonunda silinir ve paket hakları yurt içinde geçerlidir.",
       "campaign": "Online'a özel fiyat, sınırsız YaaY kullanımı ve Bi' Dünya Fırsat avantajları.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/dijital-4gb"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/dijital-4gb",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 490.0
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "activation_channels": null
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"Dijital 4GB 28 gün 750 DK +250 SMS + 4 GB 540 TL\". Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.1 (2026-10-12): official page: \"son 60 gün içinde yeni hat alarak veya numara taşıyarak gelen müşteriler\" and \"belirtilen tarifeler dışındaki faturasız tarifelerde bulunan mevcut müşteriler faydalanabilecektir\" -> both channels. The page also opens it to existing customers; the catalog stays new-customer only (customer_type new). Phase 2D.2 (2026-10-12): renewal_type=recurring -- official page: \"Paket, 28 gün sonunda iptal edilmezse, hatta yeterli bakiye olması halinde otomatik olarak yenilenecektir\".",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "Dijital 8 GB",
       "package_group": "digital",
-      "price_try": 570.0,
+      "price_try": 630.0,
       "price_period": "28_day",
       "price_lock_months": null,
       "internet_gb": 8,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 8,
       "voice_minutes": 750,
       "sms_count": 250,
       "validity_value": 28,
@@ -308,18 +430,56 @@
       "validity_days": 28,
       "conditions": "Bireysel faturasız müşteriler için 28 gün geçerlidir. Paket online kanallara özeldir. Kullanılmayan haklar süre sonunda silinir ve paket hakları yurt içinde geçerlidir.",
       "campaign": "Online'a özel fiyat, sınırsız YaaY kullanımı ve Bi' Dünya Fırsat avantajları.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/dijital-8gb"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/dijital-8gb",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 570.0
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "activation_channels": null
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"Dijital 8GB 28 gün 750 DK +250 SMS + 8 GB 630 TL\". Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.1 (2026-10-12): official page: \"son 60 gün içinde yeni hat alarak veya numara taşıyarak gelen müşteriler\" and \"belirtilen tarifeler dışındaki faturasız tarifelerde bulunan mevcut müşteriler faydalanabilecektir\" -> both channels. The page also opens it to existing customers; the catalog stays new-customer only (customer_type new). Phase 2D.2 (2026-10-12): renewal_type=recurring -- official page: \"Paket, 28 gün sonunda iptal edilmezse, hatta yeterli bakiye olması halinde otomatik olarak yenilenecektir\".",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "Dijital 12 GB",
       "package_group": "digital",
-      "price_try": 650.0,
+      "price_try": 715.0,
       "price_period": "28_day",
       "price_lock_months": null,
       "internet_gb": 12,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 12,
       "voice_minutes": 750,
       "sms_count": 250,
       "validity_value": 28,
@@ -327,18 +487,56 @@
       "validity_days": 28,
       "conditions": "Bireysel faturasız müşteriler için 28 gün geçerlidir. Paket online kanallara özeldir. Kullanılmayan haklar süre sonunda silinir ve paket hakları yurt içinde geçerlidir.",
       "campaign": "Online'a özel fiyat, sınırsız YaaY kullanımı ve Bi' Dünya Fırsat avantajları.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/dijital-12gb"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/dijital-12gb",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 650.0
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "activation_channels": null
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"Dijital 12GB 28 gün 750 DK +250 SMS + 12 GB 715 TL\". Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.1 (2026-10-12): official page: \"son 60 gün içinde yeni hat alarak veya numara taşıyarak gelen müşteriler\" and \"belirtilen tarifeler dışındaki faturasız tarifelerde bulunan mevcut müşteriler faydalanabilecektir\" -> both channels. The page also opens it to existing customers; the catalog stays new-customer only (customer_type new). Phase 2D.2 (2026-10-12): renewal_type=recurring -- official page: \"Paket, 28 gün sonunda iptal edilmezse, hatta yeterli bakiye olması halinde otomatik olarak yenilenecektir\".",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "Dijital 24 GB",
       "package_group": "digital",
-      "price_try": 860.0,
+      "price_try": 950.0,
       "price_period": "28_day",
       "price_lock_months": null,
       "internet_gb": 24,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 24,
       "voice_minutes": 750,
       "sms_count": 250,
       "validity_value": 28,
@@ -346,7 +544,277 @@
       "validity_days": 28,
       "conditions": "Bireysel faturasız müşteriler için 28 gün geçerlidir. Paket online kanallara özeldir. Kullanılmayan haklar süre sonunda silinir ve paket hakları yurt içinde geçerlidir.",
       "campaign": "Online'a özel fiyat, sınırsız YaaY kullanımı ve Bi' Dünya Fırsat avantajları.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/dijital-24gb"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/dijital-24gb",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 860.0
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "activation_channels": null
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official page: \"Dijital 24GB 28 gün 750 DK +250 SMS + 24 GB 950 TL\". Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.1 (2026-10-12): official page: \"son 60 gün içinde yeni hat alarak veya numara taşıyarak gelen müşteriler\" and \"belirtilen tarifeler dışındaki faturasız tarifelerde bulunan mevcut müşteriler faydalanabilecektir\" -> both channels. The page also opens it to existing customers; the catalog stays new-customer only (customer_type new). Phase 2D.2 (2026-10-12): renewal_type=recurring -- official page: \"Paket, 28 gün sonunda iptal edilmezse, hatta yeterli bakiye olması halinde otomatik olarak yenilenecektir\".",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "Hoş Geldin 10 GB Paketi",
+      "package_group": "welcome",
+      "price_try": 200.0,
+      "price_period": "28_day",
+      "price_lock_months": null,
+      "internet_gb": 10,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 750,
+      "sms_count": 750,
+      "validity_value": 28,
+      "validity_unit": "day",
+      "validity_days": 28,
+      "conditions": "Sadece son 90 gün içerisinde yeni hat açılışı veya numara taşıma yolu ile Türk Telekom faturasıza gelen müşteriler paketten faydalanabilir. Paket 28 gün geçerlidir ve otomatik yenilenmez; aktivasyondan sonraki 90 gün içinde tekrar alınabilir. Yeni hat tesisinde ÖİV ve telsiz ruhsatname ücreti ayrıca tahsil edilir.",
+      "campaign": null,
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/hos-geldin-10gb-paketi",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer prepaid listing. Page: \"Hoş Geldin 10 GB Paketi sadece 200 TL\", 28 gün, 750 DK + 750 SMS + 10 GB; \"Sadece son 90 gün içerisinde yeni hat açılışı veya numara taşıma yolu ile gelen müşteriler paketten faydalanabilecektir\"; \"Paket yenilenemez\". Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=one_time -- official page: \"Paket yenilenemez\"; record: \"otomatik yenilenmez\".",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "one_time"
+    },
+    {
+      "name": "Hoş Geldin 25 GB Paketi",
+      "package_group": "welcome",
+      "price_try": 300.0,
+      "price_period": "28_day",
+      "price_lock_months": null,
+      "internet_gb": 25,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 750,
+      "sms_count": 750,
+      "validity_value": 28,
+      "validity_unit": "day",
+      "validity_days": 28,
+      "conditions": "Sadece son 90 gün içerisinde yeni hat açılışı veya numara taşıma yolu ile Türk Telekom faturasıza gelen müşteriler paketten faydalanabilir. Paket 28 gün geçerlidir ve otomatik yenilenmez; aktivasyondan sonraki 90 gün içinde tekrar alınabilir. Yeni hat tesisinde ÖİV ve telsiz ruhsatname ücreti ayrıca tahsil edilir.",
+      "campaign": null,
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/hos-geldin-25gb-paketi",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer prepaid listing. Page: \"Hoş Geldin 25 GB Paketi sadece 300 TL\", 28 gün, 750 DK + 750 SMS + 25 GB; \"Sadece son 90 gün içerisinde yeni hat açılışı veya numara taşıma yolu ile gelen müşteriler paketten faydalanabilecektir\"; \"Paket yenilenemez\". Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=one_time -- official page: \"Paket yenilenemez\"; record: \"otomatik yenilenmez\".",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "one_time"
+    },
+    {
+      "name": "Hoş Geldin 40 GB Paketi",
+      "package_group": "welcome",
+      "price_try": 400.0,
+      "price_period": "28_day",
+      "price_lock_months": null,
+      "internet_gb": 40,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 750,
+      "sms_count": 750,
+      "validity_value": 28,
+      "validity_unit": "day",
+      "validity_days": 28,
+      "conditions": "Sadece son 90 gün içerisinde yeni hat açılışı veya numara taşıma yolu ile Türk Telekom faturasıza gelen müşteriler paketten faydalanabilir. Paket 28 gün geçerlidir ve otomatik yenilenmez; aktivasyondan sonraki 90 gün içinde tekrar alınabilir. Yeni hat tesisinde ÖİV ve telsiz ruhsatname ücreti ayrıca tahsil edilir.",
+      "campaign": null,
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/hos-geldin-40gb-paketi",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer prepaid listing. Page: \"Hoş Geldin 40 GB Paketi sadece 400 TL\", 28 gün, 750 DK + 750 SMS + 40 GB; \"Sadece son 90 gün içerisinde yeni hat açılışı veya numara taşıma yolu ile gelen müşteriler paketten faydalanabilecektir\"; \"Paket yenilenemez\". Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=one_time -- official page: \"Paket yenilenemez\"; record: \"otomatik yenilenmez\".",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "one_time"
+    },
+    {
+      "name": "Hoş Geldin 60 GB Paketi",
+      "package_group": "welcome",
+      "price_try": 550.0,
+      "price_period": "28_day",
+      "price_lock_months": null,
+      "internet_gb": 60,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 750,
+      "sms_count": 750,
+      "validity_value": 28,
+      "validity_unit": "day",
+      "validity_days": 28,
+      "conditions": "Sadece son 90 gün içerisinde yeni hat açılışı veya numara taşıma yolu ile Türk Telekom faturasıza gelen müşteriler paketten faydalanabilir. Paket 28 gün geçerlidir ve otomatik yenilenmez; aktivasyondan sonraki 90 gün içinde tekrar alınabilir. Yeni hat tesisinde ÖİV ve telsiz ruhsatname ücreti ayrıca tahsil edilir.",
+      "campaign": null,
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/hos-geldin-60gb-paketi",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer prepaid listing. Page: \"Hoş Geldin 60 GB Paketi sadece 550 TL\", 28 gün, 750 DK + 750 SMS + 60 GB; \"Sadece son 90 gün içerisinde yeni hat açılışı veya numara taşıma yolu ile gelen müşteriler paketten faydalanabilecektir\"; \"Paket yenilenemez\". Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=one_time -- official page: \"Paket yenilenemez\"; record: \"otomatik yenilenmez\".",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "one_time"
+    },
+    {
+      "name": "Fırsat 50 GB Paketi",
+      "package_group": "welcome",
+      "price_try": 200.0,
+      "price_period": "60_day",
+      "price_lock_months": null,
+      "internet_gb": 50,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 750,
+      "sms_count": 250,
+      "validity_value": 60,
+      "validity_unit": "day",
+      "validity_days": 60,
+      "conditions": "Sadece son 90 gün içerisinde yeni hat tesisi yoluyla Türk Telekom faturasıza gelen müşteriler paketten faydalanabilir; aktivasyondan itibaren 90 gün içinde pakete kayıt yapılabilir. Paket 60 gün geçerlidir.",
+      "campaign": null,
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler/firsat-50gb-paketi",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer prepaid listing. Page: \"Yeni hat alarak faturasıza gelen müşterilerimize 60 gün boyunca geçerli Fırsat 50GB Paketi\", 200 TL, 50 GB, 750 DK, 250 SMS; \"Sadece son 90 gün içerisinde yeni hat tesisi yoluyla gelen müşteriler paketten faydalanabilecektir\". Priced per 60-day package, so price_period is one_time. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=one_time -- official page: \"Paketimiz tek seferliktir\".",
+      "activation_channels": [
+        "new_line"
+      ],
+      "benefits": [
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "one_time"
     }
-  ]
+  ],
+  "verified_at": "2026-10-12",
+  "schema_version": 2
 }

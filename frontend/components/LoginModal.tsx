@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuth } from "@/lib/auth";
 
 interface Props {
@@ -16,6 +16,13 @@ export default function LoginModal({ open, onClose, reason }: Props) {
   const [sent, setSent] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open, onClose]);
 
   if (!open) return null;
 
@@ -33,7 +40,7 @@ export default function LoginModal({ open, onClose, reason }: Props) {
       setError(
         /rate limit/i.test(msg)
           ? "Çok fazla deneme yapıldı. Birkaç dakika sonra tekrar dene."
-          : `Bağlantı gönderilemedi: ${msg}`,
+          : "Bağlantı gönderilemedi. E-posta adresini kontrol edip tekrar dene.",
       );
     } finally {
       setBusy(false);
@@ -46,26 +53,27 @@ export default function LoginModal({ open, onClose, reason }: Props) {
         className="login-modal"
         role="dialog"
         aria-modal="true"
-        aria-label="Giriş yap"
+        aria-labelledby="login-title"
         onClick={(e) => e.stopPropagation()}
       >
-        <button className="login-close" onClick={onClose} aria-label="Kapat">
-          ✕
+        <button type="button" className="icon-btn ghost login-close" onClick={onClose} aria-label="Kapat">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
         </button>
 
-        <div className="login-brand">
-          <span className="a">Tarife</span>
-          <span className="b">AI</span>
-        </div>
+        <span className="wordmark">
+          Tarife<span>AI</span>
+        </span>
 
-        <h2 className="login-title">Devam etmek için giriş yap</h2>
+        <h2 id="login-title" className="login-title">Devam etmek için giriş yap</h2>
         <p className="login-sub">
           {reason ??
             "Ücretsiz mesaj hakkın doldu. E-postana gelecek giriş linkiyle sohbete devam edebilirsin."}
         </p>
 
         {sent ? (
-          <div className="login-sent">
+          <div className="login-sent" role="status">
             <strong>Bağlantı gönderildi.</strong>
             <span>
               {email} adresine gelen giriş linkine tıklayarak devam et.
@@ -79,16 +87,22 @@ export default function LoginModal({ open, onClose, reason }: Props) {
                 inputMode="email"
                 autoComplete="email"
                 placeholder="E-posta adresin"
+                aria-label="E-posta adresin"
+                autoFocus
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <button type="submit" disabled={busy || !email.trim()}>
+              <button type="submit" className="btn btn-primary" disabled={busy || !email.trim()}>
                 {busy ? "Gönderiliyor…" : "Giriş Linki Gönder"}
               </button>
             </form>
 
-            {error && <div className="login-error">{error}</div>}
+            {error && (
+              <p className="login-error" role="alert">
+                {error}
+              </p>
+            )}
           </>
         )}
       </div>

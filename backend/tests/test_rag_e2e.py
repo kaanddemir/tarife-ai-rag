@@ -22,7 +22,6 @@ def _pkg(operator, name, price, gb):
         customer_type="any",
         product_scope="mobile_voice",
         commitment_status="no_commitment",
-        data_quality_status="complete",
         price_try=price,
         internet_gb=gb,
         voice_minutes=1000,
@@ -67,12 +66,11 @@ def test_generate_grounds_and_filters_citations(monkeypatch):
     assert "Hazir Kart 20 GB" in user_msg and "Kolay Paket 20 GB" in user_msg
     # Source lines must carry the package's bucket (line type + who it's open to).
     assert "(faturasiz, yeni veya mevcut musteri)" in user_msg
+    # Sectioned facts (official / calculated / unknown) and an adaptive style,
+    # instead of one rigid answer template.
+    assert "RESMİ (operatör sayfası" in user_msg and "<USLUP>" in user_msg
     system_msg = _FakeCompletions.last_kwargs["messages"][0]["content"]
-    assert "**Öneri:**" in system_msg
-    assert "**Kime hangisi uygun:**" in system_msg
-    assert "orta detayli Markdown" in system_msg
-    assert "**Sonraki adım:**" in system_msg
-    assert "takip sorusu" in system_msg
+    assert "HESAP (TarifeAI'nin kiyas icin hesabi" in system_msg
 
 
 def test_generate_orders_table_by_answer_citation_order(monkeypatch):

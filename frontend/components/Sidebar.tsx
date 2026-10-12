@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import type { Conversation } from "@/lib/types";
+import ThemeToggle from "./ThemeToggle";
 
 interface Props {
   conversations: Conversation[];
@@ -37,8 +39,24 @@ export default function Sidebar({
   onLogout,
 }: Props) {
   const [menuId, setMenuId] = useState<string | null>(null);
+  // The conversation awaiting delete confirmation, captured when "Sil" is chosen
+  // so the dialog always acts on that id, not on whatever is active later.
+  const [pendingDelete, setPendingDelete] = useState<Conversation | null>(null);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [draftTitle, setDraftTitle] = useState("");
+
+  // An open menu closes on Escape or a click anywhere else.
+  useEffect(() => {
+    if (!menuId) return;
+    const close = () => setMenuId(null);
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && close();
+    document.addEventListener("click", close);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("click", close);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [menuId]);
 
   function startRename(conversation: Conversation) {
     setEditingId(conversation.id);
@@ -52,38 +70,34 @@ export default function Sidebar({
     setDraftTitle("");
   }
 
+  const remaining = isSignedIn ? Math.max(0, dailyLimit - dailyUsed) : Math.max(0, guestLimit - guestUsed);
+  const limit = isSignedIn ? dailyLimit : guestLimit;
+
   return (
-    <aside className="sidebar">
+    <aside className="sidebar" aria-label="Sohbetler">
       <div className="sidebar-head">
-        <div className="wordmark">
-          <span className="a">Tarife</span>
-          <span className="b">AI</span>
-        </div>
+        <span className="wordmark">
+          Tarife<span>AI</span>
+        </span>
       </div>
 
-      <button className="new-btn" onClick={onNew}>
-        <span>＋</span> Yeni Sohbet
+      <button type="button" className="btn btn-primary new-btn" onClick={onNew}>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 5v14M5 12h14" />
+        </svg>
+        Yeni sohbet
       </button>
 
-      <div className="conv-label">Sohbetler</div>
-      <div className="conv-list">
-        {conversations.length === 0 && (
-          <div className="conv-preview" style={{ padding: "8px 12px" }}>
-            Henüz sohbet yok.
-          </div>
-        )}
+      <h2 className="conv-label">Sohbetler</h2>
+      <ul className="conv-list">
         {conversations.map((c) => (
-          <div
-            key={c.id}
-            className={`conv${c.id === activeId ? " active" : ""}`}
-            onClick={() => onSelect(c.id)}
-          >
+          <li key={c.id} className={`conv${c.id === activeId ? " active" : ""}`}>
             {editingId === c.id ? (
               <input
                 className="conv-title-input"
+                aria-label="Sohbet adı"
                 value={draftTitle}
                 autoFocus
-                onClick={(e) => e.stopPropagation()}
                 onChange={(e) => setDraftTitle(e.target.value)}
                 onBlur={() => finishRename(c.id)}
                 onKeyDown={(e) => {
@@ -95,94 +109,152 @@ export default function Sidebar({
                 }}
               />
             ) : (
-              <div className="conv-title">{c.title}</div>
+              <button
+                type="button"
+                className="conv-select"
+                aria-current={c.id === activeId ? "page" : undefined}
+                onClick={() => onSelect(c.id)}
+              >
+                {c.title}
+              </button>
             )}
             <button
+              type="button"
               className="conv-menu-btn"
-              title="Sohbet seçenekleri"
-              aria-label="Sohbet seçenekleri"
+              aria-label={`"${c.title}" seçenekleri`}
+              aria-haspopup="menu"
               aria-expanded={menuId === c.id}
               onClick={(e) => {
                 e.stopPropagation();
                 setMenuId((id) => (id === c.id ? null : c.id));
               }}
             >
-              <svg className="dots-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="5" cy="12" r="2.3" />
-                <circle cx="12" cy="12" r="2.3" />
-                <circle cx="19" cy="12" r="2.3" />
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="5" cy="12" r="1.6" />
+                <circle cx="12" cy="12" r="1.6" />
+                <circle cx="19" cy="12" r="1.6" />
               </svg>
             </button>
             {menuId === c.id && (
-              <div className="conv-menu" onClick={(e) => e.stopPropagation()}>
-                <button type="button" onClick={() => startRename(c)}>
-                  <svg className="menu-icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M4 20h4.2L18.9 9.3l-4.2-4.2L4 15.8V20z" />
-                    <path d="M13.7 6.1l4.2 4.2" />
-                  </svg>
+              <div className="conv-menu" role="menu" onClick={(e) => e.stopPropagation()}>
+                <button type="button" role="menuitem" onClick={() => startRename(c)}>
                   Yeniden adlandır
                 </button>
                 <button
                   type="button"
+                  role="menuitem"
                   className="danger"
                   onClick={() => {
                     setMenuId(null);
-                    onDelete(c.id);
+                    setPendingDelete(c);
                   }}
                 >
-                  <svg className="menu-icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M6 6l12 12M18 6L6 18" />
-                  </svg>
                   Sil
                 </button>
               </div>
             )}
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
 
-      <div className="sidebar-foot">
-        {/* Signed-in: the name before "@". Guest: "K" (from "Kullanıcı"). */}
-        <div className="avatar">
-          {isSignedIn && email ? email[0].toUpperCase() : "K"}
-        </div>
-        <div className="foot-main">
+      <div className="auth-row">
+      <button
+        type="button"
+        className="auth-btn"
+        onClick={isSignedIn ? onLogout : onLogin}
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
           {isSignedIn ? (
             <>
-              <div className="foot-name truncate" title={email ?? undefined}>
-                {email ? email.split("@")[0] : "Hesabım"}
-              </div>
-              <div className="guest-meter">
-                <b>{Math.max(0, dailyLimit - dailyUsed)}</b> / {dailyLimit} Mesaj hakkı
-              </div>
-            </>
-          ) : (
-            <>
-              <div className="foot-name">Misafir Kullanıcı</div>
-              <div className="guest-meter">
-                <b>{Math.max(0, guestLimit - guestUsed)}</b> / {guestLimit} Ücretsiz Mesaj
-              </div>
-            </>
-          )}
-        </div>
-        {isSignedIn ? (
-          <button className="foot-action" onClick={onLogout} title="Çıkış" aria-label="Çıkış">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
               <path d="M16 17l5-5-5-5" />
               <path d="M21 12H9" />
-            </svg>
-          </button>
-        ) : (
-          <button className="foot-action" onClick={onLogin} title="Giriş yap" aria-label="Giriş yap">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
+            </>
+          ) : (
+            <>
               <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
               <path d="M10 17l5-5-5-5" />
               <path d="M15 12H3" />
-            </svg>
-          </button>
-        )}
+            </>
+          )}
+        </svg>
+        {isSignedIn ? "Çıkış yap" : "Giriş yap"}
+      </button>
+      <ThemeToggle />
       </div>
+
+      <div className="sidebar-foot">
+        <span className="avatar" aria-hidden="true">
+          {isSignedIn && email ? email[0].toUpperCase() : "M"}
+        </span>
+        <div className="foot-main">
+          <span className="foot-name" title={isSignedIn ? (email ?? undefined) : undefined}>
+            {isSignedIn ? (email ? email.split("@")[0] : "Hesabım") : "Misafir"}
+          </span>
+          <span className="meter">
+            {remaining}/{limit} Mesaj
+            <span className="sr-only"> hakkı kaldı{isSignedIn ? " (bugün)" : ""}</span>
+          </span>
+          <span className="meter-bar" aria-hidden="true">
+            <span style={{ width: `${(remaining / limit) * 100}%` }} />
+          </span>
+        </div>
+      </div>
+      {pendingDelete && (
+        <ConfirmDelete
+          onCancel={() => setPendingDelete(null)}
+          onConfirm={() => {
+            const id = pendingDelete.id;
+            setPendingDelete(null);
+            onDelete(id);
+          }}
+        />
+      )}
     </aside>
+  );
+}
+
+function ConfirmDelete({ onCancel, onConfirm }: { onCancel: () => void; onConfirm: () => void }) {
+  const cancelRef = useRef<HTMLButtonElement>(null);
+  const onCancelRef = useRef(onCancel);
+  onCancelRef.current = onCancel;
+
+  // Focus the safe choice; Escape cancels; focus returns to where it was.
+  useEffect(() => {
+    const previous = document.activeElement as HTMLElement | null;
+    cancelRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onCancelRef.current();
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      previous?.focus?.();
+    };
+  }, []);
+
+  // Portal: on mobile the sidebar is a transformed drawer, which would otherwise
+  // trap this fixed-position dialog inside it.
+  return createPortal(
+    <div className="login-backdrop" onClick={onCancel}>
+      <div
+        className="login-modal confirm-modal"
+        role="alertdialog"
+        aria-modal="true"
+        aria-labelledby="confirm-title"
+        aria-describedby="confirm-desc"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <h2 id="confirm-title" className="confirm-title">Sohbet silinsin mi?</h2>
+        <p id="confirm-desc" className="confirm-desc">Bu işlem geri alınamaz.</p>
+        <div className="confirm-actions">
+          <button ref={cancelRef} type="button" className="btn" onClick={onCancel}>
+            Vazgeç
+          </button>
+          <button type="button" className="btn btn-danger" onClick={onConfirm}>
+            Sil
+          </button>
+        </div>
+      </div>
+    </div>,
+    document.body
   );
 }

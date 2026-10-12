@@ -10,12 +10,11 @@
       "name": "Bol GB Tanışma Seti Kampanyası",
       "package_group": "new_line",
       "price_try": 1250.0,
-      "price_period": "one_time",
+      "price_period": "60_day",
       "price_lock_months": null,
       "internet_gb": 50,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 50,
       "voice_minutes": 750,
       "sms_count": 250,
       "validity_value": 2,
@@ -23,7 +22,15 @@
       "validity_days": 60,
       "conditions": "Turkcell'den yeni bir faturasız hat almak isteyen bireysel müşterilere sunulur. Yeni hat vergileri fiyata dahildir. Hediye internet, dakika ve SMS hakları 2 ay boyunca kullanılabilir.",
       "campaign": "Yeni faturasız hat alan müşterilere 2 ay boyunca 50 GB internet, her yöne 750 dakika ve 250 SMS verilir.",
-      "source_url": "https://www.turkcell.com.tr/kampanyalar/mobil-hat-data-hatti-kampanyalari/yeni-turkcell-musterisi/bol-gb-tanisma-seti-kampanyasi"
+      "source_url": "https://www.turkcell.com.tr/kampanyalar/mobil-hat-data-hatti-kampanyalari/yeni-turkcell-musterisi/bol-gb-tanisma-seti-kampanyasi",
+      "verified_at": "2026-10-12",
+      "evidence": "Official campaign page: \"Kampanya Fiyatı 1.250 TL\", 750 dakika, 250 SMS, 50 GB for 2 months, \"31 Aralık 2026 tarihine kadar geçerli\". Partially verified: the detailed terms are not server-rendered. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=unknown -- official campaign page states no renewal rule.",
+      "activation_channels": [
+        "new_line"
+      ],
+      "benefits": [],
+      "benefits_status": "unverified",
+      "renewal_type": "unknown"
     },
     {
       "name": "5G Cepte Fırsat 10",
@@ -34,7 +41,6 @@
       "internet_gb": 10,
       "social_media_gb": null,
       "bonus_internet_gb": 1,
-      "total_internet_gb": 11,
       "voice_minutes": 1000,
       "sms_count": 250,
       "validity_value": 4,
@@ -42,7 +48,26 @@
       "validity_days": 28,
       "conditions": "Numarasını Turkcell'e taşıyan uygun bireysel faturasız müşterilere sunulur. Paket 4 hafta geçerlidir. Paket satın alındıktan sonra fiyat 3 ay boyunca sabit kalır.",
       "campaign": "BiP uygulamasında geçerli 1 GB ek internet pakete dahildir.",
-      "source_url": "https://www.turkcell.com.tr/kampanyalar/mobil-hat-data-hatti-kampanyalari/yeni-turkcell-musterisi/5g-cepte-firsat-10"
+      "source_url": "https://www.turkcell.com.tr/kampanyalar/mobil-hat-data-hatti-kampanyalari/yeni-turkcell-musterisi/5g-cepte-firsat-10",
+      "verified_at": "2026-10-12",
+      "evidence": "Official campaign page: price per 4 weeks, GB, 1000 dk, 250 SMS and BiP 1 GB match; \"31 Aralık 2026 tarihine kadar geçerli\". Partially verified: the detailed terms are not server-rendered. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=unknown -- official campaign page states no renewal rule.",
+      "activation_channels": [
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "BiP uygulamasında geçerli 1 GB ek internet",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": 1
+        }
+      ],
+      "benefits_status": "verified",
+      "bonus_internet_scope": "app_specific",
+      "renewal_type": "unknown"
     },
     {
       "name": "5G Cepte Fırsat 20",
@@ -53,7 +78,6 @@
       "internet_gb": 20,
       "social_media_gb": null,
       "bonus_internet_gb": 1,
-      "total_internet_gb": 21,
       "voice_minutes": 1000,
       "sms_count": 250,
       "validity_value": 4,
@@ -61,7 +85,26 @@
       "validity_days": 28,
       "conditions": "Numarasını Turkcell'e taşıyan uygun bireysel faturasız müşterilere sunulur. Paket 4 hafta geçerlidir. Paket satın alındıktan sonra fiyat 3 ay boyunca sabit kalır.",
       "campaign": "BiP uygulamasında geçerli 1 GB ek internet pakete dahildir.",
-      "source_url": "https://www.turkcell.com.tr/kampanyalar/mobil-hat-data-hatti-kampanyalari/yeni-turkcell-musterisi/5g-cepte-firsat-20"
+      "source_url": "https://www.turkcell.com.tr/kampanyalar/mobil-hat-data-hatti-kampanyalari/yeni-turkcell-musterisi/5g-cepte-firsat-20",
+      "verified_at": "2026-10-12",
+      "evidence": "Official campaign page: price per 4 weeks, GB, 1000 dk, 250 SMS and BiP 1 GB match; \"31 Aralık 2026 tarihine kadar geçerli\". Partially verified: the detailed terms are not server-rendered. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=unknown -- official campaign page states no renewal rule.",
+      "activation_channels": [
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "BiP uygulamasında geçerli 1 GB ek internet",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": 1
+        }
+      ],
+      "benefits_status": "verified",
+      "bonus_internet_scope": "app_specific",
+      "renewal_type": "unknown"
     },
     {
       "name": "5G Cepte Fırsat 30",
@@ -72,7 +115,6 @@
       "internet_gb": 30,
       "social_media_gb": null,
       "bonus_internet_gb": 1,
-      "total_internet_gb": 31,
       "voice_minutes": 1000,
       "sms_count": 250,
       "validity_value": 4,
@@ -80,7 +122,26 @@
       "validity_days": 28,
       "conditions": "Numarasını Turkcell'e taşıyan uygun bireysel faturasız müşterilere sunulur. Paket 4 hafta geçerlidir. Paket satın alındıktan sonra fiyat 3 ay boyunca sabit kalır.",
       "campaign": "BiP uygulamasında geçerli 1 GB ek internet pakete dahildir.",
-      "source_url": "https://www.turkcell.com.tr/kampanyalar/mobil-hat-data-hatti-kampanyalari/yeni-turkcell-musterisi/5g-cepte-firsat-30"
+      "source_url": "https://www.turkcell.com.tr/kampanyalar/mobil-hat-data-hatti-kampanyalari/yeni-turkcell-musterisi/5g-cepte-firsat-30",
+      "verified_at": "2026-10-12",
+      "evidence": "Official campaign page: price per 4 weeks, GB, 1000 dk, 250 SMS and BiP 1 GB match; \"31 Aralık 2026 tarihine kadar geçerli\". Partially verified: the detailed terms are not server-rendered. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=unknown -- official campaign page states no renewal rule.",
+      "activation_channels": [
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "BiP uygulamasında geçerli 1 GB ek internet",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": 1
+        }
+      ],
+      "benefits_status": "verified",
+      "bonus_internet_scope": "app_specific",
+      "renewal_type": "unknown"
     },
     {
       "name": "5G Cepte Fırsat 50",
@@ -91,7 +152,6 @@
       "internet_gb": 50,
       "social_media_gb": null,
       "bonus_internet_gb": 1,
-      "total_internet_gb": 51,
       "voice_minutes": 1000,
       "sms_count": 250,
       "validity_value": 4,
@@ -99,7 +159,26 @@
       "validity_days": 28,
       "conditions": "Numarasını Turkcell'e taşıyan uygun bireysel faturasız müşterilere sunulur. Paket 4 hafta geçerlidir. Paket satın alındıktan sonra fiyat 3 ay boyunca sabit kalır.",
       "campaign": "BiP uygulamasında geçerli 1 GB ek internet pakete dahildir.",
-      "source_url": "https://www.turkcell.com.tr/kampanyalar/mobil-hat-data-hatti-kampanyalari/yeni-turkcell-musterisi/5g-cepte-firsat-50"
+      "source_url": "https://www.turkcell.com.tr/kampanyalar/mobil-hat-data-hatti-kampanyalari/yeni-turkcell-musterisi/5g-cepte-firsat-50",
+      "verified_at": "2026-10-12",
+      "evidence": "Official campaign page: price per 4 weeks, GB, 1000 dk, 250 SMS and BiP 1 GB match; \"31 Aralık 2026 tarihine kadar geçerli\". Partially verified: the detailed terms are not server-rendered. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=unknown -- official campaign page states no renewal rule.",
+      "activation_channels": [
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "BiP uygulamasında geçerli 1 GB ek internet",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": 1
+        }
+      ],
+      "benefits_status": "verified",
+      "bonus_internet_scope": "app_specific",
+      "renewal_type": "unknown"
     },
     {
       "name": "5G Cepte Fırsat 75",
@@ -110,7 +189,6 @@
       "internet_gb": 75,
       "social_media_gb": null,
       "bonus_internet_gb": 1,
-      "total_internet_gb": 76,
       "voice_minutes": 1000,
       "sms_count": 250,
       "validity_value": 4,
@@ -118,7 +196,28 @@
       "validity_days": 28,
       "conditions": "Numarasını Turkcell'e taşıyan uygun bireysel faturasız müşterilere sunulur. Paket 4 hafta geçerlidir. Paket satın alındıktan sonra fiyat 3 ay boyunca sabit kalır.",
       "campaign": "BiP uygulamasında geçerli 1 GB ek internet pakete dahildir.",
-      "source_url": "https://www.turkcell.com.tr/kampanyalar/mobil-hat-data-hatti-kampanyalari/yeni-turkcell-musterisi/5g-cepte-firsat-75"
+      "source_url": "https://www.turkcell.com.tr/kampanyalar/mobil-hat-data-hatti-kampanyalari/yeni-turkcell-musterisi/5g-cepte-firsat-75",
+      "verified_at": "2026-10-12",
+      "evidence": "Official campaign page: price per 4 weeks, GB, 1000 dk, 250 SMS and BiP 1 GB match; \"31 Aralık 2026 tarihine kadar geçerli\". Partially verified: the detailed terms are not server-rendered. Phase 2D (2026-10-12): 'Paketteki Faydalar' and price-protection clause ('12 fatura dönemi boyunca ... olası fiyat değişikliklerinden etkilenmeyecektir') re-read. Phase 2D.2 (2026-10-12): renewal_type=unknown -- official campaign page states no renewal rule.",
+      "activation_channels": [
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "BiP uygulamasında geçerli 1 GB ek internet",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": 1
+        }
+      ],
+      "benefits_status": "verified",
+      "bonus_internet_scope": "app_specific",
+      "renewal_type": "unknown"
     }
-  ]
+  ],
+  "verified_at": "2026-10-12",
+  "schema_version": 2
 }

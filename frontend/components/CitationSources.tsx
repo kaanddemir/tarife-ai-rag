@@ -36,7 +36,11 @@ export default function CitationSources({ citations, copyText }: Props) {
 
   async function copyAnswer() {
     if (!copyText) return;
-    await navigator.clipboard.writeText(cleanCopyText(copyText));
+    try {
+      await navigator.clipboard.writeText(cleanCopyText(copyText));
+    } catch {
+      return; // clipboard blocked (permissions / insecure context): nothing to confirm
+    }
     setCopied(true);
     window.setTimeout(() => setCopied(false), 1400);
   }
@@ -71,7 +75,7 @@ export default function CitationSources({ citations, copyText }: Props) {
                 </>
               )}
             </svg>
-            {copied ? "Kopyalandı" : "Kopyala"}
+            <span aria-live="polite">{copied ? "Kopyalandı" : "Kopyala"}</span>
           </button>
         )}
       </div>
@@ -86,7 +90,7 @@ export default function CitationSources({ citations, copyText }: Props) {
               target="_blank"
               rel="noreferrer"
             >
-              <span className="cite-num">{index + 1}</span>
+              <span className="cite-num" aria-hidden="true">{index + 1}</span>
               <span className="cite-body">
                 <span className="cite-name">{c.name}</span>
                 <span className="cite-meta">

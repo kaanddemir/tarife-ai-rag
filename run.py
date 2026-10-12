@@ -7,11 +7,13 @@ Ctrl+C is enough.
 """
 
 import os
+import re
 import shutil
 import signal
 import socket
 import subprocess
 import sys
+import threading
 import time
 from pathlib import Path
 
@@ -24,6 +26,27 @@ DEFAULT_API_PORT = 8000
 DEFAULT_WEB_PORT = 3000
 # How long a child gets to exit on SIGTERM before it is killed.
 SHUTDOWN_GRACE = 5
+
+# Routine `next dev` lines that repeat what the banner says or report every
+# successful compile. Anything else (warnings, errors, stack traces) passes through.
+NEXT_NOISE = re.compile(
+    r"^(> |▲ Next\.js|- (Local|Network|Environments|Experiments):|✓ (Starting|Ready in|Compiled)|○ Compiling)"
+)
+ANSI = re.compile(r"\x1b\[[0-9;]*m")
+# Output that bypasses Python logging (own handlers, progress bars, C++ logs),
+# set through each library's supported switch. Warnings and errors still show;
+# Python logging itself is governed by backend/dev_logging.json.
+QUIET_LIBRARIES = {
+    "TOKENIZERS_PARALLELISM": "false",
+    "TQDM_DISABLE": "1",
+    "HF_HUB_DISABLE_PROGRESS_BARS": "1",
+    "HF_HUB_VERBOSITY": "warning",
+    "HF_DATASETS_DISABLE_PROGRESS_BARS": "1",
+    "DATASETS_VERBOSITY": "warning",
+    "TRANSFORMERS_VERBOSITY": "warning",
+    "TRANSFORMERS_NO_ADVISORY_WARNINGS": "1",
+    "TORCH_CPP_LOG_LEVEL": "WARNING",
+}
 
 
 def _paint(tty):
@@ -146,7 +169,23 @@ def _banner(api_port, web_port, reload_enabled, paint):
     return "\n".join(lines)
 
 
-def _start(command, cwd, extra_env=None):
+def _forward_filtered(stream):
+    """Copy a child's stdout to ours, minus NEXT_NOISE lines."""
+    for line in iter(stream.readline, ""):
+        plain = ANSI.sub("", line).strip()
+        if plain and not NEXT_NOISE.match(plain):
+            sys.stdout.write(line)
+            sys.stdout.flush()
+
+
+def _accepts(port):
+    """Whether something is accepting connections on `port` yet."""
+    with socket.socket() as probe:
+        probe.settimeout(0.2)
+        return probe.connect_ex(("127.0.0.1", port)) == 0
+
+
+def _start(command, cwd, extra_env=None, filter_stdout=False):
     """Start a child in its own process group.
 
     Its own group is what keeps Ctrl+C from reaching the children directly: the
@@ -155,7 +194,15 @@ def _start(command, cwd, extra_env=None):
     """
     env = os.environ.copy()
     env.update(extra_env or {})
-    return subprocess.Popen(command, cwd=cwd, env=env, start_new_session=True)
+    if not filter_stdout:
+        return subprocess.Popen(command, cwd=cwd, env=env, start_new_session=True)
+    # stderr stays attached to the terminal, so errors are never filtered.
+    process = subprocess.Popen(
+        command, cwd=cwd, env=env, start_new_session=True,
+        stdout=subprocess.PIPE, text=True, encoding="utf-8", errors="replace", bufsize=1,
+    )
+    threading.Thread(target=_forward_filtered, args=(process.stdout,), daemon=True).start()
+    return process
 
 
 def _terminate(signum, frame):
@@ -206,6 +253,10 @@ def main():
     api_command = [
         str(VENV_PYTHON), "-m", "uvicorn", "app.main:app",
         "--host", "127.0.0.1", "--port", str(api_port),
+        # Forwarding headers are interpreted only by app/client_ip.py (TRUSTED_PROXIES).
+        "--no-proxy-headers",
+        # Dev-only: shorter lines, redacted access log, quiet libraries (see app/dev_logging.py).
+        "--log-config", "dev_logging.json",
     ]
     if reload_enabled:
         api_command.append("--reload")
@@ -216,12 +267,13 @@ def main():
             api_command,
             cwd=BACKEND,
             # The embedding model warns about forking with parallel tokenizers and
-            # then disables them anyway, so the warning is noise either way.
-            extra_env={"TOKENIZERS_PARALLELISM": "false"},
+            # then disables them anyway, so that warning is noise either way.
+            extra_env=QUIET_LIBRARIES,
         ))
         processes.append(_start(
             ["npm", "run", "dev", "--", "--port", str(web_port)],
             cwd=FRONTEND,
+            filter_stdout=True,
         ))
     except OSError as exc:
         for process in processes:
@@ -237,6 +289,8 @@ def main():
 
     code = 0
     died = None
+    # Announced once each, when the port actually accepts connections.
+    waiting = {"API": api_port, "Web": web_port}
     try:
         # Either child exiting on its own means a half-running app, which is
         # worse than a stopped one: the surviving half answers requests the
@@ -247,6 +301,10 @@ def main():
                     code = process.returncode or 1
                     died = name
                     raise SystemExit(code)
+            for name, port in list(waiting.items()):
+                if _accepts(port):
+                    del waiting[name]
+                    print(f"  {paint('✓', 'green')} {name} ready", flush=True)
             time.sleep(0.2)
     except (KeyboardInterrupt, SystemExit):
         pass

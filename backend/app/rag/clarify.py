@@ -11,7 +11,7 @@ import re
 from dataclasses import dataclass
 
 from app.models import ChatTurn
-from app.rag.history import contextual_question
+from app.rag.history import contextual_question, is_conversational
 from app.rag.retrieve import detect_gb, detect_line_type, detect_max_price, detect_operator
 
 # "150 TL", "200 lira", "300₺" -- detect_max_price only fires when a bound word
@@ -33,6 +33,10 @@ _ESCAPE_RE = re.compile(
     r"bilmiyorum|ne olursa|onemli degil|[oö]nemli de[gğ]il",
     re.I,
 )
+
+# A concrete question about the catalog (question particle, "?", or an info word).
+_DIRECT_QUESTION_RE = re.compile(
+    r"\?|\b(?:m[ıiuü]|m[ıiuü]d[ıiuü]r)\b|ne kadar|ka[cç] tl|nedir|hangi(?:si|leri)|ko[sş]ul|maliyet", re.I)
 
 _CITATION_RE = re.compile(r"\[S\d+\]")
 
@@ -63,6 +67,8 @@ class Slots:
     usage: bool
     operator: bool
     escape_hatch: bool
+    named: bool = False  # the user names a catalog tariff or points at an earlier one
+    direct_question: bool = False
 
     @property
     def missing(self) -> list[str]:
@@ -73,13 +79,21 @@ class Slots:
 def collect_slots(question: str, history: list[ChatTurn] | None = None) -> Slots:
     """Slots accumulate across turns: contextual_question merges recent user turns
     with the question, so the user can spread the info over several messages."""
+    from app.rag.query import conversation_query
+    from app.rag.references import resolve
+
     text = contextual_question(question, history)
+    q = conversation_query(question, history)
+    usage_slots = (q.min_gb, q.max_gb, q.unlimited_internet, q.unlimited_social, q.apps, q.subscriptions,
+                   q.min_minutes, q.unlimited_minutes, q.min_sms, q.objective)
     return Slots(
-        line_type=detect_line_type(text) is not None,
-        budget=detect_budget_signal(text),
-        usage=detect_usage_signal(text),
+        line_type=q.line_type is not None or detect_line_type(text) is not None,
+        budget=q.max_price is not None or q.min_price is not None or detect_budget_signal(text),
+        usage=detect_usage_signal(text) or any(v is not None for v in usage_slots),
         operator=detect_operator(text) is not None,
         escape_hatch=detect_escape_hatch(text),
+        named=bool(resolve(question, history)[0]),
+        direct_question=bool(_DIRECT_QUESTION_RE.search(question)),
     )
 
 
@@ -95,7 +109,8 @@ def already_clarified(history: list[ChatTurn] | None) -> bool:
     if not history:
         return False
     for turn in reversed(history):
-        if turn.role == "assistant" and turn.content.strip():
+        # Error replies are not a clarification turn; skip them (is_conversational).
+        if turn.role == "assistant" and is_conversational(turn):
             return not _CITATION_RE.search(turn.content)
     return False
 
@@ -103,6 +118,8 @@ def already_clarified(history: list[ChatTurn] | None) -> bool:
 def should_clarify(slots: Slots, history: list[ChatTurn] | None = None) -> bool:
     """Line type is required (eligibility filter); additionally at least one of the
     budget or usage signals is needed. Without both, a recommendation is just a guess."""
-    if slots.escape_hatch or already_clarified(history):
+    if slots.escape_hatch or slots.named or already_clarified(history):
         return False
+    if slots.line_type and slots.direct_question:
+        return False  # a concrete question ("... yenileniyor mu?") is answered, not quizzed
     return not slots.line_type or not (slots.budget or slots.usage)

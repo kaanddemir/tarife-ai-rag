@@ -4,33 +4,12 @@
   "customer_type": "new",
   "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler",
   "scraped_at": "2026-07-10",
-  "package_count": 46,
+  "package_count": 27,
   "packages": [
-    {
-      "name": "Yeni Nesil Prime 50 GB",
-      "package_group": "new_generation_prime",
-      "price_try": 850.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 50,
-      "social_media_gb": -1,
-      "bonus_internet_gb": null,
-      "total_internet_gb": -1,
-      "voice_minutes": -1,
-      "sms_count": -1,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir. Sosyal medya kullanımı sınırsızdır ve tarife aşımsızdır.",
-      "campaign": "Sınırsız konuşma, sınırsız WhatsApp mesajlaşma, özel müşteri hizmetleri, 500 TL hediye çeki, e-dergi, ayda 3 gün Tarifen Yurt Dışında, sınırsız YaaY, 6 ay Tivibu Go Süper Paket, 6 ay Muud Premium, 20 GB Türk Telekom WiFi, 3 ay YouTube Premium ve Prime ayrıcalıkları.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-50gb"
-    },
     {
       "name": "Yeni Nesil Prime 75 GB",
       "package_group": "new_generation_prime",
-      "price_try": 950.0,
+      "price_try": 1100.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -38,20 +17,146 @@
       "internet_gb": 75,
       "social_media_gb": -1,
       "bonus_internet_gb": null,
-      "total_internet_gb": -1,
       "voice_minutes": -1,
       "sms_count": -1,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir. Sosyal medya kullanımı sınırsızdır ve tarife aşımsızdır.",
       "campaign": "Sınırsız konuşma, sınırsız WhatsApp mesajlaşma, özel müşteri hizmetleri, 500 TL hediye çeki, e-dergi, ayda 3 gün Tarifen Yurt Dışında, sınırsız YaaY, 6 ay Tivibu Go Süper Paket, 6 ay Muud Premium, 20 GB Türk Telekom WiFi, 3 ay YouTube Premium ve Prime ayrıcalıkları.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-75gb"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-75-gb",
+      "no_commitment_price_try": 1900.0,
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 950.0,
+            "no_commitment_price_try": null,
+            "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-75gb"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "The 2026-07 page version closed to new customers on 24.07.2026; the plan was relaunched under the same name on https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-75-gb with the same allowances (\"Tarife Taahhütlü Fiyat* 1100 TL\", \"Tarife Taahhütsüz Fiyat** 1900 TL\"). Same identity kept; price, no-commitment price and URL updated. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "social_media_apps": [
+        "Instagram",
+        "Facebook",
+        "YouTube",
+        "X",
+        "ChatGPT",
+        "Claude"
+      ],
+      "benefits": [
+        {
+          "category": "bonus_data",
+          "service": "Yeni Hat Alanlara 10 GB Hediye",
+          "offer": "included",
+          "amount_gb": 10,
+          "duration_months": 12,
+          "eligibility": "new_line_only",
+          "activation": "Tarifeye gelişten sonraki 30 gün içinde HEDIYE EK 10 GB yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "Tivibu Go Süper Paket",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "unknown",
+          "activation": "PRİME DİJİTAL yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "Muud Premium",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "unknown",
+          "activation": "PRİME DİJİTAL yazıp 5555'e SMS"
+        },
+        {
+          "category": "service",
+          "service": "Türk Telekom WiFi 20 GB kampanya kodu",
+          "offer": "included",
+          "activation": "PRİME DİJİTAL yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "YouTube Premium",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "voucher",
+          "service": "Apple Store / Google Play / idefix / Amazon.com.tr",
+          "offer": "included",
+          "value_try": 500,
+          "activation": "Seçilen mağaza adını 5555'e SMS"
+        },
+        {
+          "category": "roaming",
+          "service": "Ayda 3 gün Tarifen Yurtdışında (yalnızca 1. Bölge ülkeleri)",
+          "offer": "included"
+        },
+        {
+          "category": "app_data",
+          "service": "e-dergi",
+          "offer": "requires_purchase",
+          "apps": [
+            "e-dergi"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımı ve uygulamada sınırsız internet; sayfa ayrıca uygulamanın mağazadan satın alınması gerektiğini söylüyor."
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        },
+        {
+          "category": "service",
+          "service": "Prime ayrıcalıkları",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "Yeni Nesil Prime 100 GB",
       "package_group": "new_generation_prime",
-      "price_try": 1050.0,
+      "price_try": 1200.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -59,20 +164,146 @@
       "internet_gb": 100,
       "social_media_gb": -1,
       "bonus_internet_gb": null,
-      "total_internet_gb": -1,
       "voice_minutes": -1,
       "sms_count": -1,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir. Sosyal medya kullanımı sınırsızdır ve tarife aşımsızdır.",
       "campaign": "Sınırsız konuşma, sınırsız WhatsApp mesajlaşma, özel müşteri hizmetleri, 500 TL hediye çeki, e-dergi, ayda 3 gün Tarifen Yurt Dışında, sınırsız YaaY, 6 ay Tivibu Go Süper Paket, 6 ay Muud Premium, 20 GB Türk Telekom WiFi, 3 ay YouTube Premium ve Prime ayrıcalıkları.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-100gb"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-100-gb",
+      "no_commitment_price_try": 2000.0,
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 1050.0,
+            "no_commitment_price_try": null,
+            "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-100gb"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "The 2026-07 page version closed to new customers on 24.07.2026; the plan was relaunched under the same name on https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-100-gb with the same allowances (\"Tarife Taahhütlü Fiyat* 1200 TL\", \"Tarife Taahhütsüz Fiyat** 2000 TL\"). Same identity kept; price, no-commitment price and URL updated. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "social_media_apps": [
+        "Instagram",
+        "Facebook",
+        "YouTube",
+        "X",
+        "ChatGPT",
+        "Claude"
+      ],
+      "benefits": [
+        {
+          "category": "bonus_data",
+          "service": "Yeni Hat Alanlara 10 GB Hediye",
+          "offer": "included",
+          "amount_gb": 10,
+          "duration_months": 12,
+          "eligibility": "new_line_only",
+          "activation": "Tarifeye gelişten sonraki 30 gün içinde HEDIYE EK 10 GB yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "Tivibu Go Süper Paket",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "unknown",
+          "activation": "PRİME DİJİTAL yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "Muud Premium",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "unknown",
+          "activation": "PRİME DİJİTAL yazıp 5555'e SMS"
+        },
+        {
+          "category": "service",
+          "service": "Türk Telekom WiFi 20 GB kampanya kodu",
+          "offer": "included",
+          "activation": "PRİME DİJİTAL yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "YouTube Premium",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "voucher",
+          "service": "Apple Store / Google Play / idefix / Amazon.com.tr",
+          "offer": "included",
+          "value_try": 500,
+          "activation": "Seçilen mağaza adını 5555'e SMS"
+        },
+        {
+          "category": "roaming",
+          "service": "Ayda 3 gün Tarifen Yurtdışında (yalnızca 1. Bölge ülkeleri)",
+          "offer": "included"
+        },
+        {
+          "category": "app_data",
+          "service": "e-dergi",
+          "offer": "requires_purchase",
+          "apps": [
+            "e-dergi"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımı ve uygulamada sınırsız internet; sayfa ayrıca uygulamanın mağazadan satın alınması gerektiğini söylüyor."
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        },
+        {
+          "category": "service",
+          "service": "Prime ayrıcalıkları",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "Yeni Nesil Prime 150 GB",
       "package_group": "new_generation_prime",
-      "price_try": 1250.0,
+      "price_try": 1400.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -80,20 +311,146 @@
       "internet_gb": 150,
       "social_media_gb": -1,
       "bonus_internet_gb": null,
-      "total_internet_gb": -1,
       "voice_minutes": -1,
       "sms_count": -1,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir. Sosyal medya kullanımı sınırsızdır ve tarife aşımsızdır.",
       "campaign": "Sınırsız konuşma, sınırsız WhatsApp mesajlaşma, özel müşteri hizmetleri, 500 TL hediye çeki, e-dergi, ayda 3 gün Tarifen Yurt Dışında, sınırsız YaaY, 6 ay Tivibu Go Süper Paket, 6 ay Muud Premium, 20 GB Türk Telekom WiFi, 3 ay YouTube Premium ve Prime ayrıcalıkları.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-150gb"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-150-gb",
+      "no_commitment_price_try": 2400.0,
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 1250.0,
+            "no_commitment_price_try": null,
+            "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-150gb"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "The 2026-07 page version closed to new customers on 24.07.2026; the plan was relaunched under the same name on https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-150-gb with the same allowances (\"Tarife Taahhütlü Fiyat* 1400 TL\", \"Tarife Taahhütsüz Fiyat** 2400 TL\"). Same identity kept; price, no-commitment price and URL updated. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "social_media_apps": [
+        "Instagram",
+        "Facebook",
+        "YouTube",
+        "X",
+        "ChatGPT",
+        "Claude"
+      ],
+      "benefits": [
+        {
+          "category": "bonus_data",
+          "service": "Yeni Hat Alanlara 10 GB Hediye",
+          "offer": "included",
+          "amount_gb": 10,
+          "duration_months": 12,
+          "eligibility": "new_line_only",
+          "activation": "Tarifeye gelişten sonraki 30 gün içinde HEDIYE EK 10 GB yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "Tivibu Go Süper Paket",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "unknown",
+          "activation": "PRİME DİJİTAL yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "Muud Premium",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "unknown",
+          "activation": "PRİME DİJİTAL yazıp 5555'e SMS"
+        },
+        {
+          "category": "service",
+          "service": "Türk Telekom WiFi 20 GB kampanya kodu",
+          "offer": "included",
+          "activation": "PRİME DİJİTAL yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "YouTube Premium",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "voucher",
+          "service": "Apple Store / Google Play / idefix / Amazon.com.tr",
+          "offer": "included",
+          "value_try": 500,
+          "activation": "Seçilen mağaza adını 5555'e SMS"
+        },
+        {
+          "category": "roaming",
+          "service": "Ayda 3 gün Tarifen Yurtdışında (yalnızca 1. Bölge ülkeleri)",
+          "offer": "included"
+        },
+        {
+          "category": "app_data",
+          "service": "e-dergi",
+          "offer": "requires_purchase",
+          "apps": [
+            "e-dergi"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımı ve uygulamada sınırsız internet; sayfa ayrıca uygulamanın mağazadan satın alınması gerektiğini söylüyor."
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        },
+        {
+          "category": "service",
+          "service": "Prime ayrıcalıkları",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "Yeni Nesil Prime Sınırsız",
       "package_group": "new_generation_prime",
-      "price_try": 1550.0,
+      "price_try": 1700.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -101,162 +458,133 @@
       "internet_gb": -1,
       "social_media_gb": -1,
       "bonus_internet_gb": null,
-      "total_internet_gb": -1,
       "voice_minutes": -1,
       "sms_count": -1,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir. Genel internet, konuşma ve SMS sınırsızdır; tarife aşımsızdır.",
       "campaign": "Sınırsız konuşma, sınırsız WhatsApp mesajlaşma, özel müşteri hizmetleri, 500 TL hediye çeki, e-dergi, ayda 3 gün Tarifen Yurt Dışında, sınırsız YaaY, 6 ay Tivibu Go Süper Paket, 6 ay Muud Premium, 20 GB Türk Telekom WiFi, 3 ay YouTube Premium ve Prime ayrıcalıkları.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-sinirsiz"
-    },
-    {
-      "name": "Dijital Lider 1 GB",
-      "package_group": "digital_leader",
-      "price_try": 230.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 1,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 1,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "Ücretsiz dijital kurye, sınırsız YaaY, e-dergi, 24 saatte teslimat ve Kontrol Sizde.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/dijital-lider-1gb"
-    },
-    {
-      "name": "Dijital Lider 5 GB",
-      "package_group": "digital_leader",
-      "price_try": 270.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 5,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 5,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "Ücretsiz dijital kurye, sınırsız YaaY, e-dergi, 24 saatte teslimat ve Kontrol Sizde.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/dijital-lider-5gb"
-    },
-    {
-      "name": "Dijital Lider 10 GB",
-      "package_group": "digital_leader",
-      "price_try": 310.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 10,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 10,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "Ücretsiz dijital kurye, sınırsız YaaY, e-dergi, 24 saatte teslimat ve Kontrol Sizde.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/dijital-lider-10gb"
-    },
-    {
-      "name": "Dijital Lider 20 GB",
-      "package_group": "digital_leader",
-      "price_try": 400.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 20,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 20,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "Ücretsiz dijital kurye, sınırsız YaaY, e-dergi, 24 saatte teslimat ve Kontrol Sizde.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/dijital-lider-20gb"
-    },
-    {
-      "name": "Dijital Lider 30 GB",
-      "package_group": "digital_leader",
-      "price_try": 490.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 30,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 30,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "Ücretsiz dijital kurye, sınırsız YaaY, e-dergi, 24 saatte teslimat ve Kontrol Sizde.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/dijital-lider-30gb"
-    },
-    {
-      "name": "Dijital Lider Prime 40 GB",
-      "package_group": "digital_leader_prime",
-      "price_try": 620.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 40,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": -1,
-      "voice_minutes": 3000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "Türk Telekomlularla sınırsız konuşma, haftalık Sil Süpür interneti, sınırsız WhatsApp, e-dergi, sınırsız YaaY, 6 ay Tivibu Go, 6 ay Muud Premium, 20 GB Türk Telekom WiFi, 3 ay YouTube Premium ve Kontrol Sizde.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/dijital-lider-prime-40gb"
-    },
-    {
-      "name": "Dijital Lider Prime 60 GB",
-      "package_group": "digital_leader_prime",
-      "price_try": 750.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 60,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 60,
-      "voice_minutes": 3000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "Türk Telekomlularla sınırsız konuşma, haftalık Sil Süpür interneti, sınırsız WhatsApp, e-dergi, sınırsız YaaY, 6 ay Tivibu Go, 6 ay Muud Premium, 20 GB Türk Telekom WiFi, 3 ay YouTube Premium ve Kontrol Sizde.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/dijital-lider-prime-60gb"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-sinirsizz",
+      "no_commitment_price_try": 2900.0,
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 1550.0,
+            "no_commitment_price_try": null,
+            "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-sinirsiz"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "The 2026-07 page version closed to new customers on 24.07.2026; the plan was relaunched under the same name on https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-nesil-prime-sinirsizz with the same allowances (\"Tarife Taahhütlü Fiyat* 1700 TL\", \"Tarife Taahhütsüz Fiyat** 2900 TL\"). Same identity kept; price, no-commitment price and URL updated. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "bonus_data",
+          "service": "Yeni Hat Alanlara 10 GB Hediye",
+          "offer": "included",
+          "amount_gb": 10,
+          "duration_months": 12,
+          "eligibility": "new_line_only",
+          "activation": "Tarifeye gelişten sonraki 30 gün içinde HEDIYE EK 10 GB yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "Tivibu Go Süper Paket",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "unknown",
+          "activation": "PRİME DİJİTAL yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "Muud Premium",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "unknown",
+          "activation": "PRİME DİJİTAL yazıp 5555'e SMS"
+        },
+        {
+          "category": "service",
+          "service": "Türk Telekom WiFi 20 GB kampanya kodu",
+          "offer": "included",
+          "activation": "PRİME DİJİTAL yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "YouTube Premium",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "voucher",
+          "service": "Apple Store / Google Play / idefix / Amazon.com.tr",
+          "offer": "included",
+          "value_try": 500,
+          "activation": "Seçilen mağaza adını 5555'e SMS"
+        },
+        {
+          "category": "roaming",
+          "service": "Ayda 3 gün Tarifen Yurtdışında (yalnızca 1. Bölge ülkeleri)",
+          "offer": "included"
+        },
+        {
+          "category": "app_data",
+          "service": "e-dergi",
+          "offer": "requires_purchase",
+          "apps": [
+            "e-dergi"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımı ve uygulamada sınırsız internet; sayfa ayrıca uygulamanın mağazadan satın alınması gerektiğini söylüyor."
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        },
+        {
+          "category": "service",
+          "service": "Prime ayrıcalıkları",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "Yeni Parlamenter 5 GB",
@@ -269,15 +597,24 @@
       "internet_gb": 5,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 5,
       "voice_minutes": 3000,
       "sms_count": 1000,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir. Kamuya özel uygunluk şartları geçerlidir.",
       "campaign": "Kamuya özel; üç yakına kadar tarifeden yararlandırma ve Türk Telekom Mobil yönüne 5000 dakika.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-parlamenter-5gb-tarifesi"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-parlamenter-5gb-tarifesi",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page (now under diger-teklifler, no closure notice): price, 3000 DK + 1000 SMS and 5 GB match. Public-sector audience restriction unchanged. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "no_commitment_price_try": 460,
+      "benefits": [],
+      "benefits_status": "verified_none",
+      "renewal_type": "recurring"
     },
     {
       "name": "Yeni Parlamenter 10 GB",
@@ -290,15 +627,24 @@
       "internet_gb": 10,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 10,
       "voice_minutes": 3000,
       "sms_count": 1000,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir. Kamuya özel uygunluk şartları geçerlidir.",
       "campaign": "Kamuya özel; üç yakına kadar tarifeden yararlandırma ve Türk Telekom Mobil yönüne 5000 dakika.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-parlamenter-10gb-tarifesi"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-parlamenter-10gb-tarifesi",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page (now under diger-teklifler, no closure notice): price, 3000 DK + 1000 SMS and 10 GB match. Public-sector audience restriction unchanged. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "no_commitment_price_try": 520,
+      "benefits": [],
+      "benefits_status": "verified_none",
+      "renewal_type": "recurring"
     },
     {
       "name": "Yeni Parlamenter 20 GB",
@@ -311,15 +657,24 @@
       "internet_gb": 20,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 20,
       "voice_minutes": 3000,
       "sms_count": 1000,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir. Kamuya özel uygunluk şartları geçerlidir.",
       "campaign": "Kamuya özel; üç yakına kadar tarifeden yararlandırma ve Türk Telekom Mobil yönüne 5000 dakika.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-parlamenter-20gb-tarifesi"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-parlamenter-20gb-tarifesi",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page (now under diger-teklifler, no closure notice): price, 3000 DK + 1000 SMS and 20 GB match. Public-sector audience restriction unchanged. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "no_commitment_price_try": 640,
+      "benefits": [],
+      "benefits_status": "verified_none",
+      "renewal_type": "recurring"
     },
     {
       "name": "Yeni Parlamenter 30 GB",
@@ -332,15 +687,24 @@
       "internet_gb": 30,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 30,
       "voice_minutes": 3000,
       "sms_count": 1000,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir. Kamuya özel uygunluk şartları geçerlidir.",
       "campaign": "Kamuya özel; üç yakına kadar tarifeden yararlandırma ve Türk Telekom Mobil yönüne 5000 dakika.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-parlamenter-30gb-tarifesi"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-parlamenter-30gb-tarifesi",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page (now under diger-teklifler, no closure notice): price, 3000 DK + 1000 SMS and 30 GB match. Public-sector audience restriction unchanged. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "no_commitment_price_try": 740,
+      "benefits": [],
+      "benefits_status": "verified_none",
+      "renewal_type": "recurring"
     },
     {
       "name": "Yeni Parlamenter 40 GB",
@@ -353,267 +717,24 @@
       "internet_gb": 40,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 40,
       "voice_minutes": 3000,
       "sms_count": 1000,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir. Kamuya özel uygunluk şartları geçerlidir.",
       "campaign": "Kamuya özel; üç yakına kadar tarifeden yararlandırma ve Türk Telekom Mobil yönüne 5000 dakika.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-parlamenter-40gb-tarifesi"
-    },
-    {
-      "name": "Yeni Lider Prime 80 GB",
-      "package_group": "new_leader_prime",
-      "price_try": 860.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 80,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 80,
-      "voice_minutes": 3000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "Türk Telekomlularla sınırsız konuşma, haftalık Sil Süpür interneti, sınırsız WhatsApp, e-dergi, sınırsız YaaY, 6 ay Tivibu Go, 6 ay Muud Premium, 20 GB Türk Telekom WiFi, 3 ay YouTube Premium ve Kontrol Sizde.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-lider-prime-80gb-tarifesi"
-    },
-    {
-      "name": "Yeni Lider 1 GB",
-      "package_group": "new_leader",
-      "price_try": 275.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 1,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 1,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "E-dergi uygulamasında sınırsız internet, sınırsız YaaY, ücretsiz dijital kurye ve 24 saatte teslimat.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-lider-1gb-2"
-    },
-    {
-      "name": "Yeni Lider 5 GB",
-      "package_group": "new_leader",
-      "price_try": 315.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 5,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 5,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "E-dergi uygulamasında sınırsız internet, sınırsız YaaY, ücretsiz dijital kurye ve 24 saatte teslimat.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-lider-5gb-2"
-    },
-    {
-      "name": "Yeni Lider 10 GB",
-      "package_group": "new_leader",
-      "price_try": 365.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 10,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 10,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "E-dergi uygulamasında sınırsız internet, sınırsız YaaY, ücretsiz dijital kurye ve 24 saatte teslimat.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-lider-10gb-2"
-    },
-    {
-      "name": "Yeni Lider 20 GB",
-      "package_group": "new_leader",
-      "price_try": 465.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 20,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 20,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "E-dergi uygulamasında sınırsız internet, sınırsız YaaY, ücretsiz dijital kurye ve 24 saatte teslimat.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-lider-20gb-2"
-    },
-    {
-      "name": "Yeni Lider 30 GB",
-      "package_group": "new_leader",
-      "price_try": 565.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 30,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 30,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "E-dergi uygulamasında sınırsız internet, sınırsız YaaY, ücretsiz dijital kurye ve 24 saatte teslimat.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-lider-30gb-2"
-    },
-    {
-      "name": "Yeni Lider Prime 40 GB",
-      "package_group": "new_leader_prime",
-      "price_try": 685.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 40,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 40,
-      "voice_minutes": 3000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "Türk Telekomlularla sınırsız konuşma, haftalık Sil Süpür interneti, sınırsız WhatsApp, e-dergi, sınırsız YaaY, 6 ay Tivibu Go, 6 ay Muud Premium, 20 GB Türk Telekom WiFi, 3 ay YouTube Premium ve Kontrol Sizde.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-lider-prime-40gb-2"
-    },
-    {
-      "name": "Yeni Lider Prime 60 GB",
-      "package_group": "new_leader_prime",
-      "price_try": 795.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 60,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 60,
-      "voice_minutes": 3000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "Türk Telekomlularla sınırsız konuşma, haftalık Sil Süpür interneti, sınırsız WhatsApp, e-dergi, sınırsız YaaY, 6 ay Tivibu Go, 6 ay Muud Premium, 20 GB Türk Telekom WiFi, 3 ay YouTube Premium ve Kontrol Sizde.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-lider-prime-60gb-2"
-    },
-    {
-      "name": "HİT 2 GB",
-      "package_group": "hit",
-      "price_try": 220.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 2,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 2,
-      "voice_minutes": 500,
-      "sms_count": 500,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir. 6-15 yaş arası müşterilere özeldir.",
-      "campaign": "12 ay Safe Family, 3 ay YouTube Premium, sınırsız WhatsApp mesajlaşma, aşıma kapalı kullanım, Avatar ve ücretsiz çağrı engelleme.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/hit-2"
-    },
-    {
-      "name": "HİT 10 GB",
-      "package_group": "hit",
-      "price_try": 290.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 10,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 10,
-      "voice_minutes": 500,
-      "sms_count": 500,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir. 6-15 yaş arası müşterilere özeldir.",
-      "campaign": "12 ay Safe Family, 3 ay YouTube Premium, sınırsız WhatsApp mesajlaşma, aşıma kapalı kullanım, Avatar ve ücretsiz çağrı engelleme.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/hit-10"
-    },
-    {
-      "name": "HİT 15 GB",
-      "package_group": "hit",
-      "price_try": 330.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 15,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 15,
-      "voice_minutes": 500,
-      "sms_count": 500,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir. 6-15 yaş arası müşterilere özeldir.",
-      "campaign": "12 ay Safe Family, 3 ay YouTube Premium, sınırsız WhatsApp mesajlaşma, aşıma kapalı kullanım, Avatar ve ücretsiz çağrı engelleme.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/hit-15"
-    },
-    {
-      "name": "HİT 20 GB",
-      "package_group": "hit",
-      "price_try": 370.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 20,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 20,
-      "voice_minutes": 500,
-      "sms_count": 500,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir. 6-15 yaş arası müşterilere özeldir.",
-      "campaign": "12 ay Safe Family, 3 ay YouTube Premium, sınırsız WhatsApp mesajlaşma, aşıma kapalı kullanım, Avatar ve ücretsiz çağrı engelleme.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/hit-20"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-parlamenter-40gb-tarifesi",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page (now under diger-teklifler, no closure notice): price, 3000 DK + 1000 SMS and 40 GB match. Public-sector audience restriction unchanged. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "no_commitment_price_try": 920,
+      "benefits": [],
+      "benefits_status": "verified_none",
+      "renewal_type": "recurring"
     },
     {
       "name": "Enerji 6 GB",
@@ -626,15 +747,67 @@
       "internet_gb": 6,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 6,
       "voice_minutes": 1000,
       "sms_count": 1000,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
       "campaign": "Sınırsız YaaY, Bi' Dünya Fırsat ve ücretsiz dijital kurye.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/enerji-6gb-tarifesi"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/enerji-6gb-tarifesi",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page, no closure notice: price, GB (incl. 5 GB social), DK and SMS match. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "no_commitment_price_try": 580,
+      "eligibility_tags": [
+        "partner_channel_only"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "Enerji 12 GB",
@@ -647,15 +820,67 @@
       "internet_gb": 12,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 12,
       "voice_minutes": 1000,
       "sms_count": 1000,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
       "campaign": "Sınırsız YaaY, Bi' Dünya Fırsat ve ücretsiz dijital kurye.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/enerji-12gb-tarifesi"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/enerji-12gb-tarifesi",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page, no closure notice: price, GB (incl. 5 GB social), DK and SMS match. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "no_commitment_price_try": 690,
+      "eligibility_tags": [
+        "partner_channel_only"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "Enerji 20 GB + 5 GB Sosyal Medya",
@@ -668,15 +893,67 @@
       "internet_gb": 20,
       "social_media_gb": 5,
       "bonus_internet_gb": null,
-      "total_internet_gb": 25,
       "voice_minutes": 1500,
       "sms_count": 1000,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
       "campaign": "WhatsApp sınırsız mesajlaşma, sınırsız YaaY, Türk Telekomlularla sınırsız konuşma ve ücretsiz dijital kurye.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/enerji-25gb-tarifesi"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/enerji-25gb-tarifesi",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page, no closure notice: price, GB (incl. 5 GB social), DK and SMS match. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "no_commitment_price_try": 840,
+      "social_media_apps": [
+        "Instagram",
+        "Facebook",
+        "YouTube",
+        "X"
+      ],
+      "eligibility_tags": [
+        "partner_channel_only"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "Enerji 25 GB + 5 GB Sosyal Medya",
@@ -689,141 +966,67 @@
       "internet_gb": 25,
       "social_media_gb": 5,
       "bonus_internet_gb": null,
-      "total_internet_gb": 30,
       "voice_minutes": 1500,
       "sms_count": 1000,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
       "campaign": "5 GB sosyal medya, WhatsApp sınırsız mesajlaşma, sınırsız YaaY ve ücretsiz dijital kurye.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/enerji-30gb-tarifesi"
-    },
-    {
-      "name": "Selfy 1+1 40 GB + Sınırsız",
-      "package_group": "selfy_1plus1",
-      "price_try": 720.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 40,
-      "social_media_gb": -1,
-      "bonus_internet_gb": null,
-      "total_internet_gb": -1,
-      "voice_minutes": 750,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "WhatsApp sınırsız mesajlaşma ve taahhüde özel her ay hediye GB.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/selfy-40sinirsiz-sosyal"
-    },
-    {
-      "name": "Selfy 1+1 30 GB + 30 GB",
-      "package_group": "selfy_1plus1",
-      "price_try": 670.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 30,
-      "social_media_gb": null,
-      "bonus_internet_gb": 30,
-      "total_internet_gb": 60,
-      "voice_minutes": 750,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "WhatsApp sınırsız mesajlaşma, her ay hediye GB, 3 ay YouTube Premium, e-dergi ve ücretsiz dijital kurye.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/selfy-3030-gb"
-    },
-    {
-      "name": "Selfy 1+1 20 GB + 20 GB",
-      "package_group": "selfy_1plus1",
-      "price_try": 580.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 20,
-      "social_media_gb": null,
-      "bonus_internet_gb": 20,
-      "total_internet_gb": 40,
-      "voice_minutes": 750,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "WhatsApp sınırsız mesajlaşma, her ay hediye GB, 3 ay YouTube Premium, e-dergi ve ücretsiz dijital kurye.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/selfy-2020-gb"
-    },
-    {
-      "name": "Selfy 1+1 15 GB + 15 GB",
-      "package_group": "selfy_1plus1",
-      "price_try": 500.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 15,
-      "social_media_gb": null,
-      "bonus_internet_gb": 15,
-      "total_internet_gb": 30,
-      "voice_minutes": 750,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "WhatsApp sınırsız mesajlaşma, her ay hediye GB, 3 ay YouTube Premium, e-dergi ve ücretsiz dijital kurye.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/selfy-1515-gb"
-    },
-    {
-      "name": "Selfy 1+1 10 GB + 10 GB",
-      "package_group": "selfy_1plus1",
-      "price_try": 400.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 10,
-      "social_media_gb": null,
-      "bonus_internet_gb": 10,
-      "total_internet_gb": 20,
-      "voice_minutes": 750,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "WhatsApp sınırsız mesajlaşma, her ay hediye GB, 3 ay YouTube Premium, e-dergi ve ücretsiz dijital kurye.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/selfy-1010-gb"
-    },
-    {
-      "name": "Selfy 1+1 5 GB + 5 GB",
-      "package_group": "selfy_1plus1",
-      "price_try": 320.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": null,
-      "internet_gb": 5,
-      "social_media_gb": null,
-      "bonus_internet_gb": 5,
-      "total_internet_gb": 10,
-      "voice_minutes": 750,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "WhatsApp sınırsız mesajlaşma, her ay hediye GB, 3 ay YouTube Premium, e-dergi ve ücretsiz dijital kurye.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/selfy-5-5-gb"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/enerji-30gb-tarifesi",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page, no closure notice: price, GB (incl. 5 GB social), DK and SMS match. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "no_commitment_price_try": 1060,
+      "social_media_apps": [
+        "Instagram",
+        "Facebook",
+        "YouTube",
+        "X"
+      ],
+      "eligibility_tags": [
+        "partner_channel_only"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "Ailece Prime Düşün 30 GB",
@@ -836,15 +1039,99 @@
       "internet_gb": 30,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 30,
       "voice_minutes": 5000,
       "sms_count": 1000,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "Ortak internet, dakika ve SMS kullanımı, grup içi sınırsız konuşma, sınırsız WhatsApp, e-dergi, 12 ay Safe Family, Vitamin ve Raunt indirimi, Prime, 6 ay Muud ve Tivibu Go.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/ailece-prime-dusun-30gb"
+      "campaign": "Ortak internet, dakika ve SMS kullanımı (paylaşıma eklenen her kişi için aylık 60 TL), grup içi sınırsız konuşma, sınırsız WhatsApp, e-dergi, 12 ay ücretsiz Safe Family, Vitamin ve Raunt %35 indirim, Prime ayrıcalıkları, 6 ay hediye Muud Premium ve Tivibu Go.",
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/ailece-prime-dusun-30gb",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page, no closure notice: price, GB, 5000/100 DK and SMS match. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "no_commitment_price_try": 1150,
+      "benefits": [
+        {
+          "category": "service",
+          "service": "Safe Family",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown",
+          "activation": "AILECE PRIME SAFE FAMILY yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "Muud Premium",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "subscription",
+          "service": "Tivibu Go Süper Paket",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Vitamin ve Raunt %35 indirim",
+          "offer": "included"
+        },
+        {
+          "category": "app_data",
+          "service": "e-dergi",
+          "offer": "requires_purchase",
+          "apps": [
+            "e-dergi"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımı ve uygulamada sınırsız internet; sayfa ayrıca uygulamanın mağazadan satın alınması gerektiğini söylüyor."
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        },
+        {
+          "category": "service",
+          "service": "Prime ayrıcalıkları",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "Ortak internet, dakika ve SMS kullanımı, grup içi sınırsız konuşma, sınırsız WhatsApp, e-dergi, 12 ay Safe Family, Vitamin ve Raunt indirimi, Prime, 6 ay Muud ve Tivibu Go."
+          }
+        }
+      ],
+      "renewal_type": "recurring"
     },
     {
       "name": "Ailece Prime Düşün 50 GB",
@@ -857,15 +1144,99 @@
       "internet_gb": 50,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 50,
       "voice_minutes": 5000,
       "sms_count": 1000,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "Ortak internet, dakika ve SMS kullanımı, grup içi sınırsız konuşma, sınırsız WhatsApp, e-dergi, 12 ay Safe Family, Vitamin ve Raunt indirimi, Prime, 6 ay Muud ve Tivibu Go.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/ailece-prime-dusun-50gb"
+      "campaign": "Ortak internet, dakika ve SMS kullanımı (paylaşıma eklenen her kişi için aylık 60 TL), grup içi sınırsız konuşma, sınırsız WhatsApp, e-dergi, 12 ay ücretsiz Safe Family, Vitamin ve Raunt %35 indirim, Prime ayrıcalıkları, 6 ay hediye Muud Premium ve Tivibu Go.",
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/ailece-prime-dusun-50gb",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page, no closure notice: price, GB, 5000/100 DK and SMS match. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "no_commitment_price_try": 1390,
+      "benefits": [
+        {
+          "category": "service",
+          "service": "Safe Family",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown",
+          "activation": "AILECE PRIME SAFE FAMILY yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "Muud Premium",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "subscription",
+          "service": "Tivibu Go Süper Paket",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Vitamin ve Raunt %35 indirim",
+          "offer": "included"
+        },
+        {
+          "category": "app_data",
+          "service": "e-dergi",
+          "offer": "requires_purchase",
+          "apps": [
+            "e-dergi"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımı ve uygulamada sınırsız internet; sayfa ayrıca uygulamanın mağazadan satın alınması gerektiğini söylüyor."
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        },
+        {
+          "category": "service",
+          "service": "Prime ayrıcalıkları",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "Ortak internet, dakika ve SMS kullanımı, grup içi sınırsız konuşma, sınırsız WhatsApp, e-dergi, 12 ay Safe Family, Vitamin ve Raunt indirimi, Prime, 6 ay Muud ve Tivibu Go."
+          }
+        }
+      ],
+      "renewal_type": "recurring"
     },
     {
       "name": "Ailece Prime Düşün 100 GB",
@@ -878,15 +1249,99 @@
       "internet_gb": 100,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 100,
       "voice_minutes": 5000,
       "sms_count": 1000,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
-      "campaign": "Ortak internet, dakika ve SMS kullanımı, grup içi sınırsız konuşma, sınırsız WhatsApp, e-dergi, 12 ay Safe Family, Vitamin ve Raunt indirimi, Prime, 6 ay Muud ve Tivibu Go.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/ailece-prime-dusun-100gb"
+      "campaign": "Ortak internet, dakika ve SMS kullanımı (paylaşıma eklenen her kişi için aylık 60 TL), grup içi sınırsız konuşma, sınırsız WhatsApp, e-dergi, 12 ay ücretsiz Safe Family, Vitamin ve Raunt %35 indirim, Prime ayrıcalıkları, 6 ay hediye Muud Premium ve Tivibu Go.",
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/ailece-prime-dusun-100gb",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page, no closure notice: price, GB, 5000/100 DK and SMS match. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "no_commitment_price_try": 2160,
+      "benefits": [
+        {
+          "category": "service",
+          "service": "Safe Family",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown",
+          "activation": "AILECE PRIME SAFE FAMILY yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "Muud Premium",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "subscription",
+          "service": "Tivibu Go Süper Paket",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Vitamin ve Raunt %35 indirim",
+          "offer": "included"
+        },
+        {
+          "category": "app_data",
+          "service": "e-dergi",
+          "offer": "requires_purchase",
+          "apps": [
+            "e-dergi"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımı ve uygulamada sınırsız internet; sayfa ayrıca uygulamanın mağazadan satın alınması gerektiğini söylüyor."
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        },
+        {
+          "category": "service",
+          "service": "Prime ayrıcalıkları",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "Ortak internet, dakika ve SMS kullanımı, grup içi sınırsız konuşma, sınırsız WhatsApp, e-dergi, 12 ay Safe Family, Vitamin ve Raunt indirimi, Prime, 6 ay Muud ve Tivibu Go."
+          }
+        }
+      ],
+      "renewal_type": "recurring"
     },
     {
       "name": "Ailece Başlangıç 100 MB",
@@ -899,15 +1354,86 @@
       "internet_gb": 0.1,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 0.1,
       "voice_minutes": 100,
       "sms_count": 100,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Faturalı tarife aylık olarak ücretlendirilir ve taahhütsüzdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir. 100 TL ilk ay ücretidir; taahhütsüz fiyat koşulları geçerlidir.",
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Faturalı tarife aylık olarak ücretlendirilir ve taahhütsüzdür. İlk ay ücreti 100 TL, ikinci ay ve takip eden aylarda 190 TL'dir. Ailece Prime Düşün paylaşımına dahil olana kadar bu tarifenin haklarıyla kullanılır. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
       "campaign": "Ortak kullanım, sınırsız WhatsApp, e-dergi, Safe Family, eğitim indirimi ve Bi' Dünya Fırsat.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/ailece-baslangic-tarifesi"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/ailece-baslangic-tarifesi",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page, no closure notice: price, GB, 5000/100 DK and SMS match. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "promo_months": 1,
+      "price_after_promo_try": 190,
+      "benefits": [
+        {
+          "category": "service",
+          "service": "Safe Family",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Vitamin ve Raunt %35 indirim",
+          "offer": "included"
+        },
+        {
+          "category": "app_data",
+          "service": "e-dergi",
+          "offer": "requires_purchase",
+          "apps": [
+            "e-dergi"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımı ve uygulamada sınırsız internet; sayfa ayrıca uygulamanın mağazadan satın alınması gerektiğini söylüyor."
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "discount",
+          "service": "Bi' Dünya Fırsat",
+          "offer": "included",
+          "note": "Türk Telekom indirim programı; tarife sayfasında Ek Faydalar altında listelenir, belirli bir indirim tutarı yok."
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "conditions": "Faturalı tarife aylık olarak ücretlendirilir ve taahhütsüzdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir. 100 TL ilk ay ücretidir; taahhütsüz fiyat koşulları geçerlidir."
+          }
+        }
+      ],
+      "renewal_type": "recurring"
     },
     {
       "name": "Prime Netflix 30 GB",
@@ -918,17 +1444,91 @@
       "commitment_status": "committed",
       "price_lock_months": null,
       "internet_gb": 30,
-      "social_media_gb": null,
+      "social_media_gb": -1,
       "bonus_internet_gb": null,
-      "total_internet_gb": 30,
       "voice_minutes": 3000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
       "campaign": "İlk 6 ay Netflix, sınırsız X ve Facebook, WhatsApp mesajlaşma, Türk Telekomlularla sınırsız konuşma, 12 ay Tivibu Go ve Prime.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/prime-netflix-30gb"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/prime-netflix-30gb",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page, no closure notice: committed price, GB, 3000 DK and 250 SMS match. Not shown on the new-customer listing page; the plan page itself is live. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "no_commitment_price_try": 1550,
+      "social_media_apps": [
+        "X",
+        "Facebook"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "Netflix Temel Paket",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "paid",
+          "after_trial_price_try": 259.99,
+          "note": "Sayfa: 'İlk 6 Ay Ücretsiz, Sonraki 6 ay' ücreti tarife faturasına yansır.",
+          "activation": "SMS ile gelen bağlantıdan Netflix üyeliği"
+        },
+        {
+          "category": "subscription",
+          "service": "Tivibu Go Süper Paket",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown",
+          "activation": "TİVİBU GO SUPER yazıp 5555'e SMS"
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Prime ayrıcalıkları",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "social_media_gb": null,
+            "total_internet_gb": 30
+          }
+        }
+      ],
+      "renewal_type": "recurring"
     },
     {
       "name": "Prime Netflix 40 GB",
@@ -939,17 +1539,92 @@
       "commitment_status": "committed",
       "price_lock_months": null,
       "internet_gb": 40,
-      "social_media_gb": null,
+      "social_media_gb": -1,
       "bonus_internet_gb": null,
-      "total_internet_gb": 40,
       "voice_minutes": 3000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
       "campaign": "İlk 6 ay Netflix, sınırsız Instagram, X ve Facebook, WhatsApp mesajlaşma, Türk Telekomlularla sınırsız konuşma, 12 ay Tivibu Go ve Prime.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/prime-netflix-40gb"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/prime-netflix-40gb",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page, no closure notice: committed price, GB, 3000 DK and 250 SMS match. Not shown on the new-customer listing page; the plan page itself is live. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "no_commitment_price_try": 1894.6,
+      "social_media_apps": [
+        "Instagram",
+        "X",
+        "Facebook"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "Netflix Standart Paket",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "paid",
+          "after_trial_price_try": 389.99,
+          "note": "Sayfa: 'İlk 6 Ay Ücretsiz, Sonraki 6 ay' ücreti tarife faturasına yansır.",
+          "activation": "SMS ile gelen bağlantıdan Netflix üyeliği"
+        },
+        {
+          "category": "subscription",
+          "service": "Tivibu Go Süper Paket",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown",
+          "activation": "TİVİBU GO SUPER yazıp 5555'e SMS"
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Prime ayrıcalıkları",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "social_media_gb": null,
+            "total_internet_gb": 40
+          }
+        }
+      ],
+      "renewal_type": "recurring"
     },
     {
       "name": "Prime Netflix 60 GB",
@@ -960,17 +1635,630 @@
       "commitment_status": "committed",
       "price_lock_months": null,
       "internet_gb": 60,
-      "social_media_gb": null,
+      "social_media_gb": -1,
       "bonus_internet_gb": null,
-      "total_internet_gb": 60,
       "voice_minutes": 3000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
       "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 ay taahhütlüdür. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
       "campaign": "İlk 6 ay Netflix, sınırsız YouTube, Instagram, X ve Facebook, WhatsApp mesajlaşma, Türk Telekomlularla sınırsız konuşma, 12 ay Tivibu Go ve Prime.",
-      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/prime-netflix-60gb"
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/prime-netflix-60gb",
+      "verified_at": "2026-10-12",
+      "evidence": "Official page, no closure notice: committed price, GB, 3000 DK and 250 SMS match. Not shown on the new-customer listing page; the plan page itself is live. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "no_commitment_price_try": 2250,
+      "social_media_apps": [
+        "YouTube",
+        "Instagram",
+        "X",
+        "Facebook"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "Netflix Premium Paket",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "paid",
+          "after_trial_price_try": 499.99,
+          "note": "Sayfa: 'İlk 6 Ay Ücretsiz, Sonraki 6 ay' ücreti tarife faturasına yansır.",
+          "activation": "SMS ile gelen bağlantıdan Netflix üyeliği"
+        },
+        {
+          "category": "subscription",
+          "service": "Tivibu Go Süper Paket",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown",
+          "activation": "TİVİBU GO SUPER yazıp 5555'e SMS"
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Prime ayrıcalıkları",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "history": [
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "social_media_gb": null,
+            "total_internet_gb": 60
+          }
+        }
+      ],
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "Yeni Dijital Lider 1 GB",
+      "package_group": "digital_leader",
+      "price_try": 275.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": null,
+      "no_commitment_price_try": 465.0,
+      "internet_gb": 1,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 fatura dönemi taahhütlüdür. Tarife sadece dijital kanallar üzerinden gerçekleştirilen numara taşıma ve yeni hat tesis işlemlerinde geçerlidir. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
+      "campaign": null,
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-dijital-lider-1gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing. Page: \"Yeni Dijital Lider 1GB Tarifesi her ay yurt içinde geçerli 1 GB internet, 1000 dakika konuşma ve 250 SMS\"; \"Tarife Taahhütlü Fiyat* 275 TL\", \"Tarife Taahhütsüz Fiyat** 465 TL\"; \"sadece dijital kanallar üzerinden gerçekleştirilen numara taşıma ve yeni hat tesis işlemlerinde geçerlidir\". Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "bonus_data",
+          "service": "Kontrol Sizde Hediye Ek Data Paketi",
+          "offer": "included",
+          "note": "Tarifeye kayıttan itibaren 90 gün içinde katılan müşterilere taahhüt boyunca."
+        },
+        {
+          "category": "app_data",
+          "service": "e-dergi",
+          "offer": "requires_purchase",
+          "apps": [
+            "e-dergi"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımı ve uygulamada sınırsız internet; sayfa ayrıca uygulamanın mağazadan satın alınması gerektiğini söylüyor."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "Yeni Dijital Lider 5 GB",
+      "package_group": "digital_leader",
+      "price_try": 315.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": null,
+      "no_commitment_price_try": 535.0,
+      "internet_gb": 5,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 fatura dönemi taahhütlüdür. Tarife sadece dijital kanallar üzerinden gerçekleştirilen numara taşıma ve yeni hat tesis işlemlerinde geçerlidir. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
+      "campaign": null,
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-dijital-lider-5gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing. Page: \"Yeni Dijital Lider 5GB Tarifesi her ay yurt içinde geçerli 5 GB internet, 1000 dakika konuşma ve 250 SMS\"; \"Tarife Taahhütlü Fiyat* 315 TL\", \"Tarife Taahhütsüz Fiyat** 535 TL\"; \"sadece dijital kanallar üzerinden gerçekleştirilen numara taşıma ve yeni hat tesis işlemlerinde geçerlidir\". Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "bonus_data",
+          "service": "Kontrol Sizde Hediye Ek Data Paketi",
+          "offer": "included",
+          "note": "Tarifeye kayıttan itibaren 90 gün içinde katılan müşterilere taahhüt boyunca."
+        },
+        {
+          "category": "app_data",
+          "service": "e-dergi",
+          "offer": "requires_purchase",
+          "apps": [
+            "e-dergi"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımı ve uygulamada sınırsız internet; sayfa ayrıca uygulamanın mağazadan satın alınması gerektiğini söylüyor."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "Yeni Dijital Lider 10 GB",
+      "package_group": "digital_leader",
+      "price_try": 365.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": null,
+      "no_commitment_price_try": 620.0,
+      "internet_gb": 10,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 fatura dönemi taahhütlüdür. Tarife sadece dijital kanallar üzerinden gerçekleştirilen numara taşıma ve yeni hat tesis işlemlerinde geçerlidir. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
+      "campaign": null,
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-dijital-lider-10gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing. Page: \"Yeni Dijital Lider 10GB Tarifesi her ay yurt içinde geçerli 10 GB internet, 1000 dakika konuşma ve 250 SMS\"; \"Tarife Taahhütlü Fiyat* 365 TL\", \"Tarife Taahhütsüz Fiyat** 620 TL\"; \"sadece dijital kanallar üzerinden gerçekleştirilen numara taşıma ve yeni hat tesis işlemlerinde geçerlidir\". Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "bonus_data",
+          "service": "Kontrol Sizde Hediye Ek Data Paketi",
+          "offer": "included",
+          "note": "Tarifeye kayıttan itibaren 90 gün içinde katılan müşterilere taahhüt boyunca."
+        },
+        {
+          "category": "app_data",
+          "service": "e-dergi",
+          "offer": "requires_purchase",
+          "apps": [
+            "e-dergi"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımı ve uygulamada sınırsız internet; sayfa ayrıca uygulamanın mağazadan satın alınması gerektiğini söylüyor."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "Yeni Dijital Lider 20 GB",
+      "package_group": "digital_leader",
+      "price_try": 465.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": null,
+      "no_commitment_price_try": 790.0,
+      "internet_gb": 20,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 fatura dönemi taahhütlüdür. Tarife sadece dijital kanallar üzerinden gerçekleştirilen numara taşıma ve yeni hat tesis işlemlerinde geçerlidir. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
+      "campaign": null,
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-dijital-lider-20gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing. Page: \"Yeni Dijital Lider 20GB Tarifesi her ay yurt içinde geçerli 20 GB internet, 1000 dakika konuşma ve 250 SMS\"; \"Tarife Taahhütlü Fiyat* 465 TL\", \"Tarife Taahhütsüz Fiyat** 790 TL\"; \"sadece dijital kanallar üzerinden gerçekleştirilen numara taşıma ve yeni hat tesis işlemlerinde geçerlidir\". Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "bonus_data",
+          "service": "Kontrol Sizde Hediye Ek Data Paketi",
+          "offer": "included",
+          "note": "Tarifeye kayıttan itibaren 90 gün içinde katılan müşterilere taahhüt boyunca."
+        },
+        {
+          "category": "app_data",
+          "service": "e-dergi",
+          "offer": "requires_purchase",
+          "apps": [
+            "e-dergi"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımı ve uygulamada sınırsız internet; sayfa ayrıca uygulamanın mağazadan satın alınması gerektiğini söylüyor."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "Yeni Dijital Lider 30 GB",
+      "package_group": "digital_leader",
+      "price_try": 565.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": null,
+      "no_commitment_price_try": 900.0,
+      "internet_gb": 30,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 fatura dönemi taahhütlüdür. Tarife sadece dijital kanallar üzerinden gerçekleştirilen numara taşıma ve yeni hat tesis işlemlerinde geçerlidir. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
+      "campaign": null,
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-dijital-lider-30gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing. Page: \"Yeni Dijital Lider 30GB Tarifesi her ay yurt içinde geçerli 30 GB internet, 1000 dakika konuşma ve 250 SMS\"; \"Tarife Taahhütlü Fiyat* 565 TL\", \"Tarife Taahhütsüz Fiyat** 900 TL\"; \"sadece dijital kanallar üzerinden gerçekleştirilen numara taşıma ve yeni hat tesis işlemlerinde geçerlidir\". Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "bonus_data",
+          "service": "Kontrol Sizde Hediye Ek Data Paketi",
+          "offer": "included",
+          "note": "Tarifeye kayıttan itibaren 90 gün içinde katılan müşterilere taahhüt boyunca."
+        },
+        {
+          "category": "app_data",
+          "service": "e-dergi",
+          "offer": "requires_purchase",
+          "apps": [
+            "e-dergi"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımı ve uygulamada sınırsız internet; sayfa ayrıca uygulamanın mağazadan satın alınması gerektiğini söylüyor."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "Yeni Dijital Lider 40 GB",
+      "package_group": "digital_leader",
+      "price_try": 685.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": null,
+      "no_commitment_price_try": 1055.0,
+      "internet_gb": 40,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 fatura dönemi taahhütlüdür. Tarife sadece dijital kanallar üzerinden gerçekleştirilen numara taşıma ve yeni hat tesis işlemlerinde geçerlidir. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
+      "campaign": null,
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-dijital-lider-40gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing. Page: \"Yeni Dijital Lider 40GB Tarifesi her ay yurt içinde geçerli 40 GB internet, 1000 dakika konuşma ve 250 SMS\"; \"Tarife Taahhütlü Fiyat* 685 TL\", \"Tarife Taahhütsüz Fiyat** 1055 TL\"; \"sadece dijital kanallar üzerinden gerçekleştirilen numara taşıma ve yeni hat tesis işlemlerinde geçerlidir\". Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "bonus_data",
+          "service": "Kontrol Sizde Hediye Ek Data Paketi",
+          "offer": "included",
+          "note": "Tarifeye kayıttan itibaren 90 gün içinde katılan müşterilere taahhüt boyunca."
+        },
+        {
+          "category": "app_data",
+          "service": "e-dergi",
+          "offer": "requires_purchase",
+          "apps": [
+            "e-dergi"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımı ve uygulamada sınırsız internet; sayfa ayrıca uygulamanın mağazadan satın alınması gerektiğini söylüyor."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "Yeni Dijital Lider Prime 80 GB",
+      "package_group": "digital_leader",
+      "price_try": 860.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": null,
+      "no_commitment_price_try": 1460.0,
+      "internet_gb": 80,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 3000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Faturalı tarife aylık olarak ücretlendirilir. 12 fatura dönemi taahhütlüdür. Tarife sadece dijital kanallar üzerinden gerçekleştirilen numara taşıma ve yeni hat tesis işlemlerinde geçerlidir. Aylık ücrete telsiz kullanım ücreti; yeni hat tesisinde telsiz ruhsatname ücreti ve özel iletişim vergisi dahil değildir.",
+      "campaign": null,
+      "source_url": "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler/yeni-dijital-lider-prime-80gb",
+      "verified_at": "2026-10-12",
+      "evidence": "New-customer listing. Page: \"Yeni Dijital Lider Prime 80GB Tarifesi her ay yurt içinde geçerli 80 GB internet, 3000 dakika konuşma ve 250 SMS\"; \"Tarife Taahhütlü Fiyat* 860 TL\", \"Tarife Taahhütsüz Fiyat** 1.460 TL\"; digital-channel new line / number porting only. Phase 2D (2026-10-12): channels, no-commitment price and Ek Faydalar re-read on the tariff page. Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "bonus_data",
+          "service": "Sil Süpür'den her hafta hediye internet",
+          "offer": "included"
+        },
+        {
+          "category": "bonus_data",
+          "service": "Kontrol Sizde Hediye Ek Data Paketi",
+          "offer": "included",
+          "note": "Tarifeye kayıttan itibaren 90 gün içinde katılan müşterilere taahhüt boyunca."
+        },
+        {
+          "category": "subscription",
+          "service": "Tivibu Go Süper Paket",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "unknown",
+          "activation": "PRİME DİJİTAL yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "Muud Premium",
+          "offer": "free_trial",
+          "duration_months": 6,
+          "after_trial": "unknown",
+          "activation": "PRİME DİJİTAL yazıp 5555'e SMS"
+        },
+        {
+          "category": "service",
+          "service": "Türk Telekom WiFi 20 GB kampanya kodu",
+          "offer": "included",
+          "activation": "PRİME DİJİTAL yazıp 5555'e SMS"
+        },
+        {
+          "category": "subscription",
+          "service": "YouTube Premium",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown",
+          "note": "YouTube Premium Kampanyası: 3 ay ücretsiz abonelik."
+        },
+        {
+          "category": "app_data",
+          "service": "e-dergi",
+          "offer": "requires_purchase",
+          "apps": [
+            "e-dergi"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımı ve uygulamada sınırsız internet; sayfa ayrıca uygulamanın mağazadan satın alınması gerektiğini söylüyor."
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız mesajlaşma",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1,
+          "note": "Yalnızca mesajlaşma; sesli/görüntülü arama dahil değil."
+        },
+        {
+          "category": "app_data",
+          "service": "YaaY sınırsız",
+          "offer": "included",
+          "apps": [
+            "YaaY"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "app_data",
+          "service": "BiP sınırsız",
+          "offer": "included",
+          "apps": [
+            "BiP"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "service",
+          "service": "Ücretsiz dijital kurye (SIM teslimatı)",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     }
-  ]
+  ],
+  "verified_at": "2026-10-12",
+  "schema_version": 2
 }

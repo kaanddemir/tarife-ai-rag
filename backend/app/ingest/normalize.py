@@ -3,7 +3,6 @@ into normalized rows: typed fields + a natural-language `doc_text` used for
 embedding and retrieval grounding.
 """
 import re
-import unicodedata
 from typing import Optional
 
 OPERATOR_LABELS = {
@@ -23,20 +22,23 @@ CUSTOMER_TYPE_LABELS = {
 # We write eligibility explicitly into doc_text so the embedding carries the
 # "faturali" / "yeni musteri" phrases and can surface the right bucket even without a filter.
 _CUSTOMER_TYPE_PHRASES = {
-    "new": "yeni musteri / numara tasima veya yeni hat ile gelenlere ozel",
+    "new": "yalnizca operatore yeni gelen musterilere ozel",
     "existing": "hali hazirda hatti olan mevcut musterilere ozel",
     "any": "hem yeni hem mevcut musteriler yararlanabilir",
 }
 
-# Sentinel for unlimited numeric fields. It applied to voice_minutes/sms_count from
-# the start; with postpaid packages the GB fields (internet_gb, social_media_gb,
-# total_internet_gb) can carry this value too.
+# Sentinel for unlimited numeric fields (voice_minutes, sms_count and the GB fields).
 UNLIMITED = -1
 
 AUDIENCE_SEGMENTS = {"general", "youth", "child", "family", "public_special"}
 PRODUCT_SCOPES = {"mobile_voice", "wearable", "data_only", "iot"}
 COMMITMENT_STATUSES = {"committed", "no_commitment", "unknown"}
-PRICE_PERIODS = {"month", "one_time", "28_day", "3_month", "6_month", "12_month"}
+# The period price_try pays for: "month" = one postpaid billing month; "<N>_day" = one
+# prepaid package whose allowances last N days (always equal to validity_days).
+PRICE_PERIODS = {"month", "28_day", "60_day", "90_day", "180_day", "360_day"}
+# Whether the plan charges again by itself. "unknown" = the official source does not say;
+# never inferred from "monthly" or a 28-day validity.
+RENEWAL_TYPES = {"recurring", "one_time", "unknown"}
 VALIDITY_UNITS = {"day", "week", "month"}
 
 _YOUTH_FAMILIES = {"gnc", "freezone", "freezone_red", "selfy_1plus1"}
@@ -104,6 +106,43 @@ _ELIGIBILITY_LABELS = {
 
 _UNLIMITED_WORDS = ("sinirsiz", "sınırsız", "unlimited")
 
+# ---- Structured benefits ----
+# Each record carries `benefits` (a list) and `benefits_status`:
+#   verified       -- the official page was read; `benefits` lists what it states (>= 1 item)
+#   verified_none  -- the official page was read and lists no extra benefit (benefits == [])
+#   unverified     -- the terms could not be read (e.g. rendered by JavaScript); nothing is claimed
+# A benefit is what the page says, never more: a free trial is not "included", data for an
+# app is not a subscription to it, and a discount is not free.
+BENEFITS_STATUSES = {"verified", "verified_none", "unverified"}
+# Where bonus_internet_gb can be used. App-only data is listed in `benefits` as well
+# (app_data); the scope stops it being read as general internet.
+BONUS_INTERNET_SCOPES = {
+    "general": "tum internet kullanimlarinda gecerli ek/hediye internet",
+    "tethering_only": "yalnizca internet paylasiminda (hotspot) kullanilabilen ek internet",
+    "app_specific": "yalnizca belirli uygulamalarda gecerli ek internet",
+}
+BENEFIT_CATEGORIES = {
+    "subscription",  # membership of a service (Netflix, Tivibu Go, ChatGPT Go ...)
+    "app_data",      # data usable only in named apps; never the app's subscription itself
+    "bonus_data",    # extra general data (campaign gift on top of the tariff)
+    "voucher",       # one-off gift card / coupon with a stated value
+    "discount",      # a price reduction at a partner or on a service
+    "roaming",       # use of the domestic allowance abroad
+    "service",       # an operator service (safety app, delivery, privileges programme ...)
+}
+BENEFIT_OFFERS = {
+    "included",           # part of the tariff for as long as it runs
+    "free_trial",         # free for duration_months, then paid or ends (after_trial)
+    "discounted",         # cheaper, not free
+    "requires_purchase",  # app_data that only works after the service itself is bought
+}
+BENEFIT_AFTER_TRIAL = {"paid", "ends", "unknown"}
+BENEFIT_ELIGIBILITY = {"new_line_only"}
+_STREAMING_SERVICES = ("netflix", "tivibu", "muud", "youtube premium", "dijital platform", "spotify", "amazon prime")
+_SAFETY_SERVICES = ("safe family", "find my kids", "durma")
+_PRIVILEGE_SERVICES = ("prime ayrıcalık", "platinum", "red ayrıcalık")
+_MESSAGING_APPS = {"whatsapp", "bip", "yaay", "facebook messenger"}
+
 # Rough day equivalents (used to derive validity_days when it's not given).
 _UNIT_DAYS = {"day": 1, "week": 7, "month": 30}
 _UNIT_LABELS = {"day": "gun", "week": "hafta", "month": "ay"}
@@ -112,12 +151,26 @@ _UNIT_LABELS = {"day": "gun", "week": "hafta", "month": "ay"}
 # For multi-month packages price_try is the TOTAL charge; calling it "monthly fee" is misleading.
 _PERIOD_PRICE_LABELS = {
     "month": "Aylik ucret",
-    "one_time": "Tek seferlik paket ucreti",
     "28_day": "28 gunluk paket ucreti",
-    "3_month": "3 aylik paket ucreti (toplam)",
-    "6_month": "6 aylik paket ucreti (toplam)",
-    "12_month": "12 aylik paket ucreti (toplam)",
+    "60_day": "60 gunluk paket ucreti (toplam)",
+    "90_day": "90 gunluk paket ucreti (toplam)",
+    "180_day": "180 gunluk paket ucreti (toplam)",
+    "360_day": "360 gunluk paket ucreti (toplam)",
 }
+
+
+def renewal_phrase(rec: dict) -> Optional[str]:
+    """How the plan charges again, as stated by the source (None when renewal_type is absent)."""
+    kind = rec.get("renewal_type")
+    if kind == "recurring":
+        if rec.get("line_type") == "postpaid":
+            return "Faturali tarife: ucret her fatura doneminde (aylik) yeniden alinir."
+        return "Iptal edilmezse ve bakiye yeterliyse sure sonunda otomatik yenilenir."
+    if kind == "one_time":
+        return "Tek seferlik pakettir; kendiliginden yenilenmez, tekrar kullanmak icin yeniden alinmasi gerekir."
+    if kind == "unknown":
+        return "Paketin otomatik yenilenip yenilenmedigi kaynakta belirtilmemis."
+    return None
 
 def _num(text: str, pattern: str) -> Optional[float]:
     m = re.search(pattern, text, flags=re.IGNORECASE)
@@ -164,11 +217,58 @@ def _amount_phrase(value: Optional[int], unit: str) -> str:
     return f"{value} {unit}"
 
 
-def _gb_amount(value) -> Optional[str]:
-    """'20 GB' / 'sinirsiz' (unlimited). None -> the caller should omit the phrase entirely."""
-    if value is None:
+def _is_unlimited(value) -> bool:
+    return value is not None and float(value) == UNLIMITED
+
+
+def general_internet_gb(internet, bonus=None, bonus_scope=None) -> Optional[float]:
+    """Internet usable for anything: the general allowance plus a bonus only when its
+    verified scope is "general". Social-media, hotspot-only and app-only data never count.
+    UNLIMITED only when the general allowance (or a general bonus) is unlimited; None when
+    the general allowance is unknown."""
+    if internet is None:
         return None
-    return "sinirsiz" if value == UNLIMITED else f"{value:g} GB"
+    if _is_unlimited(internet):
+        return float(UNLIMITED)
+    if bonus_scope == "general" and bonus is not None:
+        if _is_unlimited(bonus):
+            return float(UNLIMITED)
+        return float(internet) + float(bonus)
+    return float(internet)
+
+
+_BONUS_PART_LABELS = {
+    "general": "ek genel",
+    "tethering_only": "yalnizca paylasim (hotspot)",
+    "app_specific": "uygulamaya ozel",
+}
+
+
+def internet_phrase(internet, social=None, bonus=None, bonus_scope=None) -> Optional[str]:
+    """Describe a package's internet without overstating it. The headline is the
+    general-use amount (general_internet_gb); restricted quotas are listed as parts and
+    never summed into it. Only unlimited *general* internet reads as unlimited.
+    Returns None when the general allowance is unknown."""
+    general = general_internet_gb(internet, bonus, bonus_scope)
+    if general is None:
+        return None
+    if _is_unlimited(general):
+        return "sinirsiz genel internet"
+    parts = [f"{float(internet):g} GB genel"]
+    restricted_unlimited = False
+    if social is not None and float(social) != 0:
+        restricted_unlimited |= _is_unlimited(social)
+        parts.append("sinirsiz sosyal medya" if _is_unlimited(social) else f"{float(social):g} GB sosyal medya")
+    if bonus is not None and float(bonus) != 0:
+        label = _BONUS_PART_LABELS.get(bonus_scope, "bonus")
+        restricted_unlimited |= _is_unlimited(bonus)
+        parts.append(f"sinirsiz {label}" if _is_unlimited(bonus) else f"{float(bonus):g} GB {label}")
+    if len(parts) == 1:
+        return f"{general:g} GB internet"
+    note = " (genel internet sinirsiz degil)" if restricted_unlimited else ""
+    if general != float(internet):  # a general-scope bonus adds to what can be used anywhere
+        return f"toplam {general:g} GB genel kullanim internet ({' + '.join(parts)}){note}"
+    return f"{' + '.join(parts)} internet{note}"
 
 
 def _commitment_phrases(rec: dict) -> list[str]:
@@ -226,17 +326,170 @@ def _taxonomy(rec: dict) -> dict:
     }
 
 
-def _tags(rec: dict) -> tuple[list[str], list[str]]:
+# Activation channels a new customer can use. Only source text that grants or
+# restricts eligibility counts; a fee disclosure ("yeni hat tesisinde telsiz
+# ruhsatname ucreti dahil degildir", "yeni hat alimlarinda SIM kart ucreti tahsil
+# edilir") says nothing about who may buy the plan, so such sentences are ignored.
+# No channel found -> unknown, never assumed.
+ACTIVATION_CHANNELS = ("new_line", "number_porting")
+_FEE_SENTENCE_RE = re.compile(r"[uü]cret|tahsil|dahil de[gğ]il", re.I)
+_NEW_LINE_RE = re.compile(r"yeni hat")
+_PORTING_RE = re.compile(r"numara\w*.{0,40}ta[sş][ıi]")
+
+
+def activation_channels(rec: dict) -> list[str]:
+    text = " ".join(str(rec.get(k) or "") for k in ("conditions", "campaign")).lower()
+    sentences = [s for s in re.split(r"(?<=[.!?])\s+", text) if not _FEE_SENTENCE_RE.search(s)]
+    evidence = " ".join([str(rec.get("name") or "").lower(), *sentences])
+    channels = []
+    if _NEW_LINE_RE.search(evidence):
+        channels.append("new_line")
+    if _PORTING_RE.search(evidence):
+        channels.append("number_porting")
+    return channels
+
+
+def record_channels(rec: dict) -> Optional[list[str]]:
+    """The record's activation channels. An explicit `activation_channels` (list, or None
+    for "the source does not say") wins; older records fall back to the text rule."""
+    if "activation_channels" in rec:
+        return rec["activation_channels"]
+    return activation_channels(rec) or None
+
+
+def channel_phrase(tags) -> str:
+    """Turkish rendering of the activation channels for doc_text and the prompt."""
+    tags = set(tags or [])
+    if {"new_line", "number_porting"} <= tags:
+        return "yeni hat veya numara tasima ile alinabilir"
+    if "new_line" in tags:
+        return "yalnizca yeni hat ile alinabilir (numara tasima kaynakta belirtilmemis)"
+    if "number_porting" in tags:
+        return "numara tasima ile alinabilir (yeni hat kaynakta belirtilmemis)"
+    return "yeni hat / numara tasima kanali kaynakta belirtilmemis"
+
+
+def _fmt_num(value) -> str:
+    return f"{float(value):g}".replace(".", ",")
+
+
+def benefit_phrase(b: dict) -> str:
+    """One benefit in plain Turkish, qualifiers first-class: a trial says it is a trial,
+    app data says it is app data (and whether the app must be bought)."""
+    service = b.get("service") or "belirtilmemis hizmet"
+    category, offer = b.get("category"), b.get("offer")
+    months = b.get("duration_months")
+    apps = ", ".join(b.get("apps") or []) or service
+    amount = b.get("amount_gb")
+    if category == "app_data":
+        size = "sinirsiz" if amount == UNLIMITED else (f"{_fmt_num(amount)} GB" if amount is not None else "miktari belirtilmemis")
+        text = f"{apps} uygulamalarinda gecerli {size} internet (uygulama aboneligi degil)"
+        if offer == "requires_purchase":
+            text += "; servis ayrica satin alinmadan kullanilamaz"
+    elif category == "subscription":
+        text = f"{service} uyeligi"
+        if offer == "free_trial":
+            text += f": ilk {months} ay ucretsiz deneme" if months else ": ucretsiz deneme (sure belirtilmemis)"
+            after = b.get("after_trial")
+            if after == "paid":
+                price = b.get("after_trial_price_try")
+                text += f", sonrasinda ucretli ({_fmt_num(price)} TL)" if price is not None else ", sonrasinda ucretli"
+            elif after == "ends":
+                text += ", sonrasinda sona erer"
+            else:
+                text += ", sonrasi kaynakta belirtilmemis"
+        elif offer == "discounted":
+            text += " (indirimli, ucretsiz degil)"
+        elif months:
+            text += f" ({months} ay)"
+    elif category == "bonus_data":
+        size = f"{_fmt_num(amount)} GB" if amount is not None else "miktari belirtilmemis"
+        text = f"{service}: ek {size} genel internet"
+        if months:
+            text += f", {months} ay boyunca"
+    elif category == "voucher":
+        value = b.get("value_try")
+        text = f"{service} hediye ceki" + (f" ({_fmt_num(value)} TL, tek seferlik)" if value is not None else "")
+    elif category == "discount":
+        text = f"{service} (indirim, ucretsiz degil)"
+    elif category == "roaming":
+        text = f"{service} (yurt disi kullanim)"
+    else:
+        text = service
+        if offer == "free_trial" and months:
+            text += f": {months} ay ucretsiz"
+    if b.get("eligibility") == "new_line_only":
+        text += " [yalnizca yeni hat ile gelenlere]"
+    if b.get("activation"):
+        text += f" [aktivasyon: {b['activation']}]"
+    return text
+
+
+def benefits_sentence(rec: dict) -> Optional[str]:
+    status = rec.get("benefits_status")
+    if status is None:
+        return None
+    if status == "unverified":
+        return "Ek faydalar: kaynakta dogrulanamadi; ek fayda iddiasinda bulunulmaz."
+    if status == "verified_none":
+        return "Ek faydalar: resmi sayfada ek fayda belirtilmemis."
+    return "Ek faydalar (resmi sayfaya gore): " + "; ".join(benefit_phrase(b) for b in rec.get("benefits") or []) + "."
+
+
+def _structured_benefit_tags(rec: dict) -> set[str]:
+    """Benefit tags from the verified `benefits` list only -- never from free text."""
+    tags: set[str] = set()
+    for b in rec.get("benefits") or []:
+        service = str(b.get("service") or "").lower()
+        category, offer = b.get("category"), b.get("offer")
+        if category == "subscription" and offer in ("included", "free_trial"):
+            if any(s in service for s in _STREAMING_SERVICES):
+                tags.add("streaming_perks")
+            if "netflix" in service:
+                tags.add("netflix")
+            if offer == "free_trial":
+                tags.add("free_trial_subscription")
+        elif category == "app_data":
+            # Unlimited messaging (WhatsApp/BiP/YaaY) is not extra data for other apps.
+            messaging = {a.lower() for a in b.get("apps") or []} <= _MESSAGING_APPS
+            tags.add("unlimited_messaging" if messaging else "app_specific_data")
+        elif category == "bonus_data":
+            tags.add("bonus_data")
+        elif category == "voucher":
+            tags.add("gift_voucher")
+        elif category == "discount":
+            tags.add("digital_perks")
+        elif category == "roaming":
+            tags.add("international_usage")
+        if category in ("service", "subscription") and any(s in service for s in _SAFETY_SERVICES):
+            tags.add("safety_services")
+        if category == "service" and any(s in service for s in _PRIVILEGE_SERVICES):
+            tags.add("premium_perks")
+        if category == "service" and "kurye" in service:
+            tags.add("free_delivery")
+    return tags
+
+
+# Tags that a structured `benefits` list decides on its own. Text matching made
+# "Netflix kullanimi sinirsizdir" (zero-rated data) look like a Netflix subscription.
+_STRUCTURED_BENEFIT_TAGS = {
+    "unlimited_messaging", "streaming_perks", "netflix", "free_trial_subscription", "app_specific_data", "gift_voucher",
+    "digital_perks", "international_usage", "safety_services", "premium_perks",
+}
+
+
+def eligibility_tags(rec: dict) -> list[str]:
+    """Purchase restrictions that no dedicated field expresses: province, dealer/partner/
+    online channel, activation window, identity, parental link, profession. Activation
+    channel (activation_channels), age (age_min/age_max) and audience (audience_segment)
+    are never repeated here."""
+    text = " ".join(str(rec.get(k) or "") for k in ("name", "conditions", "campaign")).lower()
     text = " ".join(str(rec.get(k) or "") for k in ("name", "conditions", "campaign")).lower()
     eligibility = set(rec.get("eligibility_tags") or [])
-    benefits = set(rec.get("benefit_tags") or [])
-    if "yeni hat" in text:
-        eligibility.add("new_line")
-    if re.search(r"numara\w*.{0,40}ta[sş][ıi]", text):
-        eligibility.add("number_porting")
+    # Channels live in activation_channels, ages in age_min/age_max: not repeated here.
+    eligibility -= {"new_line", "number_porting", "age_restricted"}
     if "online" in text:
         eligibility.add("online_only")
-        benefits.add("online_only")
     if (
         "belirli iller" in text
         or "illere özel" in text
@@ -259,12 +512,6 @@ def _tags(rec: dict) -> tuple[list[str], list[str]]:
         eligibility.add("activation_window")
     if "tckn/ykn" in text or re.search(r"tc ya da yabancı kimlik|tc ya da yabanci kimlik", text):
         eligibility.add("identity_required")
-    if (
-        re.search(r"\b\d{1,2}\s*-\s*\d{1,2}\s*yaş", text)
-        or rec.get("age_min") is not None
-        or rec.get("age_max") is not None
-    ):
-        eligibility.add("age_restricted")
     if "ebeveyn" in text or "çocuk kullanıcı tanımlaması" in text or "cocuk kullanici tanimlamasi" in text:
         eligibility.add("parental_relationship_required")
     family = rec.get("operator_family") or rec.get("package_group")
@@ -272,6 +519,51 @@ def _tags(rec: dict) -> tuple[list[str], list[str]]:
         eligibility.add("parliamentarian")
     elif family == "new_internal_affairs":
         eligibility.add("internal_affairs_personnel")
+    return sorted(eligibility)
+
+
+def _field_benefit_tags(rec: dict) -> set[str]:
+    """Tags that follow from structured allowance/price fields."""
+    tags: set[str] = set()
+    if rec.get("internet_gb") == UNLIMITED:
+        tags.add("unlimited_data")
+    if rec.get("voice_minutes") == UNLIMITED:
+        tags.add("unlimited_calls")
+    if rec.get("sms_count") == UNLIMITED:
+        tags.add("unlimited_sms")
+    if rec.get("social_media_gb") == UNLIMITED:
+        tags.add("unlimited_social")
+    if rec.get("bonus_internet_gb") not in (None, 0):
+        tags.add("bonus_data")
+    if rec.get("bonus_internet_scope") == "tethering_only":
+        tags.add("data_sharing")
+    if rec.get("price_lock_months"):
+        tags.add("price_guarantee")
+    if (rec.get("validity_days") or 0) >= 90:
+        tags.add("long_validity")
+    return tags
+
+
+def benefit_tags(rec: dict) -> list[str]:
+    """Benefit classification, derived on demand and never stored, so it cannot drift.
+
+    Catalog records (with benefits_status) use only the structured `benefits` list and
+    structured fields; marketing text never adds a tag. Records without structured
+    benefits (older test fixtures) keep the text rules below."""
+    if rec.get("benefits_status") in BENEFITS_STATUSES:
+        tags = _structured_benefit_tags(rec) | _field_benefit_tags(rec)
+        if any(b.get("category") == "bonus_data" for b in rec.get("benefits") or []):
+            tags.add("bonus_data")
+        return sorted(tags)
+    return _text_benefit_tags(rec)
+
+
+def _text_benefit_tags(rec: dict) -> list[str]:
+    text = " ".join(str(rec.get(k) or "") for k in ("name", "conditions", "campaign")).lower()
+    family = rec.get("operator_family") or rec.get("package_group")
+    benefits: set[str] = set()
+    if "online" in text:
+        benefits.add("online_only")
     if rec.get("social_media_gb") == UNLIMITED or "sınırsız sosyal" in text:
         benefits.add("unlimited_social")
     if "sınırsız eğlence" in text or "sinirsiz eglence" in text:
@@ -305,7 +597,9 @@ def _tags(rec: dict) -> tuple[list[str], list[str]]:
         benefits.add("data_sharing")
     if "markada indirim" in text and (family in _YOUTH_FAMILIES or "genç" in text or "genc" in text):
         benefits.add("youth_perks")
-    if rec.get("internet_gb") == UNLIMITED or rec.get("total_internet_gb") == UNLIMITED:
+    # Only the general allowance counts: an unlimited social/bonus quota is not
+    # unlimited general internet.
+    if rec.get("internet_gb") == UNLIMITED:
         benefits.add("unlimited_data")
     if rec.get("voice_minutes") == UNLIMITED:
         benefits.add("unlimited_calls")
@@ -323,7 +617,7 @@ def _tags(rec: dict) -> tuple[list[str], list[str]]:
         benefits.add("safety_services")
     if re.search(r"\b5g(?:'ye|ye)?\b", text):
         benefits.add("5g_ready")
-    return sorted(eligibility), sorted(benefits)
+    return sorted(benefits)
 
 
 def _commitment_status(rec: dict) -> str:
@@ -336,29 +630,6 @@ def _commitment_status(rec: dict) -> str:
     if "taahhütsüz" in text or "taahhutsuz" in text:
         return "no_commitment"
     return "no_commitment" if rec.get("line_type") == "prepaid" else "unknown"
-
-
-def _canonical_id(rec: dict) -> str:
-    def clean(value) -> str:
-        raw = unicodedata.normalize("NFKD", str(value or "none"))
-        ascii_text = raw.encode("ascii", "ignore").decode().lower()
-        return re.sub(r"[^a-z0-9]+", "-", ascii_text).strip("-")
-
-    identity = (
-        rec.get("operator"), rec.get("line_type"), rec.get("operator_family"),
-        rec.get("internet_gb"), rec.get("social_media_gb"), rec.get("bonus_internet_gb"),
-        rec.get("total_internet_gb"), rec.get("voice_minutes"), rec.get("sms_count"),
-    )
-    return ":".join(clean(value) for value in identity)
-
-
-def _quality(rec: dict) -> tuple[str, list[str]]:
-    missing = [field for field in ("price_try", "source_url") if not rec.get(field)]
-    if rec.get("line_type") == "postpaid" and rec.get("commitment_status") == "unknown":
-        missing.append("commitment_status")
-    if rec.get("internet_gb") is None and rec.get("total_internet_gb") is None:
-        missing.append("internet_gb")
-    return ("review_required" if missing else "complete", missing)
 
 
 def derive_validity_days(rec: dict) -> Optional[int]:
@@ -389,11 +660,12 @@ def _validity_phrase(rec: dict) -> Optional[str]:
 def build_doc_text(rec: dict) -> str:
     """Fixed section order; the canonical per-package embedding/grounding document."""
     op = OPERATOR_LABELS.get(rec.get("operator", ""), rec.get("operator", ""))
-    gb = rec.get("total_internet_gb")
-    if gb is None:
-        gb = rec.get("internet_gb")
-    gb_amount = _gb_amount(gb)
-    gb_phrase = f"{gb_amount} internet" if gb_amount else "belirtilmemis internet"
+    gb_phrase = internet_phrase(
+        rec.get("internet_gb"),
+        rec.get("social_media_gb"),
+        rec.get("bonus_internet_gb"),
+        rec.get("bonus_internet_scope"),
+    ) or "belirtilmemis internet"
     price = rec.get("price_try")
     price_phrase = f"{price:g} TL" if price is not None else "fiyat belirtilmemis"
     price_label = _PERIOD_PRICE_LABELS.get(rec.get("price_period"), "Paket ucreti")
@@ -415,41 +687,46 @@ def build_doc_text(rec: dict) -> str:
         _ELIGIBILITY_LABELS.get(tag, tag) for tag in rec.get("eligibility_tags") or []
     ) or "ek kosul etiketi yok"
     benefits = ", ".join(
-        _BENEFIT_LABELS.get(tag, tag) for tag in rec.get("benefit_tags") or []
+        _BENEFIT_LABELS.get(tag, tag) for tag in benefit_tags(rec)
     ) or "ozel avantaj etiketi yok"
 
     parts = [
         f"Kimlik: {op} {rec.get('name', '')} {line_label} paketi; "
         f"operator ailesi {rec.get('operator_family', 'standard')}; "
-        f"urun kapsami {rec.get('product_scope', 'mobile_voice')}; "
-        f"kanonik kimlik {rec.get('canonical_id', 'belirtilmemis')}.",
-        f"Uygunluk: {_CUSTOMER_TYPE_PHRASES[rec['customer_type']]}; {audience_phrase}; "
+        f"urun kapsami {rec.get('product_scope', 'mobile_voice')}.",
+        f"Uygunluk: {_CUSTOMER_TYPE_PHRASES[rec['customer_type']]}; "
+        f"{channel_phrase(rec.get('activation_channels'))}; {audience_phrase}; "
         f"etiketler: {eligibility}.",
         f"Icerik: {gb_phrase}, {_amount_phrase(rec.get('voice_minutes'), 'dakika')}, "
         f"{_amount_phrase(rec.get('sms_count'), 'SMS')}.",
         f"Fiyat: {price_sentence}.",
     ]
+    parts.append(renewal_phrase(rec))
     parts.extend(_commitment_phrases(rec))
+    if rec.get("promo_months") and rec.get("price_after_promo_try") is not None:
+        parts.append(
+            f"Bu fiyat ilk {rec['promo_months']} ay icindir; sonrasinda {rec['price_after_promo_try']:g} TL'dir."
+        )
 
     social = rec.get("social_media_gb")
+    apps = ", ".join(rec.get("social_media_apps") or []) or "TikTok, Instagram, YouTube vb."
     if social == UNLIMITED:
-        parts.append("Sosyal medya (TikTok, Instagram, YouTube vb.) kullanimi sinirsizdir.")
+        parts.append(f"Sosyal medya ({apps}) kullanimi sinirsizdir; bu genel internet degildir.")
     elif social:
-        parts.append(f"Bunun {social:g} GB'i sosyal medya (TikTok, Instagram, YouTube vb.) kotasidir.")
+        parts.append(f"Bunun {social:g} GB'i sosyal medya ({apps}) kotasidir.")
     bonus = rec.get("bonus_internet_gb")
+    scope = BONUS_INTERNET_SCOPES.get(rec.get("bonus_internet_scope"), "bonus internet (kullanim alani belirtilmemis)")
     if bonus == UNLIMITED:
-        parts.append("Bonus/paylasim interneti sinirsizdir.")
+        parts.append(f"Sinirsiz {scope} dahildir.")
     elif bonus:
-        parts.append(f"Ayrica {bonus:g} GB bonus/paylasim interneti dahildir.")
+        parts.append(f"Ayrica {bonus:g} GB {scope} dahildir.")
     parts.append(f"Avantajlar: {benefits}.")
+    if (sentence := benefits_sentence(rec)):
+        parts.append(sentence)
     if rec.get("conditions"):
         parts.append(f"Istisnalar ve kosullar: {rec['conditions']}")
     if rec.get("campaign"):
         parts.append(f"Kampanya: {rec['campaign']}")
-    parts.append(
-        f"Veri kalitesi: {rec.get('data_quality_status', 'complete')}; "
-        f"eksik alanlar: {', '.join(rec.get('missing_fields') or []) or 'yok'}."
-    )
     parts.append(f"Kaynak: {rec.get('source_url', 'belirtilmemis')}.")
     return " ".join(p for p in parts if p).strip()
 
@@ -478,10 +755,11 @@ def normalize_record(rec: dict, *, require_mobile_voice: bool = False) -> dict:
     out["internet_gb"] = parse_gb(rec.get("internet_gb"))
     out["social_media_gb"] = parse_gb(rec.get("social_media_gb"))
     out["bonus_internet_gb"] = parse_gb(rec.get("bonus_internet_gb"))
-    out["total_internet_gb"] = parse_gb(rec.get("total_internet_gb"))
     out["voice_minutes"] = parse_amount(rec.get("voice_minutes"))
     out["sms_count"] = parse_amount(rec.get("sms_count"))
     out["no_commitment_price_try"] = parse_price(rec.get("no_commitment_price_try"))
+    out["price_after_promo_try"] = parse_price(rec.get("price_after_promo_try"))
+    out["activation_channels"] = record_channels(rec)
     out["price_lock_months"] = (
         int(rec["price_lock_months"])
         if rec.get("price_lock_months") is not None
@@ -504,8 +782,6 @@ def normalize_record(rec: dict, *, require_mobile_voice: bool = False) -> dict:
     if out["line_type"] == "prepaid":
         out["commitment_months"] = None
         out["no_commitment_price_try"] = None
-    out["eligibility_tags"], out["benefit_tags"] = _tags(out)
-    out["canonical_id"] = rec.get("canonical_id") or _canonical_id(out)
-    out["data_quality_status"], out["missing_fields"] = _quality(out)
+    out["eligibility_tags"] = eligibility_tags(out)
     out["doc_text"] = build_doc_text(out)
     return out

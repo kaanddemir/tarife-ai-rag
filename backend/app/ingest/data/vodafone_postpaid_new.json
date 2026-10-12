@@ -4,187 +4,11 @@
   "customer_type": "new",
   "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler",
   "scraped_at": "2026-07-10",
-  "package_count": 22,
+  "package_count": 25,
   "packages": [
     {
       "name": "5G Online Plus 5GB Paketi",
       "package_group": "online_plus",
-      "price_try": 300.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
-      "no_commitment_price_try": 800.0,
-      "internet_gb": 5,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 5,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Vodafone'un online kanallarından yeni hat veya numara taşıma başvurusu yapan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
-      "campaign": "3 ay ücretsiz ChatGPT Go aboneliği ve seçili markalarda 7.000 TL'ye varan avantajlar.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
-    },
-    {
-      "name": "5G Online Plus 10GB Paketi",
-      "package_group": "online_plus",
-      "price_try": 325.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
-      "no_commitment_price_try": 1000.0,
-      "internet_gb": 10,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 10,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Vodafone'un online kanallarından yeni hat veya numara taşıma başvurusu yapan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
-      "campaign": "3 ay ücretsiz ChatGPT Go aboneliği ve seçili markalarda 7.000 TL'ye varan avantajlar.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
-    },
-    {
-      "name": "5G Online Plus 20GB Paketi",
-      "package_group": "online_plus",
-      "price_try": 400.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
-      "no_commitment_price_try": 1300.0,
-      "internet_gb": 20,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 20,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Vodafone'un online kanallarından yeni hat veya numara taşıma başvurusu yapan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
-      "campaign": "3 ay ücretsiz ChatGPT Go aboneliği ve seçili markalarda 7.000 TL'ye varan avantajlar.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
-    },
-    {
-      "name": "5G Online Plus 30GB Paketi",
-      "package_group": "online_plus",
-      "price_try": 500.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
-      "no_commitment_price_try": 1600.0,
-      "internet_gb": 30,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 30,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Vodafone'un online kanallarından yeni hat veya numara taşıma başvurusu yapan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
-      "campaign": "3 ay ücretsiz ChatGPT Go aboneliği ve seçili markalarda 7.000 TL'ye varan avantajlar.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
-    },
-    {
-      "name": "5G Online Plus 50GB Paketi",
-      "package_group": "online_plus",
-      "price_try": 650.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
-      "no_commitment_price_try": 2350.0,
-      "internet_gb": 50,
-      "social_media_gb": null,
-      "bonus_internet_gb": null,
-      "total_internet_gb": 50,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Vodafone'un online kanallarından yeni hat veya numara taşıma başvurusu yapan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
-      "campaign": "3 ay ücretsiz ChatGPT Go aboneliği ve seçili markalarda 7.000 TL'ye varan avantajlar.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
-    },
-    {
-      "name": "5G Red 40 GB Sinirsiz Sosyal Tarifesi",
-      "package_group": "red",
-      "price_try": 750.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
-      "no_commitment_price_try": 2070.0,
-      "internet_gb": 40,
-      "social_media_gb": -1,
-      "bonus_internet_gb": null,
-      "total_internet_gb": -1,
-      "voice_minutes": -1,
-      "sms_count": -1,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile Vodafone Red'e gelen uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir. Tarife her ay 10 gün Avrupa'da ek ücret olmadan kullanılabilir.",
-      "campaign": "WhatsApp, Facebook Messenger, X, Facebook ve Instagram sınırsızdır. 3 ay YouTube Premium, 23 ülkede 120 dakika ve Red ayrıcalıkları dahildir.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
-    },
-    {
-      "name": "5G Red 60GB Sinirsiz Eglence Tarifesi",
-      "package_group": "red",
-      "price_try": 900.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
-      "no_commitment_price_try": 2780.0,
-      "internet_gb": 60,
-      "social_media_gb": -1,
-      "bonus_internet_gb": null,
-      "total_internet_gb": -1,
-      "voice_minutes": -1,
-      "sms_count": -1,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile Vodafone Red'e gelen uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir. Tarife her ay 10 gün Avrupa'da ek ücret olmadan kullanılabilir.",
-      "campaign": "WhatsApp, Facebook Messenger, Facebook, X, Instagram, YouTube, Netflix, Amazon Prime Video ve Spotify kullanımları sınırsızdır.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
-    },
-    {
-      "name": "5G Red 100GB Sinirsiz Tiktok Tarifesi",
-      "package_group": "red",
-      "price_try": 1100.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
-      "no_commitment_price_try": 3040.0,
-      "internet_gb": 100,
-      "social_media_gb": -1,
-      "bonus_internet_gb": null,
-      "total_internet_gb": -1,
-      "voice_minutes": -1,
-      "sms_count": -1,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile Vodafone Red'e gelen uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir. Tarife her ay 10 gün Avrupa'da ek ücret olmadan kullanılabilir.",
-      "campaign": "TikTok, WhatsApp, Facebook Messenger, Facebook, X, Instagram, YouTube, Netflix, Amazon Prime Video ve Spotify kullanımları sınırsızdır.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
-    },
-    {
-      "name": "5G Plus 5GB Tarifesi",
-      "package_group": "plus",
       "price_try": 315.0,
       "price_period": "month",
       "commitment_months": 12,
@@ -194,19 +18,49 @@
       "internet_gb": 5,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 5,
       "voice_minutes": 1000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Vodafone'un online kanallarından yeni hat veya numara taşıma başvurusu yapan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
       "campaign": "3 ay ücretsiz ChatGPT Go aboneliği ve seçili markalarda 7.000 TL'ye varan avantajlar.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 300.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 315₺/ay Taahhütsüz fiyat 800₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "ChatGPT Go",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Seçili markalarda 7.000 TL'ye varan indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
-      "name": "5G Plus 10GB Tarifesi",
-      "package_group": "plus",
+      "name": "5G Online Plus 10GB Paketi",
+      "package_group": "online_plus",
       "price_try": 365.0,
       "price_period": "month",
       "commitment_months": 12,
@@ -216,19 +70,49 @@
       "internet_gb": 10,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 10,
       "voice_minutes": 1000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Vodafone'un online kanallarından yeni hat veya numara taşıma başvurusu yapan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
       "campaign": "3 ay ücretsiz ChatGPT Go aboneliği ve seçili markalarda 7.000 TL'ye varan avantajlar.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 325.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 365₺/ay Taahhütsüz fiyat 1000₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "ChatGPT Go",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Seçili markalarda 7.000 TL'ye varan indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
-      "name": "5G Plus 20GB Tarifesi",
-      "package_group": "plus",
+      "name": "5G Online Plus 20GB Paketi",
+      "package_group": "online_plus",
       "price_try": 465.0,
       "price_period": "month",
       "commitment_months": 12,
@@ -238,19 +122,49 @@
       "internet_gb": 20,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 20,
       "voice_minutes": 1000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Vodafone'un online kanallarından yeni hat veya numara taşıma başvurusu yapan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
       "campaign": "3 ay ücretsiz ChatGPT Go aboneliği ve seçili markalarda 7.000 TL'ye varan avantajlar.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 400.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 465₺/ay Taahhütsüz fiyat 1300₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "ChatGPT Go",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Seçili markalarda 7.000 TL'ye varan indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
-      "name": "5G Plus 30GB Tarifesi",
-      "package_group": "plus",
+      "name": "5G Online Plus 30GB Paketi",
+      "package_group": "online_plus",
       "price_try": 565.0,
       "price_period": "month",
       "commitment_months": 12,
@@ -260,20 +174,333 @@
       "internet_gb": 30,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 30,
       "voice_minutes": 1000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Vodafone'un online kanallarından yeni hat veya numara taşıma başvurusu yapan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
       "campaign": "3 ay ücretsiz ChatGPT Go aboneliği ve seçili markalarda 7.000 TL'ye varan avantajlar.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 500.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 565₺/ay Taahhütsüz fiyat 1600₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "ChatGPT Go",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Seçili markalarda 7.000 TL'ye varan indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
-      "name": "İlk Hattım 5G Plus 5GB Paketi",
-      "package_group": "first_line",
-      "price_try": 250.0,
+      "name": "5G Online Plus 50GB Paketi",
+      "package_group": "online_plus",
+      "price_try": 685.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 2350.0,
+      "internet_gb": 50,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Vodafone'un online kanallarından yeni hat veya numara taşıma başvurusu yapan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
+      "campaign": "3 ay ücretsiz ChatGPT Go aboneliği ve seçili markalarda 7.000 TL'ye varan avantajlar.",
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 650.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 685₺/ay Taahhütsüz fiyat 2350₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "ChatGPT Go",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Seçili markalarda 7.000 TL'ye varan indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G Red 40 GB Sinirsiz Sosyal Tarifesi",
+      "package_group": "red",
+      "price_try": 790.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 2070.0,
+      "internet_gb": 40,
+      "social_media_gb": -1,
+      "bonus_internet_gb": null,
+      "voice_minutes": -1,
+      "sms_count": -1,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile Vodafone Red'e gelen uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir. Tarife her ay 10 gün Avrupa'da ek ücret olmadan kullanılabilir.",
+      "campaign": "WhatsApp, Facebook Messenger, X, Facebook ve Instagram sınırsızdır. 3 ay YouTube Premium, 23 ülkede 120 dakika ve Red ayrıcalıkları dahildir.",
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 750.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 790₺/ay Taahhütsüz fiyat 2070₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "social_media_apps": [
+        "WhatsApp",
+        "Facebook Messenger",
+        "X",
+        "Facebook",
+        "Instagram"
+      ],
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "Sınırsız ek uygulamalar",
+          "offer": "included",
+          "apps": [
+            "WhatsApp",
+            "Facebook Messenger",
+            "X",
+            "Facebook",
+            "Instagram"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımında internet kotadan düşmez; Netflix/Spotify/Prime Video aboneliği DAHİL DEĞİLDİR."
+        },
+        {
+          "category": "roaming",
+          "service": "Her ay 10 gün Avrupa'da tarifeyi ek ücretsiz kullanma (12 ay)",
+          "offer": "included"
+        },
+        {
+          "category": "discount",
+          "service": "Red'e özel 25.000 TL'ye varan marka ayrıcalıkları",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G Red 60GB Sinirsiz Eglence Tarifesi",
+      "package_group": "red",
+      "price_try": 1000.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 2780.0,
+      "internet_gb": 60,
+      "social_media_gb": -1,
+      "bonus_internet_gb": null,
+      "voice_minutes": -1,
+      "sms_count": -1,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile Vodafone Red'e gelen uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir. Tarife her ay 10 gün Avrupa'da ek ücret olmadan kullanılabilir.",
+      "campaign": "WhatsApp, Facebook Messenger, Facebook, X, Instagram, YouTube, Netflix, Amazon Prime Video ve Spotify kullanımları sınırsızdır.",
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 900.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 1000₺/ay Taahhütsüz fiyat 2780₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "social_media_apps": [
+        "WhatsApp",
+        "Facebook Messenger",
+        "Facebook",
+        "X",
+        "Instagram",
+        "YouTube",
+        "Netflix",
+        "Amazon Prime Video",
+        "Spotify"
+      ],
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "Sınırsız ek uygulamalar",
+          "offer": "included",
+          "apps": [
+            "WhatsApp",
+            "Facebook Messenger",
+            "Facebook",
+            "X",
+            "Instagram",
+            "YouTube",
+            "Netflix",
+            "Amazon Prime Video",
+            "Spotify"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımında internet kotadan düşmez; Netflix/Spotify/Prime Video aboneliği DAHİL DEĞİLDİR."
+        },
+        {
+          "category": "roaming",
+          "service": "Her ay 10 gün Avrupa'da tarifeyi ek ücretsiz kullanma (12 ay)",
+          "offer": "included"
+        },
+        {
+          "category": "discount",
+          "service": "Red'e özel 25.000 TL'ye varan marka ayrıcalıkları",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G Red 100GB Sinirsiz Tiktok Tarifesi",
+      "package_group": "red",
+      "price_try": 1200.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 3040.0,
+      "internet_gb": 100,
+      "social_media_gb": -1,
+      "bonus_internet_gb": null,
+      "voice_minutes": -1,
+      "sms_count": -1,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile Vodafone Red'e gelen uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir. Tarife her ay 10 gün Avrupa'da ek ücret olmadan kullanılabilir.",
+      "campaign": "TikTok, WhatsApp, Facebook Messenger, Facebook, X, Instagram, YouTube, Netflix, Amazon Prime Video ve Spotify kullanımları sınırsızdır.",
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 1100.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 1200₺/ay Taahhütsüz fiyat 3040₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "social_media_apps": [
+        "TikTok",
+        "WhatsApp",
+        "Facebook Messenger",
+        "Facebook",
+        "X",
+        "Instagram",
+        "YouTube",
+        "Netflix",
+        "Amazon Prime Video",
+        "Spotify"
+      ],
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "app_data",
+          "service": "Sınırsız ek uygulamalar",
+          "offer": "included",
+          "apps": [
+            "TikTok",
+            "WhatsApp",
+            "Facebook Messenger",
+            "Facebook",
+            "X",
+            "Instagram",
+            "YouTube",
+            "Netflix",
+            "Amazon Prime Video",
+            "Spotify"
+          ],
+          "amount_gb": -1,
+          "note": "Uygulama kullanımında internet kotadan düşmez; Netflix/Spotify/Prime Video aboneliği DAHİL DEĞİLDİR."
+        },
+        {
+          "category": "roaming",
+          "service": "Her ay 10 gün Avrupa'da tarifeyi ek ücretsiz kullanma (12 ay)",
+          "offer": "included"
+        },
+        {
+          "category": "discount",
+          "service": "Red'e özel 25.000 TL'ye varan marka ayrıcalıkları",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G Plus 5GB Tarifesi",
+      "package_group": "plus",
+      "price_try": 375.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -282,20 +509,50 @@
       "internet_gb": 5,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 5,
       "voice_minutes": 1000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile gelen ve 7-16 yaş aralığında çocuk kullanıcı tanımlaması yapılan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
-      "campaign": "12 ay ücretsiz Durma Özelliği, 12 ay Find My Kids, sınırsız WhatsApp, 3 ay ücretsiz ChatGPT Go ve çocuklara özel marka avantajları.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
+      "campaign": "3 ay ücretsiz ChatGPT Go aboneliği ve seçili markalarda 7.000 TL'ye varan avantajlar.",
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 315.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 375₺/ay Taahhütsüz fiyat 800₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "ChatGPT Go",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Seçili markalarda 7.000 TL'ye varan indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
-      "name": "İlk Hattım 5G Plus 10GB Paketi",
-      "package_group": "first_line",
-      "price_try": 300.0,
+      "name": "5G Plus 10GB Tarifesi",
+      "package_group": "plus",
+      "price_try": 450.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -304,20 +561,50 @@
       "internet_gb": 10,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 10,
       "voice_minutes": 1000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile gelen ve 7-16 yaş aralığında çocuk kullanıcı tanımlaması yapılan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
-      "campaign": "12 ay ücretsiz Durma Özelliği, 12 ay Find My Kids, sınırsız WhatsApp, 3 ay ücretsiz ChatGPT Go ve çocuklara özel marka avantajları.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
+      "campaign": "3 ay ücretsiz ChatGPT Go aboneliği ve seçili markalarda 7.000 TL'ye varan avantajlar.",
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 365.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 450₺/ay Taahhütsüz fiyat 1000₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "ChatGPT Go",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Seçili markalarda 7.000 TL'ye varan indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
-      "name": "İlk Hattım 5G Plus 20GB Paketi",
-      "package_group": "first_line",
-      "price_try": 350.0,
+      "name": "5G Plus 20GB Tarifesi",
+      "package_group": "plus",
+      "price_try": 550.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -326,20 +613,50 @@
       "internet_gb": 20,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 20,
       "voice_minutes": 1000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile gelen ve 7-16 yaş aralığında çocuk kullanıcı tanımlaması yapılan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
-      "campaign": "12 ay ücretsiz Durma Özelliği, 12 ay Find My Kids, sınırsız WhatsApp, 3 ay ücretsiz ChatGPT Go ve çocuklara özel marka avantajları.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
+      "campaign": "3 ay ücretsiz ChatGPT Go aboneliği ve seçili markalarda 7.000 TL'ye varan avantajlar.",
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 465.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 550₺/ay Taahhütsüz fiyat 1300₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "ChatGPT Go",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Seçili markalarda 7.000 TL'ye varan indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
-      "name": "İlk Hattım 5G Plus 30GB Paketi",
-      "package_group": "first_line",
-      "price_try": 425.0,
+      "name": "5G Plus 30GB Tarifesi",
+      "package_group": "plus",
+      "price_try": 650.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -348,108 +665,350 @@
       "internet_gb": 30,
       "social_media_gb": null,
       "bonus_internet_gb": null,
-      "total_internet_gb": 30,
       "voice_minutes": 1000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "Yeni hat veya numara taşıma ile gelen ve 7-16 yaş aralığında çocuk kullanıcı tanımlaması yapılan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
-      "campaign": "12 ay ücretsiz Durma Özelliği, 12 ay Find My Kids, sınırsız WhatsApp, 3 ay ücretsiz ChatGPT Go ve çocuklara özel marka avantajları.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
+      "campaign": "3 ay ücretsiz ChatGPT Go aboneliği ve seçili markalarda 7.000 TL'ye varan avantajlar.",
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 565.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 650₺/ay Taahhütsüz fiyat 1600₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "ChatGPT Go",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Seçili markalarda 7.000 TL'ye varan indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
-      "name": "5Gye Hazir Genç 10GB Tarifesi",
-      "package_group": "freezone",
-      "price_try": 325.0,
+      "name": "İlk Hattım 5G Plus 5GB Paketi",
+      "package_group": "first_line",
+      "price_try": 300.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
       "price_lock_months": 12,
-      "no_commitment_price_try": 835.0,
+      "no_commitment_price_try": 800.0,
       "internet_gb": 5,
       "social_media_gb": null,
-      "bonus_internet_gb": 5,
-      "total_internet_gb": 10,
+      "bonus_internet_gb": null,
       "voice_minutes": 1000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "26 yaş altındaki uygun bireysel faturalı müşterilere sunulur. Sosyal medya ve oyun interneti tarife içinde ayrı kota olarak tanımlanır.",
-      "campaign": "Sınırsız WhatsApp, sosyal medya ve oyunlarda her ay ek GB, 3 ay ücretsiz dijital platform üyeliği ve oyun platformlarında aylık 100 TL indirim.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile gelen ve 7-16 yaş aralığında çocuk kullanıcı tanımlaması yapılan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
+      "campaign": "12 ay ücretsiz Durma Özelliği, 12 ay Find My Kids, sınırsız WhatsApp, 3 ay ücretsiz ChatGPT Go ve çocuklara özel marka avantajları.",
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 250.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 300₺/ay Taahhütsüz fiyat 800₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "ChatGPT Go",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "service",
+          "service": "Find My Kids ebeveyn güvenlik uygulaması",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "service",
+          "service": "Durma Özelliği (aşım koruması)",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "discount",
+          "service": "Seçili markalarda 7.000 TL'ye varan indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
-      "name": "5Gye Hazir Genç 20GB Tarifesi",
-      "package_group": "freezone",
+      "name": "İlk Hattım 5G Plus 10GB Paketi",
+      "package_group": "first_line",
+      "price_try": 350.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 1000.0,
+      "internet_gb": 10,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile gelen ve 7-16 yaş aralığında çocuk kullanıcı tanımlaması yapılan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
+      "campaign": "12 ay ücretsiz Durma Özelliği, 12 ay Find My Kids, sınırsız WhatsApp, 3 ay ücretsiz ChatGPT Go ve çocuklara özel marka avantajları.",
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 300.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 350₺/ay Taahhütsüz fiyat 1000₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "ChatGPT Go",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "service",
+          "service": "Find My Kids ebeveyn güvenlik uygulaması",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "service",
+          "service": "Durma Özelliği (aşım koruması)",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "discount",
+          "service": "Seçili markalarda 7.000 TL'ye varan indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "İlk Hattım 5G Plus 20GB Paketi",
+      "package_group": "first_line",
       "price_try": 400.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
       "price_lock_months": 12,
-      "no_commitment_price_try": 1005.0,
-      "internet_gb": 10,
-      "social_media_gb": null,
-      "bonus_internet_gb": 10,
-      "total_internet_gb": 20,
-      "voice_minutes": 1000,
-      "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "26 yaş altındaki uygun bireysel faturalı müşterilere sunulur. Sosyal medya ve oyun interneti tarife içinde ayrı kota olarak tanımlanır.",
-      "campaign": "Sınırsız WhatsApp, sosyal medya ve oyunlarda her ay ek GB, 3 ay ücretsiz dijital platform üyeliği ve oyun platformlarında aylık 100 TL indirim.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
-    },
-    {
-      "name": "5Gye Hazir Genç 40GB Tarifesi",
-      "package_group": "freezone",
-      "price_try": 575.0,
-      "price_period": "month",
-      "commitment_months": 12,
-      "commitment_status": "committed",
-      "price_lock_months": 12,
-      "no_commitment_price_try": 1340.0,
+      "no_commitment_price_try": 1300.0,
       "internet_gb": 20,
       "social_media_gb": null,
-      "bonus_internet_gb": 20,
-      "total_internet_gb": 40,
+      "bonus_internet_gb": null,
       "voice_minutes": 1000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "26 yaş altındaki uygun bireysel faturalı müşterilere sunulur. Sosyal medya ve oyun interneti tarife içinde ayrı kota olarak tanımlanır.",
-      "campaign": "Sınırsız WhatsApp, sosyal medya ve oyunlarda her ay ek GB, 3 ay ücretsiz dijital platform üyeliği ve oyun platformlarında aylık 100 TL indirim.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile gelen ve 7-16 yaş aralığında çocuk kullanıcı tanımlaması yapılan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
+      "campaign": "12 ay ücretsiz Durma Özelliği, 12 ay Find My Kids, sınırsız WhatsApp, 3 ay ücretsiz ChatGPT Go ve çocuklara özel marka avantajları.",
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 350.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 400₺/ay Taahhütsüz fiyat 1300₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "ChatGPT Go",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "service",
+          "service": "Find My Kids ebeveyn güvenlik uygulaması",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "service",
+          "service": "Durma Özelliği (aşım koruması)",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "discount",
+          "service": "Seçili markalarda 7.000 TL'ye varan indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
-      "name": "5Gye Hazir Genç 60GB Tarifesi",
-      "package_group": "freezone",
-      "price_try": 675.0,
+      "name": "İlk Hattım 5G Plus 30GB Paketi",
+      "package_group": "first_line",
+      "price_try": 500.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
       "price_lock_months": 12,
-      "no_commitment_price_try": 1675.0,
+      "no_commitment_price_try": 1600.0,
       "internet_gb": 30,
       "social_media_gb": null,
-      "bonus_internet_gb": 30,
-      "total_internet_gb": 60,
+      "bonus_internet_gb": null,
       "voice_minutes": 1000,
       "sms_count": 250,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "26 yaş altındaki uygun bireysel faturalı müşterilere sunulur. Sosyal medya ve oyun interneti tarife içinde ayrı kota olarak tanımlanır.",
-      "campaign": "Sınırsız WhatsApp, sosyal medya ve oyunlarda her ay ek GB, 3 ay ücretsiz dijital platform üyeliği ve oyun platformlarında aylık 100 TL indirim.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile gelen ve 7-16 yaş aralığında çocuk kullanıcı tanımlaması yapılan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
+      "campaign": "12 ay ücretsiz Durma Özelliği, 12 ay Find My Kids, sınırsız WhatsApp, 3 ay ücretsiz ChatGPT Go ve çocuklara özel marka avantajları.",
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 425.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 500₺/ay Taahhütsüz fiyat 1600₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "ChatGPT Go",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "service",
+          "service": "Find My Kids ebeveyn güvenlik uygulaması",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "service",
+          "service": "Durma Özelliği (aşım koruması)",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "discount",
+          "service": "Seçili markalarda 7.000 TL'ye varan indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
     },
     {
       "name": "5G Genç Red 80 GB Sinirsiz Sosyal Tarifesi",
       "package_group": "freezone_red",
-      "price_try": 750.0,
+      "price_try": 900.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -458,20 +1017,59 @@
       "internet_gb": 40,
       "social_media_gb": -1,
       "bonus_internet_gb": 40,
-      "total_internet_gb": -1,
       "voice_minutes": -1,
       "sms_count": -1,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "26 yaş altındaki uygun bireysel faturalı müşterilere sunulur. Sosyal medya ve oyun interneti tarife içinde ayrı kota olarak tanımlanır.",
-      "campaign": "40 GB genel internet, 40 GB sosyal medya ve oyun interneti ile sınırsız sosyal uygulamalar.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen 26 yaş altındaki uygun bireysel faturalı müşterilere sunulur. Hediye GB tüm internet kullanımlarında geçerlidir.",
+      "campaign": "40 GB genel internet ve tüm internet kullanımlarında geçerli her ay 40 GB hediye internet; sınırsız sosyal uygulamalar (uygulama listesi kartta yazılı değil).",
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 750.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler",
+            "conditions": "26 yaş altındaki uygun bireysel faturalı müşterilere sunulur. Sosyal medya ve oyun interneti tarife içinde ayrı kota olarak tanımlanır."
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "40 GB genel internet, 40 GB sosyal medya ve oyun interneti ile sınırsız sosyal uygulamalar.",
+            "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen 26 yaş altındaki uygun bireysel faturalı müşterilere sunulur. Sosyal medya ve oyun interneti tarife içinde ayrı kota olarak tanımlanır."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 900₺/ay Taahhütsüz fiyat 2070₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.1 (2026-10-12): official listing card reads \"40 GB\" + \"40 GB HEDİYE\" and \"Tüm internet kullanımlarında geçerli her ay tarifene ek GB hediyesi\" -- the gift is general data, not a social/game quota (record corrected). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "Dijital platform üyeliği (platform adı sayfada belirtilmemiş)",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Oyun platformlarında her ay 100 TL indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "bonus_internet_scope": "general",
+      "renewal_type": "recurring"
     },
     {
       "name": "5G Genç Red 120GB Sinirsiz Eglence Tarifesi",
       "package_group": "freezone_red",
-      "price_try": 900.0,
+      "price_try": 1000.0,
       "price_period": "month",
       "commitment_months": 12,
       "commitment_status": "committed",
@@ -480,15 +1078,385 @@
       "internet_gb": 60,
       "social_media_gb": -1,
       "bonus_internet_gb": 60,
-      "total_internet_gb": -1,
       "voice_minutes": -1,
       "sms_count": -1,
-      "validity_value": 1,
-      "validity_unit": "month",
-      "validity_days": 30,
-      "conditions": "26 yaş altındaki uygun bireysel faturalı müşterilere sunulur. Sosyal medya ve oyun interneti tarife içinde ayrı kota olarak tanımlanır.",
-      "campaign": "60 GB genel internet, 60 GB sosyal medya ve oyun interneti ile sınırsız eğlence uygulamaları.",
-      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler"
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen 26 yaş altındaki uygun bireysel faturalı müşterilere sunulur. Hediye GB tüm internet kullanımlarında geçerlidir.",
+      "campaign": "60 GB genel internet ve tüm internet kullanımlarında geçerli her ay 60 GB hediye internet; sınırsız sosyal uygulamalar (uygulama listesi kartta yazılı değil).",
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "history": [
+        {
+          "as_of": "2026-07-10",
+          "fields": {
+            "price_try": 900.0,
+            "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler?icmp=anasayfa_header_tarifeler",
+            "conditions": "26 yaş altındaki uygun bireysel faturalı müşterilere sunulur. Sosyal medya ve oyun interneti tarife içinde ayrı kota olarak tanımlanır."
+          }
+        },
+        {
+          "as_of": "2026-10-12",
+          "fields": {
+            "campaign": "60 GB genel internet, 60 GB sosyal medya ve oyun interneti ile sınırsız eğlence uygulamaları.",
+            "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen 26 yaş altındaki uygun bireysel faturalı müşterilere sunulur. Sosyal medya ve oyun interneti tarife içinde ayrı kota olarak tanımlanır."
+          }
+        }
+      ],
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 1000₺/ay Taahhütsüz fiyat 2780₺/ay\"; allowances match. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.1 (2026-10-12): official listing card reads \"60 GB\" + \"60 GB HEDİYE\" and \"Tüm internet kullanımlarında geçerli her ay tarifene ek GB hediyesi\" -- the gift is general data, not a social/game quota (record corrected). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "Dijital platform üyeliği (platform adı sayfada belirtilmemiş)",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Oyun platformlarında her ay 100 TL indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "bonus_internet_scope": "general",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G Plus 50GB Tarifesi",
+      "package_group": "plus",
+      "price_try": 800.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 2350.0,
+      "internet_gb": 50,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
+      "campaign": null,
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 800₺/ay Taahhütsüz fiyat 2350₺/ay\"; allowances match. New 50 GB tier. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "ChatGPT Go",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Seçili markalarda 7.000 TL'ye varan indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "İlk Hattım 5G Plus 50GB Paketi",
+      "package_group": "first_line",
+      "price_try": 600.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 2350.0,
+      "internet_gb": 50,
+      "social_media_gb": null,
+      "bonus_internet_gb": null,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile gelen ve 7-16 yaş aralığında çocuk kullanıcı tanımlaması yapılan uygun bireysel faturalı müşterilere sunulur. İndirimli ücret 12 fatura dönemi geçerlidir.",
+      "campaign": null,
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 600₺/ay Taahhütsüz fiyat 2350₺/ay\"; allowances match. New 50 GB tier; 7-16 child user required. Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "ChatGPT Go",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "service",
+          "service": "Find My Kids ebeveyn güvenlik uygulaması",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "service",
+          "service": "Durma Özelliği (aşım koruması)",
+          "offer": "free_trial",
+          "duration_months": 12,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "app_data",
+          "service": "WhatsApp sınırsız",
+          "offer": "included",
+          "apps": [
+            "WhatsApp"
+          ],
+          "amount_gb": -1
+        },
+        {
+          "category": "discount",
+          "service": "Seçili markalarda 7.000 TL'ye varan indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G Plus Genç 10GB Tarifesi",
+      "package_group": "freezone",
+      "price_try": 380.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 800.0,
+      "internet_gb": 5,
+      "social_media_gb": null,
+      "bonus_internet_gb": 5,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen uygun bireysel faturalı müşterilere sunulur. 26 yaş altındaki müşterilere özeldir; hediye GB tüm internet kullanımlarında geçerlidir. İndirimli ücret 12 ay geçerlidir.",
+      "campaign": null,
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 380₺/ay Taahhütsüz fiyat 800₺/ay\"; allowances match. Listing: \"26 yaş altına özel\", 5 GB + 5 GB HEDİYE (\"Tüm internet kullanımda geçerli hediye GB'lar\"). Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "Dijital platform üyeliği (platform adı sayfada belirtilmemiş)",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Oyun platformlarında her ay 100 TL indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "bonus_internet_scope": "general",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G Plus Genç 20GB Tarifesi",
+      "package_group": "freezone",
+      "price_try": 480.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 1000.0,
+      "internet_gb": 10,
+      "social_media_gb": null,
+      "bonus_internet_gb": 10,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen uygun bireysel faturalı müşterilere sunulur. 26 yaş altındaki müşterilere özeldir; hediye GB tüm internet kullanımlarında geçerlidir. İndirimli ücret 12 ay geçerlidir.",
+      "campaign": null,
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 480₺/ay Taahhütsüz fiyat 1000₺/ay\"; allowances match. Listing: \"26 yaş altına özel\", 10 GB + 10 GB HEDİYE (\"Tüm internet kullanımda geçerli hediye GB'lar\"). Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "Dijital platform üyeliği (platform adı sayfada belirtilmemiş)",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Oyun platformlarında her ay 100 TL indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "bonus_internet_scope": "general",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G Plus Genç 40GB Tarifesi",
+      "package_group": "freezone",
+      "price_try": 680.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 1300.0,
+      "internet_gb": 20,
+      "social_media_gb": null,
+      "bonus_internet_gb": 20,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen uygun bireysel faturalı müşterilere sunulur. 26 yaş altındaki müşterilere özeldir; hediye GB tüm internet kullanımlarında geçerlidir. İndirimli ücret 12 ay geçerlidir.",
+      "campaign": null,
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 680₺/ay Taahhütsüz fiyat 1300₺/ay\"; allowances match. Listing: \"26 yaş altına özel\", 20 GB + 20 GB HEDİYE (\"Tüm internet kullanımda geçerli hediye GB'lar\"). Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "Dijital platform üyeliği (platform adı sayfada belirtilmemiş)",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Oyun platformlarında her ay 100 TL indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "bonus_internet_scope": "general",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G Plus Genç 60GB Tarifesi",
+      "package_group": "freezone",
+      "price_try": 780.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 1600.0,
+      "internet_gb": 30,
+      "social_media_gb": null,
+      "bonus_internet_gb": 30,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen uygun bireysel faturalı müşterilere sunulur. 26 yaş altındaki müşterilere özeldir; hediye GB tüm internet kullanımlarında geçerlidir. İndirimli ücret 12 ay geçerlidir.",
+      "campaign": null,
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 780₺/ay Taahhütsüz fiyat 1600₺/ay\"; allowances match. Listing: \"26 yaş altına özel\", 30 GB + 30 GB HEDİYE (\"Tüm internet kullanımda geçerli hediye GB'lar\"). Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "Dijital platform üyeliği (platform adı sayfada belirtilmemiş)",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Oyun platformlarında her ay 100 TL indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "bonus_internet_scope": "general",
+      "renewal_type": "recurring"
+    },
+    {
+      "name": "5G Plus Genç 100GB Tarifesi",
+      "package_group": "freezone",
+      "price_try": 880.0,
+      "price_period": "month",
+      "commitment_months": 12,
+      "commitment_status": "committed",
+      "price_lock_months": 12,
+      "no_commitment_price_try": 2350.0,
+      "internet_gb": 50,
+      "social_media_gb": null,
+      "bonus_internet_gb": 50,
+      "voice_minutes": 1000,
+      "sms_count": 250,
+      "validity_value": null,
+      "validity_unit": null,
+      "validity_days": null,
+      "conditions": "Yeni hat veya numara taşıma ile Vodafone'a gelen uygun bireysel faturalı müşterilere sunulur. 26 yaş altındaki müşterilere özeldir; hediye GB tüm internet kullanımlarında geçerlidir. İndirimli ücret 12 ay geçerlidir.",
+      "campaign": null,
+      "source_url": "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+      "verified_at": "2026-10-12",
+      "evidence": "Official listing https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler plan data: candidateType NEW+MNP, \"12 ay boyunca 880₺/ay Taahhütsüz fiyat 2350₺/ay\"; allowances match. Listing: \"26 yaş altına özel\", 50 GB + 50 GB HEDİYE (\"Tüm internet kullanımda geçerli hediye GB'lar\"). Phase 2D (2026-10-12): benefits re-read on the official listing via a rendering fetch (the site blocks plain HTTP clients). Phase 2D.2 (2026-10-12): renewal_type=recurring -- postpaid tariff billed every invoice period (aylık fatura); allowances follow the billing month -- no separate usage validity.",
+      "activation_channels": [
+        "new_line",
+        "number_porting"
+      ],
+      "benefits": [
+        {
+          "category": "subscription",
+          "service": "Dijital platform üyeliği (platform adı sayfada belirtilmemiş)",
+          "offer": "free_trial",
+          "duration_months": 3,
+          "after_trial": "unknown"
+        },
+        {
+          "category": "discount",
+          "service": "Oyun platformlarında her ay 100 TL indirim",
+          "offer": "included"
+        }
+      ],
+      "benefits_status": "verified",
+      "bonus_internet_scope": "general",
+      "renewal_type": "recurring"
     }
-  ]
+  ],
+  "verified_at": "2026-10-12",
+  "schema_version": 2
 }
